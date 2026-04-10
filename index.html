@@ -312,6 +312,23 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
     <p>Natural · Nutritious · Sustainable · Made in India</p>
   </div>
 </footer>
-
+<script src="https://cdn.n8n.io/webhooks/chat/chat.bundle.js"></script>
+<script>
+  createChat({
+    webhookUrl: 'https://jyothi26prabhu.app.n8n.cloud/webhook/052b2172-c0f4-450e-9152-0a8f0d09fc75/chat',
+    mode: 'window',
+    chatInputKey: 'chatInput',
+    initialMessages: [
+      'Hi there! 🌿 Welcome to Alora Customary Care! How can I help you today?'
+    ],
+    i18n: {
+      en: {
+        title: '🌿 Alora Assistant',
+        subtitle: 'Ask me anything about our products!',
+        inputPlaceholder: 'Type your question...',
+      }
+    }
+  });
+</script>
 </body>
 </html>
