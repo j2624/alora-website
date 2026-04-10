@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alora Customary Care – Nature's Goodness, Preserved</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --dark:#2c2416;
+  --brown:#6b4c2a;
+  --brown-light:#8b6340;
+  --gold:#c9a84c;
+  --gold-light:#e2c47a;
+  --cream:#f7f3ec;
+  --cream2:#ede8df;
+  --cream3:#e4ddd3;
+  --olive:#4a5c2a;
+  --olive-light:#6b7d3e;
+  --muted:#7a7060;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(247,243,236,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,168,76,0.15)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:.15em;text-decoration:none;color:var(--dark)}
+.nav-links{display:flex;gap:36px;align-items:center}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--dark)}
+.nav-cta{background:var(--brown)!important;color:#fff!important;padding:9px 22px;border-radius:20px}
+.nav-cta:hover{background:var(--brown-light)!important}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 52px 80px;position:relative;overflow:hidden;background:var(--cream)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 70% at 80% 50%,rgba(201,168,76,0.08),transparent 65%),radial-gradient(ellipse 40% 50% at 10% 80%,rgba(107,76,42,0.06),transparent 60%)}
+.hero-inner{max-width:1100px;margin:auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-text{z-index:2;position:relative}
+.tag{display:inline-block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.4);padding:5px 14px;border-radius:20px;margin-bottom:28px}
+.hero-text h1{font-family:'Cormorant Garamond',serif;font-size:66px;font-weight:300;line-height:1.05;margin-bottom:24px}
+.hero-text h1 em{font-style:italic;color:var(--olive)}
+.hero-text p{font-size:16px;line-height:1.8;color:var(--muted);max-width:460px;font-weight:300;margin-bottom:36px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-brown{display:inline-block;padding:13px 28px;background:var(--brown);color:#fff;text-decoration:none;border-radius:30px;font-size:12px;font-weight:500;letter-spacing:.08em;transition:background .2s,transform .2s}
+.btn-brown:hover{background:var(--brown-light);transform:translateY(-1px)}
+.btn-outline{display:inline-block;padding:13px 28px;border:1.5px solid var(--brown);color:var(--brown);text-decoration:none;border-radius:30px;font-size:12px;font-weight:500;transition:all .2s}
+.btn-outline:hover{background:var(--brown);color:#fff;transform:translateY(-1px)}
+
+/* OLIVE ILLUSTRATION */
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+.olive-svg{width:100%;max-width:480px;filter:drop-shadow(0 20px 40px rgba(107,76,42,0.15))}
+
+/* STATS */
+.stats{background:var(--brown);padding:44px 52px;display:flex;justify-content:center;gap:80px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:#fff;line-height:1}
+.stat-num span{color:var(--gold-light)}
+.stat-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:6px}
+
+/* WHY */
+.why{padding:100px 52px;max-width:1100px;margin:auto}
+.slabel{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.why h2{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:300;line-height:1.15;margin-bottom:56px}
+.why h2 em{font-style:italic}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.wcard{background:var(--cream2);border-radius:18px;padding:34px;border:1px solid rgba(107,76,42,0.1);box-shadow:0 4px 24px rgba(44,36,22,.05);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.wcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--brown));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.wcard:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(44,36,22,.1)}
+.wcard:hover::after{transform:scaleX(1)}
+.wcard-icon{font-size:34px;margin-bottom:18px}
+.wcard h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:10px}
+.wcard p{font-size:13px;line-height:1.75;color:var(--muted);font-weight:300}
+
+/* PRODUCTS PREVIEW */
+.products{background:var(--cream3);padding:100px 52px}
+.prod-inner{max-width:1100px;margin:auto}
+.prod-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:50px;flex-wrap:wrap;gap:20px}
+.prod-header h2{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:300;line-height:1.15}
+.prod-header h2 em{font-style:italic}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pcard{background:var(--cream);border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(44,36,22,.06);border:1px solid rgba(107,76,42,.08);transition:transform .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(44,36,22,.12)}
+.pthumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:52px;overflow:hidden}
+.pthumb img{width:100%;height:100%;object-fit:cover}
+.onion-bg{background:linear-gradient(135deg,#f5e6c8,#e8d5a3)}
+.banana-bg{background:linear-gradient(135deg,#f5f0c8,#e8e0a3)}
+.amla-bg{background:linear-gradient(135deg,#c8e0d5,#a3d0c0)}
+.pinfo{padding:22px}
+.pinfo h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-bottom:8px}
+.pinfo p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.plink{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--brown);text-decoration:none}
+.plink:hover{color:var(--gold)}
+
+/* FOOTER */
+footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
+.foot-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:28px}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;letter-spacing:.14em;margin-bottom:4px}
+.foot-sub{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.foot-tag{font-size:13px;color:rgba(255,255,255,.35);max-width:200px;line-height:1.6}
+.foot-col h4{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.foot-col a{display:block;font-size:13px;color:rgba(255,255,255,.5);text-decoration:none;margin-bottom:10px;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{max-width:1100px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.foot-bottom p{font-size:11px;color:rgba(255,255,255,.25)}
+
+@media(max-width:768px){
+  nav{padding:16px 24px}
+  .hero{padding:110px 24px 70px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-text h1{font-size:42px}
+  .olive-svg{max-width:300px}
+  .stats{gap:40px;padding:40px 24px}
+  .why,.products{padding:70px 24px}
+  .why-grid,.prod-grid{grid-template-columns:1fr}
+  footer{padding:40px 24px 24px}
+  .nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Alora Customary Care</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="nav-cta">Enquire</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="tag">From Belagavi, India · Est. 2024</div>
+      <h1>Nature's<br>goodness,<br><em>preserved.</em></h1>
+      <p>Alora Customary Care crafts premium dehydrated food products — pure, additive-free, and made the way nature intended. From our kitchen in Belagavi to yours.</p>
+      <div class="hero-btns">
+        <a href="products.html" class="btn-brown">Explore Products</a>
+        <a href="contact.html" class="btn-outline">Get a Sample</a>
+      </div>
+    </div>
+
+    <!-- OLIVE SVG ILLUSTRATION -->
+    <div class="hero-visual">
+      <svg class="olive-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+        <!-- Background circle -->
+        <circle cx="200" cy="250" r="180" fill="#f0ebe0" opacity="0.6"/>
+        
+        <!-- Main branch -->
+        <path d="M200 420 Q190 350 185 300 Q180 250 195 200 Q205 160 200 120" stroke="#5c4020" stroke-width="4" fill="none" stroke-linecap="round"/>
+        
+        <!-- Left branches -->
+        <path d="M190 300 Q160 280 140 260" stroke="#5c4020" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M188 270 Q155 255 130 240" stroke="#5c4020" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M192 240 Q165 220 148 205" stroke="#5c4020" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M196 210 Q172 190 158 175" stroke="#5c4020" stroke-width="2" fill="none" stroke-linecap="round"/>
+        
+        <!-- Right branches -->
+        <path d="M194 310 Q225 290 248 272" stroke="#5c4020" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M192 280 Q222 262 244 248" stroke="#5c4020" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M194 250 Q224 230 242 215" stroke="#5c4020" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M196 220 Q220 200 236 186" stroke="#5c4020" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+        <!-- Leaves left -->
+        <ellipse cx="128" cy="254" rx="18" ry="9" fill="#6b7d3e" transform="rotate(-30 128 254)" opacity="0.9"/>
+        <ellipse cx="118" cy="234" rx="16" ry="8" fill="#7a8f46" transform="rotate(-35 118 234)" opacity="0.85"/>
+        <ellipse cx="140" cy="198" rx="15" ry="7" fill="#6b7d3e" transform="rotate(-25 140 198)" opacity="0.9"/>
+        <ellipse cx="152" cy="170" rx="14" ry="7" fill="#8a9f52" transform="rotate(-20 152 170)" opacity="0.85"/>
+
+        <!-- Leaves right -->
+        <ellipse cx="256" cy="266" rx="18" ry="9" fill="#6b7d3e" transform="rotate(30 256 266)" opacity="0.9"/>
+        <ellipse cx="252" cy="242" rx="16" ry="8" fill="#7a8f46" transform="rotate(35 252 242)" opacity="0.85"/>
+        <ellipse cx="248" cy="208" rx="15" ry="7" fill="#6b7d3e" transform="rotate(28 248 208)" opacity="0.9"/>
+        <ellipse cx="240" cy="180" rx="14" ry="7" fill="#8a9f52" transform="rotate(22 240 180)" opacity="0.85"/>
+
+        <!-- Olives -->
+        <ellipse cx="136" cy="268" rx="10" ry="14" fill="#4a5c2a" opacity="0.95"/>
+        <ellipse cx="136" cy="268" rx="4" ry="5" fill="#6b7d3e" opacity="0.5"/>
+        
+        <ellipse cx="122" cy="248" rx="9" ry="13" fill="#3d4f22" opacity="0.9"/>
+        
+        <ellipse cx="258" cy="280" rx="10" ry="14" fill="#4a5c2a" opacity="0.95"/>
+        <ellipse cx="258" cy="280" rx="4" ry="5" fill="#6b7d3e" opacity="0.5"/>
+        
+        <ellipse cx="248" cy="256" rx="9" ry="13" fill="#3d4f22" opacity="0.9"/>
+        
+        <ellipse cx="162" cy="212" rx="8" ry="12" fill="#4a5c2a" opacity="0.9"/>
+        <ellipse cx="244" cy="220" rx="8" ry="12" fill="#4a5c2a" opacity="0.9"/>
+
+        <!-- Top leaves -->
+        <path d="M200 120 Q185 100 172 88" stroke="#5c4020" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M200 120 Q215 100 228 88" stroke="#5c4020" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="166" cy="84" rx="14" ry="6" fill="#7a8f46" transform="rotate(-20 166 84)" opacity="0.9"/>
+        <ellipse cx="232" cy="84" rx="14" ry="6" fill="#6b7d3e" transform="rotate(20 232 84)" opacity="0.9"/>
+
+        <!-- Ground/base decoration -->
+        <ellipse cx="200" cy="430" rx="60" ry="12" fill="#d4c8b0" opacity="0.4"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-num">100<span>%</span></div><div class="stat-label">Natural Ingredients</div></div>
+  <div class="stat"><div class="stat-num">22<span>+</span></div><div class="stat-label">Premium Products</div></div>
+  <div class="stat"><div class="stat-num">B2B</div><div class="stat-label">Wholesale & Export</div></div>
+  <div class="stat"><div class="stat-num">GMP</div><div class="stat-label">Aligned Processing</div></div>
+</div>
+
+<!-- WHY -->
+<section class="why">
+  <div class="slabel">Our Commitment</div>
+  <h2>Why Buyers Choose <em>Alora</em></h2>
+  <div class="why-grid">
+    <div class="wcard">
+      <div class="wcard-icon">🌱</div>
+      <h3>Nutritional Integrity</h3>
+      <p>Our gentle freeze and mechanical dehydration processes preserve the natural vitamins, minerals and nutrients — so your customers get the full benefit of nature's goodness.</p>
+    </div>
+    <div class="wcard">
+      <div class="wcard-icon">🧼</div>
+      <h3>Hygiene First</h3>
+      <p>Every product is processed in hygienic, GMP-aligned facilities with strict quality control at every step — from sourcing to packaging. No sun drying, no contamination.</p>
+    </div>
+    <div class="wcard">
+      <div class="wcard-icon">🌍</div>
+      <h3>Farmer Friendly</h3>
+      <p>We source directly from local farming communities across Karnataka and other Indian states — supporting livelihoods and promoting sustainable, ethical sourcing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS PREVIEW -->
+<section class="products">
+  <div class="prod-inner">
+    <div class="prod-header">
+      <div>
+        <div class="slabel">Our Range</div>
+        <h2>Featured <em>Products</em></h2>
+      </div>
+      <a href="products.html" class="btn-outline">View All Products</a>
+    </div>
+    <div class="prod-grid">
+      <div class="pcard">
+        <div class="pthumb onion-bg">
+          <img src="onion-flakes-1.png" alt="Onion Flakes" onerror="this.parentElement.innerHTML='🧅'">
+        </div>
+        <div class="pinfo">
+          <h3>Dehydrated Onion Flakes</h3>
+          <p>Low-moisture, naturally dehydrated onion flakes. Ideal for food processing and seasoning.</p>
+          <a href="products.html" class="plink">Learn more →</a>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pthumb banana-bg">
+          <img src="banana-powder.png" alt="Banana Powder" onerror="this.parentElement.innerHTML='🍌'">
+        </div>
+        <div class="pinfo">
+          <h3>Banana Powder</h3>
+          <p>Rich in potassium and natural fibre — perfect for nutraceutical blends and health foods.</p>
+          <a href="products.html" class="plink">Learn more →</a>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pthumb amla-bg">
+          <img src="amla-powder.png" alt="Amla Powder" onerror="this.parentElement.innerHTML='🫐'">
+        </div>
+        <div class="pinfo">
+          <h3>Amla Powder</h3>
+          <p>High in Vitamin C and antioxidants. Sourced from premium Indian gooseberries.</p>
+          <a href="products.html" class="plink">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-logo">Alora Customary Care</div>
+      <div class="foot-sub">Dehydrated Fruits</div>
+      <p class="foot-tag">Premium natural ingredients from Belagavi, Karnataka, India.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="foot-col">
+      <h4>Products</h4>
+      <a href="products.html">Dehydrated Fruits</a>
+      <a href="products.html">Powders</a>
+      <a href="products.html">Vegetables</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="tel:+919137450793">+91 91374 50793 🇮🇳</a>
+      <a href="tel:+447990832467">+44 7990 832467 🇬🇧</a>
+      <a href="mailto:info@aloracare.in">info@aloracare.in</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p>© 2026 Alora Customary Care. All Rights Reserved.</p>
+    <p>Natural · Nutritious · Sustainable · Made in India</p>
+  </div>
+</footer>
+
+</body>
+</html>
