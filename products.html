@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
   --gold:       #b8975a;
   --cream:      #f5f0e8;
   --cream-dark: #ede6d6;
+  --cream2:     #e8e2d6;
   --text-main:  #2a2a25;
   --text-muted: #6b6456;
 }
@@ -21,6 +23,7 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-main); overflow-x: hidden; }
 
+/* NAV */
 header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 500;
   padding: 20px 56px;
@@ -32,13 +35,11 @@ header {
 .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; letter-spacing: 0.16em; color: var(--green-deep); }
 .logo-sub { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-top: 2px; }
 nav { display: flex; gap: 32px; align-items: center; }
-nav a { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--text-muted); transition: color 0.2s; position: relative; }
-nav a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 100%; height: 1px; background: var(--gold); transition: right 0.3s ease; }
+nav a { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--text-muted); transition: color 0.2s; }
 nav a:hover { color: var(--green-deep); }
-nav a:hover::after { right: 0; }
 .nav-cta { background: var(--green-deep) !important; color: white !important; padding: 9px 22px; border-radius: 30px; }
-.nav-cta::after { display: none; }
 
+/* HERO */
 .page-hero { padding: 160px 56px 60px; max-width: 1100px; margin: auto; }
 .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
 .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 300; color: var(--green-deep); line-height: 1.1; max-width: 650px; margin-bottom: 24px; }
@@ -46,84 +47,92 @@ nav a:hover::after { right: 0; }
 .page-hero p { font-size: 17px; line-height: 1.8; color: var(--text-muted); max-width: 560px; font-weight: 300; }
 .divider { width: 100%; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); max-width: 1100px; margin: 0 auto; opacity: 0.4; }
 
-/* FILTER */
-.filter-section { padding: 40px 56px 10px; max-width: 1100px; margin: auto; }
-.filter-bar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-.filter-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-right: 6px; font-weight: 500; }
-.filter-btn {
-  padding: 9px 22px; border-radius: 25px; border: 1.5px solid rgba(184,151,90,0.3);
-  background: white; color: var(--text-muted); font-family: 'DM Sans', sans-serif;
-  font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s;
-}
-.filter-btn:hover { border-color: var(--gold); color: var(--green-deep); }
-.filter-btn.active { background: var(--green-deep); color: white; border-color: var(--green-deep); }
+/* CATEGORY SECTIONS */
+.cat-section { padding: 70px 56px; max-width: 1100px; margin: auto; }
+.cat-section:nth-child(even) { background: var(--cream-dark); max-width: 100%; padding: 70px 0; }
+.cat-section:nth-child(even) .cat-inner { max-width: 1100px; margin: auto; padding: 0 56px; }
+.cat-inner { max-width: 1100px; margin: auto; }
 
-/* GRID */
-.products-section { padding: 30px 56px 80px; max-width: 1100px; margin: auto; }
-.products-count { font-size: 13px; color: var(--text-muted); margin-bottom: 28px; }
-.products-count span { color: var(--green-deep); font-weight: 600; }
-.products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.cat-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
+.cat-title-wrap {}
+.cat-badge-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 500; }
+.cat-title { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 300; color: var(--green-deep); line-height: 1.1; }
+.cat-title em { font-style: italic; }
+.cat-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; max-width: 500px; font-weight: 300; margin-top: 10px; }
+
+/* SUB CATEGORY LABEL */
+.subcat-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green-mid); font-weight: 600; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(184,151,90,0.2); }
+
+/* PRODUCT GRID */
+.products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 10px; }
 
 .product-card {
   background: white; border-radius: 16px; overflow: hidden;
   box-shadow: 0 4px 20px rgba(28,58,34,0.06);
   border: 1px solid rgba(184,151,90,0.1);
   transition: transform 0.25s, box-shadow 0.25s;
+  display: flex; flex-direction: column;
 }
 .product-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(28,58,34,0.12); }
-.product-card.hidden { display: none; }
 
 .product-thumb {
-  height: 140px; display: flex; align-items: center;
-  justify-content: center; font-size: 44px; position: relative;
+  height: 260px; display: flex; align-items: center;
+  justify-content: center; overflow: hidden; position: relative; flex-shrink: 0;
 }
-.powder-bg { background: linear-gradient(135deg, #fff8e1, #ffecb3); }
-.fruit-bg  { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
-.veg-bg    { background: linear-gradient(135deg, #fce4ec, #f8bbd0); }
+.product-thumb img { width: 100%; height: 100%; object-fit: contain; object-position: center; background: white; }
+.powder-fruit-bg { background: #ffffff; }
+.powder-veg-bg { background: #ffffff; }
+.fruit-bg  { background: #ffffff; }
+.veg-bg    { background: #ffffff; }
+.mixed-bg  { background: #ffffff; }
+.khawa-bg  { background: #fff3e0; }
 
-.cat-badge {
+.cat-pill {
   position: absolute; top: 10px; right: 10px;
   font-size: 9px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
   padding: 3px 8px; border-radius: 8px;
 }
-.badge-powder { background: #fff3cd; color: #856404; }
-.badge-fruit  { background: #d1e7dd; color: #0a5539; }
-.badge-veg    { background: #fce4ec; color: #880e4f; }
+.pill-fp { background: #fff3cd; color: #856404; }
+.pill-vp { background: #d1e7dd; color: #0a5539; }
+.pill-f  { background: #fce4ec; color: #880e4f; }
+.pill-v  { background: #d1e7dd; color: #0a5539; }
+.pill-m  { background: #ede7f6; color: #4a148c; }
+.pill-k  { background: #fff3e0; color: #e65100; }
 
-.product-info { padding: 16px 18px 20px; }
+.product-info { padding: 16px 18px 20px; flex: 1; display: flex; flex-direction: column; }
 .product-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--green-deep); margin-bottom: 6px; }
-.product-info p { font-size: 12px; line-height: 1.6; color: var(--text-muted); margin-bottom: 14px; font-weight: 300; }
+.product-info p { font-size: 12px; line-height: 1.6; color: var(--text-muted); margin-bottom: 14px; font-weight: 300; flex: 1; }
 .enquire-btn {
   display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--gold); text-decoration: none;
   border: 1px solid rgba(184,151,90,0.3); padding: 6px 14px; border-radius: 15px;
-  transition: all 0.2s;
+  transition: all 0.2s; margin-top: auto; align-self: flex-start;
 }
 .enquire-btn:hover { background: var(--green-deep); color: white; border-color: var(--green-deep); }
 
-/* CUSTOM ORDER BANNER */
-.custom-banner {
-  background: var(--green-deep); padding: 60px 56px;
-}
-.custom-inner {
-  max-width: 1100px; margin: auto;
-  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;
-}
+/* KHAWA SECTION - special dark */
+.khawa-section { background: var(--green-deep); padding: 70px 56px; }
+.khawa-inner { max-width: 1100px; margin: auto; }
+.khawa-section .cat-badge-label { color: var(--gold); }
+.khawa-section .cat-title { color: white; }
+.khawa-section .cat-desc { color: rgba(255,255,255,0.6); }
+.khawa-section .subcat-label { color: rgba(255,255,255,0.5); border-color: rgba(255,255,255,0.15); }
+.khawa-section .product-card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
+.khawa-section .product-card:hover { background: rgba(255,255,255,0.1); }
+.khawa-section .product-info h3 { color: white; }
+.khawa-section .product-info p { color: rgba(255,255,255,0.6); }
+.khawa-section .enquire-btn { color: var(--gold); border-color: rgba(184,151,90,0.4); }
+.khawa-section .enquire-btn:hover { background: var(--gold); color: white; }
+
+/* CUSTOM BANNER */
+.custom-banner { background: var(--green-mid); padding: 60px 56px; }
+.custom-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; }
 .custom-inner h2 { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300; color: white; margin-bottom: 12px; line-height: 1.2; }
 .custom-inner h2 em { font-style: italic; }
 .custom-inner p { font-size: 15px; color: rgba(255,255,255,0.6); font-weight: 300; max-width: 480px; line-height: 1.7; }
 .custom-points { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
-.custom-point {
-  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 20px; padding: 7px 16px;
-  font-size: 12px; color: rgba(255,255,255,0.8); font-weight: 400;
-}
-.btn-gold {
-  display: inline-block; padding: 14px 32px; background: var(--gold);
-  color: white; text-decoration: none; border-radius: 30px;
-  font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
-  transition: background 0.2s, transform 0.2s; white-space: nowrap;
-}
+.custom-point { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 7px 16px; font-size: 12px; color: rgba(255,255,255,0.8); }
+.btn-gold { display: inline-block; padding: 14px 32px; background: var(--gold); color: white; text-decoration: none; border-radius: 30px; font-size: 13px; font-weight: 500; transition: background 0.2s, transform 0.2s; white-space: nowrap; }
 .btn-gold:hover { background: #a07840; transform: translateY(-1px); }
 
 /* FOOTER */
@@ -143,9 +152,9 @@ footer { background: var(--green-deep); color: white; padding: 48px 56px 28px; }
   header { padding: 18px 24px; }
   .page-hero { padding: 120px 24px 50px; }
   .page-hero h1 { font-size: 38px; }
-  .filter-section, .products-section { padding-left: 24px; padding-right: 24px; }
-  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .custom-banner { padding: 50px 24px; }
+  .cat-section, .khawa-section, .custom-banner { padding: 50px 24px; }
+  .cat-section:nth-child(even) .cat-inner { padding: 0 24px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   footer { padding: 40px 24px 24px; }
   nav { gap: 14px; }
   .nav-cta { display: none; }
@@ -168,157 +177,290 @@ footer { background: var(--green-deep); color: white; padding: 48px 56px 28px; }
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="section-label">Our Range</div>
   <h1>Pure, <em>Natural</em> Ingredients</h1>
   <p>Carefully dehydrated to preserve peak nutrition — our full range of powders, fruits, and vegetables are available for bulk and wholesale orders worldwide.</p>
 </section>
-
 <div class="divider"></div>
 
-<!-- FILTER -->
-<div class="filter-section">
-  <div class="filter-bar">
-    <span class="filter-label">Filter:</span>
-    <button class="filter-btn active" onclick="filterProducts('all', this)">All Products</button>
-    <button class="filter-btn" onclick="filterProducts('powder', this)">🌿 Powders</button>
-    <button class="filter-btn" onclick="filterProducts('fruit', this)">🍎 Dehydrated Fruits</button>
-    <button class="filter-btn" onclick="filterProducts('veg', this)">🥦 Dehydrated Vegetables</button>
+<!-- ═══════════════════════════════════════════
+     1. DEHYDRATED POWDERS
+═══════════════════════════════════════════ -->
+<section class="cat-section">
+  <div class="cat-header">
+    <div class="cat-title-wrap">
+      <div class="cat-badge-label">Category 01</div>
+      <div class="cat-title">Dehydrated <em>Powders</em></div>
+      <div class="cat-desc">Finely milled from premium quality fruits and vegetables — ideal for nutraceuticals, food processing, and health blends.</div>
+    </div>
   </div>
-</div>
 
-<!-- PRODUCTS -->
-<section class="products-section">
-  <div class="products-count">Showing <span id="countNum">23</span> products</div>
-  <div class="products-grid" id="productsGrid">
-
-    <!-- POWDERS -->
-    <div class="product-card" data-cat="powder">
-      <div class="product-thumb powder-bg">🍌<span class="cat-badge badge-powder">Powder</span></div>
+  <!-- Fruit Powders -->
+  <div class="subcat-label">🍎 Fruit Powders</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-thumb powder-fruit-bg">
+        <img src="banana-powder.png" alt="Banana Powder" onerror="this.src='https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&q=80'">
+        <span class="cat-pill pill-fp">Fruit Powder</span>
+      </div>
       <div class="product-info"><h3>Banana Powder</h3><p>Rich in potassium and natural fibre. Fine-milled from sun-ripened bananas.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <div class="product-card" data-cat="powder">
-      <div class="product-thumb powder-bg">🫐<span class="cat-badge badge-powder">Powder</span></div>
+    <div class="product-card">
+      <div class="product-thumb powder-fruit-bg">
+        <img src="Amla-Powder.png.png" alt="Amla Powder" onerror="this.src='https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400&q=80'">
+        <span class="cat-pill pill-fp">Fruit Powder</span>
+      </div>
       <div class="product-info"><h3>Amla Powder</h3><p>High in Vitamin C and antioxidants. Sourced from premium Indian gooseberries.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <div class="product-card" data-cat="powder">
-      <div class="product-thumb powder-bg">🍎<span class="cat-badge badge-powder">Powder</span></div>
-      <div class="product-info"><h3>Apple Powder</h3><p>Naturally sweet apple powder, ideal for health blends and nutraceutical formulations.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <div class="product-card" data-cat="powder">
-      <div class="product-thumb powder-bg">🍊<span class="cat-badge badge-powder">Powder</span></div>
+    <div class="product-card">
+      <div class="product-thumb powder-fruit-bg">
+        <img src="Pomegranate-Powder.png.png" alt="Pomegranate Powder" onerror="this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&q=80'">
+        <span class="cat-pill pill-fp">Fruit Powder</span>
+      </div>
       <div class="product-info"><h3>Pomegranate Powder</h3><p>Rich in polyphenols and antioxidants. Premium quality for supplement use.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
+    <div class="product-card">
+      <div class="product-thumb powder-fruit-bg">
+        <img src="Orange_peel_powder.png.png" alt="Orange Peel Powder" onerror="this.src='https://images.unsplash.com/photo-1547514701-42782101795e?w=400&q=80'">
+        <span class="cat-pill pill-fp">Fruit Powder</span>
+      </div>
+      <div class="product-info"><h3>Orange Peel Powder</h3><p>Rich in Vitamin C and flavonoids. Used in health blends and skincare formulations.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+  </div>
 
-    <div class="product-card" data-cat="powder">
-      <div class="product-thumb powder-bg">🫚<span class="cat-badge badge-powder">Powder</span></div>
+  <!-- Veg Powders -->
+  <div class="subcat-label">🥦 Vegetable Powders</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-thumb powder-veg-bg">
+        <img src="Beetroot-Powder.png.png" alt="Beetroot Powder" onerror="this.src='https://images.unsplash.com/photo-1588170737930-40f7b87c8e48?w=400&q=80'">
+        <span class="cat-pill pill-vp">Veg Powder</span>
+      </div>
       <div class="product-info"><h3>Beetroot Powder</h3><p>Vibrant, nutrient-dense beetroot powder packed with natural nitrates and iron.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <div class="product-card" data-cat="powder">
-      <div class="product-thumb powder-bg">🥔<span class="cat-badge badge-powder">Powder</span></div>
-      <div class="product-info"><h3>Potato Powder</h3><p>Fine dehydrated potato powder — ideal for food processing and industrial use.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    <div class="product-card">
+      <div class="product-thumb powder-veg-bg">
+        <img src="Spinach-Powder.png.PNG" alt="Spinach Powder" onerror="this.src='https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400&q=80'">
+        <span class="cat-pill pill-vp">Veg Powder</span>
+      </div>
+      <div class="product-info"><h3>Spinach Powder</h3><p>Iron-rich spinach powder. Retains natural colour and full nutritional value.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <div class="product-card" data-cat="powder">
-      <div class="product-thumb powder-bg">🫚<span class="cat-badge badge-powder">Powder</span></div>
-      <div class="product-info"><h3>Ginger Powder</h3><p>Warm, aromatic ginger powder with high gingerol content. Export grade quality.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    <div class="product-card">
+      <div class="product-thumb powder-veg-bg">
+        <img src="Tomato-Powder.png.png" alt="Tomato Powder" onerror="this.src='https://images.unsplash.com/photo-1546094324-b89e5f0f4d77?w=400&q=80'">
+        <span class="cat-pill pill-vp">Veg Powder</span>
+      </div>
+      <div class="product-info"><h3>Tomato Powder</h3><p>Concentrated tomato powder rich in lycopene. Ideal for sauces, soups and seasonings.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <div class="product-card" data-cat="powder">
-      <div class="product-thumb powder-bg">🧄<span class="cat-badge badge-powder">Powder</span></div>
+    <div class="product-card">
+      <div class="product-thumb powder-veg-bg">
+        <img src="Garlic-Powder.png.png" alt="Garlic Powder" onerror="this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&q=80'">
+        <span class="cat-pill pill-vp">Veg Powder</span>
+      </div>
       <div class="product-info"><h3>Garlic Powder</h3><p>Pungent, flavourful garlic powder. Naturally processed with full nutritional retention.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <!-- DEHYDRATED FRUITS -->
-    <div class="product-card" data-cat="fruit">
-      <div class="product-thumb fruit-bg">🍎<span class="cat-badge badge-fruit">Fruit</span></div>
-      <div class="product-info"><h3>Dehydrated Apple</h3><p>Crisp, naturally sweet apple slices. No added sugar, no preservatives.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    <div class="product-card">
+      <div class="product-thumb powder-veg-bg">
+        <img src="Ginger-Powder.png.png" alt="Ginger Powder" onerror="this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&q=80'">
+        <span class="cat-pill pill-vp">Veg Powder</span>
+      </div>
+      <div class="product-info"><h3>Ginger Powder</h3><p>Warm, aromatic ginger powder with high gingerol content. Export grade quality.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <div class="product-card" data-cat="fruit">
-      <div class="product-thumb fruit-bg">🍌<span class="cat-badge badge-fruit">Fruit</span></div>
-      <div class="product-info"><h3>Dehydrated Banana</h3><p>Soft, naturally sweet banana slices. High in energy and potassium.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    <div class="product-card">
+      <div class="product-thumb powder-veg-bg">
+        <img src="Methi-Powder.png.png" alt="Methi Powder" onerror="this.src='https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&q=80'">
+        <span class="cat-pill pill-vp">Veg Powder</span>
+      </div>
+      <div class="product-info"><h3>Methi Powder</h3><p>Aromatic fenugreek powder with intense flavour. Premium grade for culinary and health use.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <div class="product-card" data-cat="fruit">
-      <div class="product-thumb fruit-bg">🥭<span class="cat-badge badge-fruit">Fruit</span></div>
-      <div class="product-info"><h3>Dehydrated Mango</h3><p>Sun-kissed Alphonso and Kesar varieties. Rich in Vitamin A and natural sweetness.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    <div class="product-card">
+      <div class="product-thumb powder-veg-bg">
+        <img src="Potatao-Powder.png.png" alt="Potato Powder" onerror="this.src='https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400&q=80'">
+        <span class="cat-pill pill-vp">Veg Powder</span>
+      </div>
+      <div class="product-info"><h3>Potato Powder</h3><p>Fine dehydrated potato powder — ideal for food processing and industrial use.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <div class="product-card" data-cat="fruit">
-      <div class="product-thumb fruit-bg">🍈<span class="cat-badge badge-fruit">Fruit</span></div>
-      <div class="product-info"><h3>Dehydrated Papaya</h3><p>Tropical papaya rich in digestive enzymes and Vitamin C.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    <div class="product-card">
+      <div class="product-thumb powder-veg-bg">
+        <img src="Tumeric-Powder.png.png" alt="Turmeric Powder" onerror="this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&q=80'">
+        <span class="cat-pill pill-vp">Veg Powder</span>
+      </div>
+      <div class="product-info"><h3>Turmeric Powder</h3><p>Pure dehydrated turmeric with high curcumin content. Anti-inflammatory and export grade.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <div class="product-card" data-cat="fruit">
-      <div class="product-thumb fruit-bg">🍍<span class="cat-badge badge-fruit">Fruit</span></div>
-      <div class="product-info"><h3>Dehydrated Pineapple</h3><p>Tangy and sweet pineapple pieces. High in bromelain enzyme and Vitamin C.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    <div class="product-card">
+      <div class="product-thumb powder-veg-bg">
+        <img src="Red_onion_powder.png.png" alt="Red Onion Powder" onerror="this.src='https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=400&q=80'">
+        <span class="cat-pill pill-vp">Veg Powder</span>
+      </div>
+      <div class="product-info"><h3>Red Onion Powder</h3><p>Finely milled red onion powder. Bold flavour, ideal for seasonings and food processing.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
     </div>
-
-    <div class="product-card" data-cat="fruit">
-      <div class="product-thumb fruit-bg">🍓<span class="cat-badge badge-fruit">Fruit</span></div>
-      <div class="product-info"><h3>Dehydrated Strawberry</h3><p>Bright, flavourful strawberry pieces packed with antioxidants and Vitamin C.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <div class="product-card" data-cat="fruit">
-      <div class="product-thumb fruit-bg">🥥<span class="cat-badge badge-fruit">Fruit</span></div>
-      <div class="product-info"><h3>Dehydrated Coconut</h3><p>Pure, naturally dried coconut pieces. Rich in healthy fats and dietary fibre.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <div class="product-card" data-cat="fruit">
-      <div class="product-thumb fruit-bg">🍐<span class="cat-badge badge-fruit">Fruit</span></div>
-      <div class="product-info"><h3>Dehydrated Guava</h3><p>Tropical guava with high Vitamin C content. Naturally processed and preservative free.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <!-- DEHYDRATED VEGETABLES -->
-    <div class="product-card" data-cat="veg">
-      <div class="product-thumb veg-bg">🧅<span class="cat-badge badge-veg">Vegetable</span></div>
-      <div class="product-info"><h3>Onion Flakes</h3><p>Low-moisture dehydrated onion flakes. Ideal for food processing and seasoning blends.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <div class="product-card" data-cat="veg">
-      <div class="product-thumb veg-bg">🍅<span class="cat-badge badge-veg">Vegetable</span></div>
-      <div class="product-info"><h3>Dehydrated Tomato</h3><p>Concentrated tomato pieces rich in lycopene and natural umami flavour.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <div class="product-card" data-cat="veg">
-      <div class="product-thumb veg-bg">🥬<span class="cat-badge badge-veg">Vegetable</span></div>
-      <div class="product-info"><h3>Dehydrated Spinach</h3><p>Iron-rich spinach flakes. Retains natural colour and full nutritional value.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <div class="product-card" data-cat="veg">
-      <div class="product-thumb veg-bg">🥕<span class="cat-badge badge-veg">Vegetable</span></div>
-      <div class="product-info"><h3>Dehydrated Carrot</h3><p>Beta-carotene rich carrot pieces. Bright colour, full flavour, long shelf life.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <div class="product-card" data-cat="veg">
-      <div class="product-thumb veg-bg">🫚<span class="cat-badge badge-veg">Vegetable</span></div>
-      <div class="product-info"><h3>Dehydrated Beetroot</h3><p>Deep red beetroot pieces with natural nitrates and earthy sweetness retained.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <div class="product-card" data-cat="veg">
-      <div class="product-thumb veg-bg">🌿<span class="cat-badge badge-veg">Vegetable</span></div>
-      <div class="product-info"><h3>Kasturi Methi</h3><p>Aromatic fenugreek leaves with intense flavour. Premium grade for culinary and health use.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <div class="product-card" data-cat="veg">
-      <div class="product-thumb veg-bg">🧄<span class="cat-badge badge-veg">Vegetable</span></div>
-      <div class="product-info"><h3>Dehydrated Garlic</h3><p>Full-flavoured garlic flakes with high allicin content. Export ready, hygienically processed.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
-    <div class="product-card" data-cat="veg">
-      <div class="product-thumb veg-bg">🫚<span class="cat-badge badge-veg">Vegetable</span></div>
-      <div class="product-info"><h3>Dehydrated Ginger</h3><p>Pungent, warm ginger pieces with high gingerol content. Ideal for health and food applications.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
-    </div>
-
   </div>
 </section>
 
-<!-- CUSTOM ORDER BANNER -->
+<!-- ═══════════════════════════════════════════
+     2. DEHYDRATED FRUITS
+═══════════════════════════════════════════ -->
+<section class="cat-section" style="background:var(--cream-dark);max-width:100%;padding:70px 0">
+  <div style="max-width:1100px;margin:auto;padding:0 56px">
+  <div class="cat-header">
+    <div class="cat-title-wrap">
+      <div class="cat-badge-label">Category 02</div>
+      <div class="cat-title">Dehydrated <em>Fruits</em></div>
+      <div class="cat-desc">Whole, sliced or diced — our dehydrated fruits retain peak nutrition and natural sweetness with no preservatives or additives.</div>
+    </div>
+  </div>
+
+  <div class="subcat-label">🍎 Single Fruits</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-thumb fruit-bg">
+        <img src="Dehydrated _apple_slicecs.png.png" alt="Dehydrated Apple Slices" onerror="this.src='https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400&q=80'">
+        <span class="cat-pill pill-f">Fruit</span>
+      </div>
+      <div class="product-info"><h3>Dehydrated Apple</h3><p>Crisp, naturally sweet apple slices. No added sugar, no preservatives.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+    <div class="product-card">
+      <div class="product-thumb fruit-bg">
+        <img src="Dehydrated _banana_slices.png.png" alt="Dehydrated Banana Slices" onerror="this.src='https://images.unsplash.com/photo-1528825871115-3581a5387919?w=400&q=80'">
+        <span class="cat-pill pill-f">Fruit</span>
+      </div>
+      <div class="product-info"><h3>Dehydrated Banana Slices</h3><p>Soft, naturally sweet banana slices. High in energy and potassium.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+    <div class="product-card">
+      <div class="product-thumb fruit-bg">
+        <img src="Dehydradetd_mangoes.png.png" alt="Dehydrated Mango Slices" onerror="this.src='https://images.unsplash.com/photo-1553279768-865429fa0078?w=400&q=80'">
+        <span class="cat-pill pill-f">Fruit</span>
+      </div>
+      <div class="product-info"><h3>Dehydrated Mango Slices</h3><p>Sun-kissed mango slices, rich in Vitamin A and natural sweetness. No added sugar.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+    <div class="product-card">
+      <div class="product-thumb fruit-bg">
+        <img src="Dehydrated_pinapple_slices.png.png" alt="Dehydrated Pineapple Slices" onerror="this.src='https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=400&q=80'">
+        <span class="cat-pill pill-f">Fruit</span>
+      </div>
+      <div class="product-info"><h3>Dehydrated Pineapple Slices</h3><p>Tangy and sweet pineapple rings. Gluten free, no preservatives, naturally delicious.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+    <div class="product-card">
+      <div class="product-thumb fruit-bg">
+        <img src="dehydrated.strawberry.png.png" alt="Dehydrated Strawberry" onerror="this.src='https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400&q=80'">
+        <span class="cat-pill pill-f">Fruit</span>
+      </div>
+      <div class="product-info"><h3>Dehydrated Strawberry</h3><p>Bright, flavourful strawberry pieces packed with antioxidants and Vitamin C.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+    <div class="product-card">
+      <div class="product-thumb fruit-bg">
+        <img src="dehydrated_coconut.png.png" alt="Dehydrated Coconut" onerror="this.src='https://images.unsplash.com/photo-1580984969071-a8da8e357b62?w=400&q=80'">
+        <span class="cat-pill pill-f">Fruit</span>
+      </div>
+      <div class="product-info"><h3>Dehydrated Coconut</h3><p>Pure, naturally dried coconut pieces. Rich in healthy fats and dietary fibre.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+    <div class="product-card">
+      <div class="product-thumb fruit-bg">
+        <img src="dehydrated_guva.png.png" alt="Dehydrated Guava Slices" onerror="this.src='https://images.unsplash.com/photo-1536511132770-e5058c7e8c46?w=400&q=80'">
+        <span class="cat-pill pill-f">Fruit</span>
+      </div>
+      <div class="product-info"><h3>Dehydrated Guava Slices</h3><p>Tropical guava with high Vitamin C content. Naturally processed and preservative free.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+  </div>
+
+  <div class="subcat-label">🍇 Mixed Fruits</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-thumb mixed-bg">
+        <img src="dehydraded_mixedfruits.png.png" alt="Mixed Dehydrated Fruits" onerror="this.src='https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&q=80'">
+        <span class="cat-pill pill-m">Mixed</span>
+      </div>
+      <div class="product-info"><h3>Mixed Dehydrated Fruits</h3><p>A vibrant blend including apple, pineapple and banana. Perfect for trail mixes, cereals and health snacks.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     3. DEHYDRATED VEGETABLES
+═══════════════════════════════════════════ -->
+<section class="cat-section">
+  <div class="cat-header">
+    <div class="cat-title-wrap">
+      <div class="cat-badge-label">Category 03</div>
+      <div class="cat-title">Dehydrated <em>Vegetables</em></div>
+      <div class="cat-desc">Hygienically processed dehydrated vegetables — retaining natural colour, flavour and nutrition for food manufacturers worldwide.</div>
+    </div>
+  </div>
+
+  <div class="subcat-label">🥕 Single Vegetables</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-thumb veg-bg">
+        <img src="dehydrated-oniondlakes.png.png" alt="Onion Flakes" onerror="this.src='https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=400&q=80'">
+        <span class="cat-pill pill-v">Vegetable</span>
+      </div>
+      <div class="product-info"><h3>Onion Flakes</h3><p>Low-moisture dehydrated onion flakes. Ideal for food processing and seasoning blends.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+    <div class="product-card">
+      <div class="product-thumb veg-bg">
+        <img src="dehydrated_tomato.png.png" alt="Dehydrated Tomato" onerror="this.src='https://images.unsplash.com/photo-1546094324-b89e5f0f4d77?w=400&q=80'">
+        <span class="cat-pill pill-v">Vegetable</span>
+      </div>
+      <div class="product-info"><h3>Dehydrated Tomato</h3><p>Concentrated tomato pieces rich in lycopene and natural umami flavour.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-thumb veg-bg">
+        <img src="dehydrated-potatoslices.png.png" alt="Dehydrated Potato Slices" onerror="this.src='https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400&q=80'">
+        <span class="cat-pill pill-v">Vegetable</span>
+      </div>
+      <div class="product-info"><h3>Dehydrated Potato Slices</h3><p>Crispy, naturally dehydrated potato slices. Ideal for snacking, soups and food processing.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+    <div class="product-card">
+      <div class="product-thumb veg-bg">
+        <img src="Dehydrated_garlic.png.png" alt="Dehydrated Garlic" onerror="this.src='https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?w=400&q=80'">
+        <span class="cat-pill pill-v">Vegetable</span>
+      </div>
+      <div class="product-info"><h3>Dehydrated Garlic Slices</h3><p>Full-flavoured garlic slices with high allicin content. Export ready, hygienically processed.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+  </div>
+
+  <div class="subcat-label">🥗 Mixed Vegetables</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-thumb mixed-bg">
+        <img src="Dehydrated_mixexveges.png.png" alt="Mixed Dehydrated Vegetables" onerror="this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80'">
+        <span class="cat-pill pill-m">Mixed</span>
+      </div>
+      <div class="product-info"><h3>Mixed Dehydrated Vegetables</h3><p>A wholesome blend including carrot and beetroot. Perfect for soups, stews and food manufacturing.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     4. KASHMIRI KHAWA TEA
+═══════════════════════════════════════════ -->
+<section class="khawa-section">
+  <div class="khawa-inner">
+    <div class="cat-header">
+      <div class="cat-title-wrap">
+        <div class="cat-badge-label">Category 04 · Specialty</div>
+        <div class="cat-title">Kashmiri <em>Khawa Tea</em></div>
+        <div class="cat-desc">A treasured blend from the valleys of Kashmir — aromatic, warming, and rich in tradition. Premium quality for discerning buyers worldwide.</div>
+      </div>
+    </div>
+    <div class="subcat-label">🍵 Herbal Tea</div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-thumb khawa-bg">
+        <img src="Khawa-Herbal-Tea.png.PNG" alt="Kashmiri Khawa Tea" onerror="this.src='https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80'">
+        <span class="cat-pill pill-k">Khawa</span>
+        </div>
+        <div class="product-info"><h3>Kashmiri Khawa Tea</h3><p>Traditional Kashmiri green tea blended with saffron, cardamom, cinnamon and almonds. Aromatic, warming and naturally energising.</p><a href="contact.html" class="enquire-btn">Enquire →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM BANNER -->
 <div class="custom-banner">
   <div class="custom-inner">
     <div>
@@ -356,6 +498,7 @@ footer { background: var(--green-deep); color: white; padding: 48px 56px 28px; }
       <a href="products.html">🌿 Powders</a>
       <a href="products.html">🍎 Dehydrated Fruits</a>
       <a href="products.html">🥦 Dehydrated Vegetables</a>
+      <a href="products.html">🍵 Kashmiri Khawa</a>
     </div>
     <div class="footer-links">
       <h4>Contact</h4>
@@ -365,32 +508,10 @@ footer { background: var(--green-deep); color: white; padding: 48px 56px 28px; }
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Alora Dehydrated Fruits. All Rights Reserved.</p>
+    <p>© 2026 Alora Customary Care. All Rights Reserved.</p>
     <p>Natural · Nutritious · Sustainable · Made in India</p>
   </div>
 </footer>
-
-<script>
-function filterProducts(cat, btn) {
-  // Update active button
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-
-  // Filter cards
-  const cards = document.querySelectorAll('.product-card');
-  let count = 0;
-  cards.forEach(card => {
-    if (cat === 'all' || card.dataset.cat === cat) {
-      card.classList.remove('hidden');
-      count++;
-    } else {
-      card.classList.add('hidden');
-    }
-  });
-
-  document.getElementById('countNum').textContent = count;
-}
-</script>
 
 </body>
 </html>
