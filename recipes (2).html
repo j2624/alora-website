@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipes & Uses – Alora Customary Care</title>
+<meta name="description" content="Discover how to use Alora dehydrated powders, fruits and vegetables. Recipes, uses and ideas for every product.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--dark:#2c2416;--brown:#6b4c2a;--brown-mid:#8b6340;--gold:#c9a84c;--gold-light:#e2c47a;--cream:#f7f3ec;--cream2:#ede8df;--cream3:#e4ddd3;--olive:#4a5c2a;--muted:#7a7060;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(247,243,236,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,168,76,0.15)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:.15em;text-decoration:none;color:var(--dark)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--dark)}
+.nav-cta{background:var(--brown)!important;color:#fff!important;padding:9px 22px;border-radius:20px}
+
+/* HERO */
+.hero{padding:140px 52px 70px;background:var(--olive);text-align:center}
+.hero-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:14px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;color:#fff;line-height:1.1;margin-bottom:16px}
+.hero h1 em{font-style:italic}
+.hero p{font-size:15px;color:rgba(255,255,255,0.6);max-width:580px;margin:auto;line-height:1.8}
+
+/* FILTER TABS */
+.filter-bar{background:#fff;padding:20px 52px;border-bottom:1px solid rgba(201,168,76,0.15);display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:sticky;top:65px;z-index:50}
+.filter-btn{padding:8px 20px;border-radius:20px;border:1.5px solid rgba(201,168,76,0.3);background:transparent;font-size:12px;font-weight:500;color:var(--muted);cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
+.filter-btn:hover,.filter-btn.active{background:var(--olive);color:#fff;border-color:var(--olive)}
+
+/* CONTENT */
+.content{max-width:1100px;margin:0 auto;padding:60px 52px}
+.cat-section{margin-bottom:70px}
+.cat-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.cat-title{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:var(--dark);margin-bottom:40px;padding-bottom:14px;border-bottom:2px solid rgba(201,168,76,0.2)}
+.cat-title em{font-style:italic}
+
+/* PRODUCT RECIPE CARD */
+.recipe-card{background:#fff;border-radius:20px;overflow:hidden;border:1px solid rgba(201,168,76,0.15);box-shadow:0 4px 20px rgba(44,36,22,.06);margin-bottom:24px}
+.recipe-header{display:grid;grid-template-columns:auto 1fr;gap:0;align-items:stretch}
+.recipe-icon-col{background:var(--cream2);padding:32px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:140px;text-align:center}
+.recipe-emoji{font-size:48px;margin-bottom:10px}
+.recipe-name{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--dark);text-align:center;line-height:1.3}
+.recipe-body{padding:28px 32px}
+.recipe-product-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--olive);margin-bottom:6px}
+.recipe-tagline{font-size:13px;color:var(--muted);margin-bottom:20px;font-style:italic}
+
+/* USES TAGS */
+.uses-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.use-tag{background:var(--cream2);border-radius:20px;padding:5px 14px;font-size:11px;color:var(--dark);font-weight:500;border:1px solid rgba(201,168,76,0.2)}
+
+/* RECIPE BOX */
+.recipes-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.recipe-box{background:var(--cream);border-radius:14px;padding:18px 20px;border:1px solid rgba(201,168,76,0.15)}
+.recipe-box-title{font-size:13px;font-weight:600;color:var(--dark);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.recipe-box p{font-size:12px;color:var(--muted);line-height:1.75}
+
+/* SOUP SPECIAL */
+.soup-card{background:linear-gradient(135deg,var(--brown),var(--brown-mid));border-radius:20px;padding:36px;margin-bottom:24px;color:#fff}
+.soup-card h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#fff;margin-bottom:6px}
+.soup-card h3 em{font-style:italic}
+.soup-card .sub{font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:20px}
+.soup-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.soup-step{background:rgba(255,255,255,0.1);border-radius:12px;padding:14px 12px;text-align:center;border:1px solid rgba(255,255,255,0.15)}
+.soup-step-num{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--gold-light);margin-bottom:6px}
+.soup-step p{font-size:11px;color:rgba(255,255,255,0.75);line-height:1.6}
+
+footer{background:var(--dark);color:#fff;padding:40px 52px 24px}
+.foot-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:.14em;margin-bottom:4px}
+.foot-sub{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.foot-col h4{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.foot-col a{display:block;font-size:13px;color:rgba(255,255,255,.5);text-decoration:none;margin-bottom:8px;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{max-width:1100px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.foot-bottom p{font-size:11px;color:rgba(255,255,255,.25)}
+
+@media(max-width:768px){
+  nav{padding:16px 24px}.hero{padding:110px 24px 50px}.hero h1{font-size:38px}
+  .filter-bar{padding:16px 24px}.content{padding:40px 24px}
+  .recipe-header{grid-template-columns:1fr}.recipe-icon-col{padding:20px;flex-direction:row;gap:14px;min-width:auto}
+  .recipes-row{grid-template-columns:1fr}.soup-steps{grid-template-columns:1fr 1fr}
+  footer{padding:36px 24px 20px}.nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Alora Customary Care</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="nav-cta">Enquire</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-label">Ideas · Inspiration · Recipes</div>
+  <h1>How to Use <em>Alora Products</em></h1>
+  <p>From smoothies to soups, skincare to seasoning — discover the many ways our organic, farm fresh dehydrated products can enrich your food and life.</p>
+</section>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterSection('all')">All Products</button>
+  <button class="filter-btn" onclick="filterSection('fruit-powder')">🍎 Fruit Powders</button>
+  <button class="filter-btn" onclick="filterSection('veg-powder')">🥦 Veg Powders</button>
+  <button class="filter-btn" onclick="filterSection('fruits')">🍌 Dehydrated Fruits</button>
+  <button class="filter-btn" onclick="filterSection('vegs')">🥕 Dehydrated Veg</button>
+  <button class="filter-btn" onclick="filterSection('khawa')">🍵 Khawa Tea</button>
+</div>
+
+<div class="content">
+
+  <!-- FRUIT POWDERS -->
+  <div class="cat-section" id="fruit-powder">
+    <div class="cat-label">Category 01</div>
+    <div class="cat-title">Fruit <em>Powder</em> Uses & Recipes</div>
+
+    <!-- Orange Peel Powder -->
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <img src="https://images.unsplash.com/photo-1547514701-42782101795e?w=500&q=80" alt="Fresh Oranges" style="width:100%;height:100%;object-fit:cover;min-height:260px">
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Orange Peel Powder</div>
+          <div class="recipe-tagline">Rich in Vitamin C · Natural Flavour · Multi-purpose</div>
+          <div class="uses-row">
+            <span class="use-tag">☕ Herbal Tea</span>
+            <span class="use-tag">🧁 Baking</span>
+            <span class="use-tag">🥤 Smoothies</span>
+            <span class="use-tag">💆 Skincare</span>
+            <span class="use-tag">🍫 Chocolate</span>
+            <span class="use-tag">🏠 Room Freshener</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">☕ Orange Peel Tea</div>
+              <p>Add ½ tsp orange peel powder to hot water with honey and ginger. Steep 3 mins. A refreshing Vitamin C boost in every sip.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🧁 Orange Cake</div>
+              <p>Add 1 tbsp orange peel powder to your cake batter for a natural citrus flavour without any artificial essence.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">💆 Face Mask</div>
+              <p>Mix 1 tsp orange peel powder with honey and yogurt. Apply for 15 mins — natural brightening and anti-tan mask.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥤 Citrus Smoothie</div>
+              <p>Blend ½ tsp with banana, milk and honey for a natural Vitamin C smoothie — fresh, tangy and nutritious.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banana Powder -->
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500&q=80" alt="Fresh Bananas" style="width:100%;height:100%;object-fit:cover;min-height:260px">
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Banana Powder</div>
+          <div class="recipe-tagline">High in Potassium · Natural Sweetener · Baby Food Friendly</div>
+          <div class="uses-row">
+            <span class="use-tag">🍼 Baby Food</span>
+            <span class="use-tag">🥤 Smoothies</span>
+            <span class="use-tag">🥞 Pancakes</span>
+            <span class="use-tag">🍪 Baking</span>
+            <span class="use-tag">💪 Protein Shakes</span>
+            <span class="use-tag">🍨 Ice Cream</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥤 Banana Smoothie</div>
+              <p>Mix 2 tbsp banana powder with milk, honey and a pinch of cinnamon. Blend and enjoy — natural energy booster.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥞 Banana Pancakes</div>
+              <p>Replace fresh banana with 3 tbsp banana powder in your pancake batter for consistent flavour and natural sweetness.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍼 Baby Porridge</div>
+              <p>Stir 1 tsp banana powder into warm rice or oat porridge for babies — natural, nutritious and easy to digest.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">💪 Protein Shake</div>
+              <p>Add 2 tbsp banana powder to your protein shake for natural carbohydrates and potassium — perfect post-workout.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amla Powder -->
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=500&q=90" alt="Fresh Amla Indian Gooseberry" style="width:100%;height:100%;object-fit:cover;min-height:260px">
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Amla Powder</div>
+          <div class="recipe-tagline">Highest Natural Vitamin C · Immunity Booster · Ayurvedic</div>
+          <div class="uses-row">
+            <span class="use-tag">🏥 Health Supplement</span>
+            <span class="use-tag">☕ Amla Tea</span>
+            <span class="use-tag">🥤 Juice</span>
+            <span class="use-tag">💆 Hair Care</span>
+            <span class="use-tag">🍯 Chutney</span>
+            <span class="use-tag">💊 Nutraceuticals</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">☕ Amla Immunity Tea</div>
+              <p>Mix ½ tsp amla powder with warm water, honey and a pinch of turmeric. Drink every morning for immunity boost.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">💆 Hair Oil Mask</div>
+              <p>Mix 2 tbsp amla powder with coconut oil, warm gently, apply to scalp. Leave 1 hour. Natural hair strengthening treatment.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥤 Amla Juice</div>
+              <p>Mix 1 tsp amla powder in a glass of water with honey and black salt. Rich in Vitamin C — refreshing health drink.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥒 Amla Turmeric Pickle</div>
+              <p>Grate fresh amla (more amla than turmeric). Heat oil, add mustard seeds, hing and red chilli powder. Add amla, turmeric and salt. Mix well with pickle masala. Once cooled, store in a glass jar — cover with foil then the lid. Refrigerate and shake daily. Lasts up to 1 month! 🌿</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍯 Amla Chutney</div>
+              <p>Mix amla powder with green chilli, ginger and salt. A tangy condiment perfect with Indian meals and snacks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pomegranate Powder -->
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <div style="width:100%;min-height:260px;background:linear-gradient(135deg,#8B0000,#c0392b);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
+            <div style="font-size:72px">🍷</div>
+            <div style="font-size:14px;font-weight:600;color:#fff;letter-spacing:.08em">Pomegranate</div>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Pomegranate Powder</div>
+          <div class="recipe-tagline">Rich in Antioxidants · Natural Colour · Heart Health</div>
+          <div class="uses-row">
+            <span class="use-tag">🥤 Smoothies</span>
+            <span class="use-tag">🧁 Baking</span>
+            <span class="use-tag">💊 Supplements</span>
+            <span class="use-tag">🍹 Drinks</span>
+            <span class="use-tag">🍦 Desserts</span>
+            <span class="use-tag">💆 Skincare</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥤 Pomegranate Smoothie</div>
+              <p>Blend 1 tsp pomegranate powder with yogurt, honey and berries. Vibrant, antioxidant-rich and naturally sweet.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍹 Health Drink</div>
+              <p>Mix 1 tsp in cold water with lemon and honey. A refreshing drink rich in polyphenols and natural antioxidants.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VEG POWDERS -->
+  <div class="cat-section" id="veg-powder">
+    <div class="cat-label">Category 02</div>
+    <div class="cat-title">Vegetable <em>Powder</em> Uses & Recipes</div>
+
+    <!-- Tomato Powder Soup -->
+    <div class="soup-card">
+      <h3>🍅 Tomato Powder <em>Soup Recipe</em></h3>
+      <p class="sub">Quick, rich and full of natural lycopene — made in under 10 minutes!</p>
+      <div class="soup-steps">
+        <div class="soup-step"><div class="soup-step-num">01</div><p>Mix 3 tbsp tomato powder with 400ml warm water. Stir until smooth.</p></div>
+        <div class="soup-step"><div class="soup-step-num">02</div><p>Add ½ tsp garlic powder, salt, pepper and a pinch of sugar.</p></div>
+        <div class="soup-step"><div class="soup-step-num">03</div><p>Heat in a pan for 5 mins. Add cream or butter for richness.</p></div>
+        <div class="soup-step"><div class="soup-step-num">04</div><p>Garnish with fresh basil or croutons. Serve hot! 🍅</p></div>
+      </div>
+    </div>
+
+    <!-- Spinach Powder -->
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500&q=90" alt="Fresh Spinach" style="width:100%;height:100%;object-fit:cover;min-height:260px">
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Spinach Powder</div>
+          <div class="recipe-tagline">Iron Rich · Natural Green Colour · Versatile</div>
+          <div class="uses-row">
+            <span class="use-tag">🍵 Soup</span>
+            <span class="use-tag">🥤 Smoothies</span>
+            <span class="use-tag">🍞 Bread & Pasta</span>
+            <span class="use-tag">🥞 Pancakes</span>
+            <span class="use-tag">💊 Health Supplements</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍵 Spinach Soup</div>
+              <p>Mix 2 tbsp spinach powder in 400ml water with garlic powder, salt and cream. Heat 5 mins. Healthy, vibrant green soup.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥤 Green Smoothie</div>
+              <p>Add 1 tsp spinach powder to banana, apple and coconut water smoothie. No raw spinach needed — easy and nutritious!</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍞 Green Pasta</div>
+              <p>Mix 2 tbsp spinach powder into pasta dough for natural green colour and added iron — beautiful and nutritious.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥞 Spinach Pancakes</div>
+              <p>Add 1 tbsp spinach powder to pancake batter. Bright green, nutritious pancakes kids will love!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Garlic Powder -->
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <img src="https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?w=500&q=80" alt="Fresh Garlic" style="width:100%;height:100%;object-fit:cover;min-height:260px">
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Garlic Powder</div>
+          <div class="recipe-tagline">Intense Flavour · Antibacterial · No Peeling Needed</div>
+          <div class="uses-row">
+            <span class="use-tag">🍝 Pasta & Sauces</span>
+            <span class="use-tag">🍵 Soups</span>
+            <span class="use-tag">🥩 Marinades</span>
+            <span class="use-tag">🍞 Garlic Bread</span>
+            <span class="use-tag">🧂 Seasoning</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍞 Garlic Butter Bread</div>
+              <p>Mix 1 tsp garlic powder with softened butter and herbs. Spread on bread and toast for instant garlic bread.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍝 Garlic Pasta Sauce</div>
+              <p>Add 1 tsp garlic powder to olive oil, tomatoes and herbs for a quick, flavourful pasta sauce — no fresh garlic needed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ginger Powder -->
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <div style="width:100%;min-height:260px;background:linear-gradient(135deg,#c8961c,#e6b84a);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
+            <div style="font-size:72px">🫚</div>
+            <div style="font-size:14px;font-weight:600;color:#fff;letter-spacing:.08em">Ginger</div>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Ginger Powder</div>
+          <div class="recipe-tagline">Anti-Inflammatory · Digestive Aid · Warming</div>
+          <div class="uses-row">
+            <span class="use-tag">☕ Ginger Tea</span>
+            <span class="use-tag">🍛 Curries</span>
+            <span class="use-tag">🍪 Gingerbread</span>
+            <span class="use-tag">🥤 Health Drinks</span>
+            <span class="use-tag">🥩 Marinades</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">☕ Ginger Honey Tea</div>
+              <p>Add ½ tsp ginger powder to hot water with honey and lemon. Perfect for digestion, immunity and cold relief.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍪 Gingerbread Cookies</div>
+              <p>Add 2 tsp ginger powder to cookie dough with cinnamon and cloves for classic warm spiced gingerbread flavour.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beetroot Powder -->
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <img src="https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?w=500&q=90" alt="Fresh Beetroot" style="width:100%;height:100%;object-fit:cover;min-height:260px">
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Beetroot Powder</div>
+          <div class="recipe-tagline">Natural Red Colour · Iron Rich · Performance Booster</div>
+          <div class="uses-row">
+            <span class="use-tag">🥤 Smoothies</span>
+            <span class="use-tag">🧁 Natural Food Colouring</span>
+            <span class="use-tag">💊 Supplements</span>
+            <span class="use-tag">🍵 Beetroot Soup</span>
+            <span class="use-tag">🎂 Natural Cake Dye</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥤 Beetroot Smoothie</div>
+              <p>Blend 1 tsp beetroot powder with apple, ginger and coconut water. Vibrant, iron-rich energy drink — naturally red!</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🎂 Red Velvet Cake</div>
+              <p>Use beetroot powder as a natural red food colouring in red velvet cake — no artificial dyes, beautiful natural colour!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Methi Powder -->
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <div style="width:100%;min-height:260px;background:linear-gradient(135deg,#1a5c1a,#2e8b2e);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
+            <div style="font-size:72px">🌿</div>
+            <div style="font-size:14px;font-weight:600;color:#fff;letter-spacing:.08em">Methi</div>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Methi (Fenugreek) Powder</div>
+          <div class="recipe-tagline">Blood Sugar Balance · Digestive · Aromatic</div>
+          <div class="uses-row">
+            <span class="use-tag">🍛 Curries & Dals</span>
+            <span class="use-tag">🥗 Salad Dressing</span>
+            <span class="use-tag">🥤 Health Drink</span>
+            <span class="use-tag">💆 Hair Treatment</span>
+            <span class="use-tag">🧂 Spice Blend</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍛 Methi Dal</div>
+              <p>Add 1 tsp methi powder to your dal while cooking for authentic flavour and added health benefits — no fresh methi needed.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥤 Morning Health Drink</div>
+              <p>Mix ½ tsp methi powder in warm water first thing in the morning — traditional remedy for digestion and blood sugar balance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Turmeric Powder -->
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <img src="https://images.unsplash.com/photo-1604423423837-84ede8b7a8ac?w=500&q=90" alt="Fresh Turmeric Yellow Root" style="width:100%;height:100%;object-fit:cover;min-height:260px">
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Turmeric Powder</div>
+          <div class="recipe-tagline">Anti-Inflammatory · Golden Spice · Curcumin Rich</div>
+          <div class="uses-row">
+            <span class="use-tag">🥛 Golden Milk</span>
+            <span class="use-tag">🍛 Curries</span>
+            <span class="use-tag">☕ Turmeric Tea</span>
+            <span class="use-tag">💆 Skincare</span>
+            <span class="use-tag">🍵 Soups</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥛 Golden Milk</div>
+              <p>Warm 1 cup milk with ½ tsp turmeric, pinch of black pepper and honey. Ancient remedy for immunity and inflammation.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">☕ Turmeric Tea</div>
+              <p>Mix ½ tsp turmeric with ginger powder, honey and lemon in hot water. Anti-inflammatory morning wellness drink.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEHYDRATED FRUITS -->
+  <div class="cat-section" id="fruits">
+    <div class="cat-label">Category 03</div>
+    <div class="cat-title">Dehydrated <em>Fruits</em> Uses & Ideas</div>
+
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=300&q=80" alt="Fresh Fruits" style="width:100%;height:100%;object-fit:cover;min-height:260px">
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Mango · Banana · Pineapple · Apple · Guava</div>
+          <div class="recipe-tagline">Natural Snacks · No Added Sugar · Long Shelf Life</div>
+          <div class="uses-row">
+            <span class="use-tag">🥣 Breakfast Cereals</span>
+            <span class="use-tag">🥾 Trail Mix</span>
+            <span class="use-tag">🧁 Baking</span>
+            <span class="use-tag">🍫 Chocolate Coating</span>
+            <span class="use-tag">🥤 Rehydrate & Blend</span>
+            <span class="use-tag">🍱 Snack Packs</span>
+            <span class="use-tag">🎂 Cake Decoration</span>
+            <span class="use-tag">🧃 Natural Flavouring</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥣 Power Breakfast Bowl</div>
+              <p>Add a handful of mixed dehydrated fruits to yogurt or oats with nuts and seeds — instant nutrition-packed breakfast.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥾 Trail Mix Snack</div>
+              <p>Mix dehydrated mango, pineapple and coconut with nuts and seeds — perfect healthy snack for on-the-go energy.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍫 Chocolate Dipped</div>
+              <p>Dip dehydrated banana or mango slices in dark chocolate. Allow to set. Premium, natural chocolate fruit snack!</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥤 Rehydrate & Use</div>
+              <p>Soak in warm water for 15-20 mins to rehydrate. Use in cakes, desserts and cooking just like fresh fruit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEHYDRATED VEG -->
+  <div class="cat-section" id="vegs">
+    <div class="cat-label">Category 04</div>
+    <div class="cat-title">Dehydrated <em>Vegetables</em> Uses & Recipes</div>
+
+    <div class="soup-card">
+      <h3>🥕 Mixed Vegetable <em>Soup Recipe</em></h3>
+      <p class="sub">A hearty, nutritious soup using Alora dehydrated vegetables — ready in 15 minutes!</p>
+      <div class="soup-steps">
+        <div class="soup-step"><div class="soup-step-num">01</div><p>Soak 2 tbsp each of onion flakes, tomato and potato slices in warm water for 10 mins.</p></div>
+        <div class="soup-step"><div class="soup-step-num">02</div><p>Sauté rehydrated veg in butter with garlic powder, salt and pepper for 3 mins.</p></div>
+        <div class="soup-step"><div class="soup-step-num">03</div><p>Add 500ml vegetable stock and 1 tsp tomato powder. Simmer 10 mins.</p></div>
+        <div class="soup-step"><div class="soup-step-num">04</div><p>Blend half for a creamy texture. Serve with bread and fresh herbs! 🌿</p></div>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&q=80" alt="Fresh Vegetables" style="width:100%;height:100%;object-fit:cover;min-height:260px">
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Onion · Tomato · Potato · Garlic</div>
+          <div class="recipe-tagline">Long Shelf Life · No Prep Needed · Full Flavour</div>
+          <div class="uses-row">
+            <span class="use-tag">🍵 Soups & Stews</span>
+            <span class="use-tag">🍝 Pasta Sauces</span>
+            <span class="use-tag">🍛 Curries</span>
+            <span class="use-tag">🥘 Casseroles</span>
+            <span class="use-tag">🥗 Salads</span>
+            <span class="use-tag">🍕 Pizza Toppings</span>
+            <span class="use-tag">🧂 Seasoning Blends</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍵 Quick Onion Soup</div>
+              <p>Rehydrate onion flakes in warm water 10 mins. Sauté in butter, add stock and thyme. Rich French-style onion soup!</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍛 Instant Curry Base</div>
+              <p>Add onion flakes, tomato and garlic powder directly to oil while cooking — no chopping, same authentic flavour!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KHAWA -->
+  <div class="cat-section" id="khawa">
+    <div class="cat-label">Category 05</div>
+    <div class="cat-title">Kashmiri <em>Khawa Tea</em> Uses & Brewing</div>
+
+    <div class="soup-card" style="background:linear-gradient(135deg,#2c3e1a,#4a5c2a)">
+      <h3>🍵 Classic Kashmiri <em>Khawa Recipe</em></h3>
+      <p class="sub">A Himalayan tradition — warming, aromatic and rich in wellness</p>
+      <div class="soup-steps">
+        <div class="soup-step"><div class="soup-step-num">01</div><p>Add 1 tsp Alora Khawa to 250ml hot water. Do not boil.</p></div>
+        <div class="soup-step"><div class="soup-step-num">02</div><p>Steep for 2-3 minutes. The saffron will release its golden colour.</p></div>
+        <div class="soup-step"><div class="soup-step-num">03</div><p>Strain into a cup using a fine strainer.</p></div>
+        <div class="soup-step"><div class="soup-step-num">04</div><p>Add honey or sugar to taste. Garnish with a strand of saffron. 🌸</p></div>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <div class="recipe-header">
+        <div class="recipe-icon-col" style="padding:0;overflow:hidden;min-width:200px">
+          <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&q=80" alt="Kashmiri Khawa Tea" style="width:100%;height:100%;object-fit:cover;min-height:260px">
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-product-title">Kashmiri Khawa Tea</div>
+          <div class="recipe-tagline">Traditional · Aromatic · Wellness Tea</div>
+          <div class="uses-row">
+            <span class="use-tag">☕ Morning Wellness</span>
+            <span class="use-tag">🌙 Evening Wind-Down</span>
+            <span class="use-tag">🤒 Cold & Flu Relief</span>
+            <span class="use-tag">🧘 Meditation Tea</span>
+            <span class="use-tag">🎁 Gift Sets</span>
+            <span class="use-tag">🏨 Hospitality</span>
+          </div>
+          <div class="recipes-row">
+            <div class="recipe-box">
+              <div class="recipe-box-title">🥛 Khawa Latte</div>
+              <p>Brew Khawa strong (2 tsp), strain and add steamed milk with honey. A warming, aromatic Indian chai latte twist!</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🧊 Iced Khawa</div>
+              <p>Brew double strength, allow to cool, pour over ice with honey and a squeeze of lemon — refreshing summer drink!</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🤒 Cold Relief Brew</div>
+              <p>Brew Khawa with extra ginger powder and honey. The saffron, cardamom and cinnamon soothe cold and flu symptoms.</p>
+            </div>
+            <div class="recipe-box">
+              <div class="recipe-box-title">🍮 Khawa Dessert</div>
+              <p>Use brewed Khawa as the liquid base for rice kheer or panna cotta — adds beautiful colour and aromatic flavour.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-logo">Alora Customary Care</div>
+      <div class="foot-sub">Dehydrated Fruits & Foods</div>
+    </div>
+    <div class="foot-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="recipes.html">Recipes & Uses</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="foot-col">
+      <h4>Legal</h4>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="payment.html">Payment Methods</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="tel:+919137450793">+91 91374 50793 🇮🇳</a>
+      <a href="tel:+447990832467">+44 7990 832467 🇬🇧</a>
+      <a href="mailto:info@aloracare.in">info@aloracare.in</a>
+      <a href="https://wa.me/919137450793" target="_blank">💬 WhatsApp</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p>© 2026 Alora Customary Care. All Rights Reserved.</p>
+    <p>Natural · Nutritious · Sustainable · Made in India</p>
+  </div>
+</footer>
+
+<script>
+function filterSection(cat) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.cat-section').forEach(s => {
+    if(cat === 'all' || s.id === cat) {
+      s.style.display = 'block';
+    } else {
+      s.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
