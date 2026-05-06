@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,82 +23,85 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 52px;display:fl
 .nav-links a:hover{color:var(--dark)}
 .nav-cta{background:var(--brown)!important;color:#fff!important;padding:9px 22px;border-radius:20px}
 
-/* HERO */
+/* HERO — original style */
 .hero{min-height:100vh;display:flex;align-items:center;padding:140px 52px 80px;position:relative;overflow:hidden;background:var(--cream)}
 .hero-inner{max-width:1100px;margin:auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .tag{display:inline-block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.4);padding:5px 14px;border-radius:20px;margin-bottom:28px}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:300;line-height:1.05;margin-bottom:24px}
 .hero h1 em{font-style:italic;color:var(--olive)}
-.hero p{font-size:16px;line-height:1.85;color:var(--muted);font-weight:300;margin-bottom:20px}
-
-/* VIBRANT FRUIT VISUAL */
-.fruit-visual{position:relative;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:420px}
-.fruit-tile{border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:52px;box-shadow:0 8px 24px rgba(44,36,22,.1);transition:transform .3s}
-.fruit-tile:hover{transform:scale(1.03)}
-.f1{background:linear-gradient(135deg,#fff3cd,#ffe69a);grid-row:1/3}
-.f2{background:linear-gradient(135deg,#d4edda,#a8d5b5)}
-.f3{background:linear-gradient(135deg,#fce4ec,#f8bbd0)}
-.f4{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);grid-column:2/4}
-.f5{background:linear-gradient(135deg,#fff8e1,#ffecb3)}
-.fruit-badge{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:var(--olive);color:#fff;border-radius:20px;padding:8px 20px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;box-shadow:0 4px 16px rgba(44,36,22,.2)}
+.hero p{font-size:16px;line-height:1.85;color:var(--muted);font-weight:300;margin-bottom:16px}
+.fruit-badge{display:inline-block;background:var(--olive);color:#fff;border-radius:20px;padding:8px 20px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;box-shadow:0 4px 16px rgba(44,36,22,.2)}
 
 /* SECTIONS */
 .section{padding:90px 52px;max-width:1100px;margin:auto}
 .section-bg{background:var(--cream2);padding:90px 52px}
-.section-bg-dark{background:var(--olive);padding:90px 52px}
-.section-bg-brown{background:var(--brown);padding:90px 52px}
+.section-bg-warm{background:var(--cream3);padding:90px 52px}
 .section-inner{max-width:1100px;margin:auto}
 .slabel{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.slabel-light{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px}
 .sh2{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:300;line-height:1.15;margin-bottom:24px}
 .sh2 em{font-style:italic}
-.sh2-white{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:300;line-height:1.15;margin-bottom:24px;color:#fff}
-.sh2-white em{font-style:italic}
 .sp{font-size:15px;line-height:1.9;color:var(--muted);margin-bottom:16px;font-weight:300}
-.sp-white{font-size:15px;line-height:1.9;color:rgba(255,255,255,0.65);margin-bottom:16px;font-weight:300}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 
-/* STORY SECTION */
+/* WHAT LED US HERE */
+.lead-card{background:var(--cream);border-radius:18px;padding:24px 28px;border:1px solid rgba(201,168,76,0.2);box-shadow:0 4px 20px rgba(44,36,22,.05);display:flex;gap:16px;align-items:flex-start;margin-bottom:14px}
+.lead-card h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--olive);margin-bottom:6px}
+.lead-card p{font-size:13px;line-height:1.75;color:var(--muted)}
+
+/* STORY BOX */
 .story-box{background:var(--cream);border-radius:20px;padding:40px;border-left:4px solid var(--gold);box-shadow:0 4px 24px rgba(44,36,22,.06)}
-.story-box p{font-size:15px;line-height:1.9;color:var(--muted);margin-bottom:14px;font-weight:300}
-.story-box p:last-child{margin-bottom:0}
+.story-box p{font-size:14px;line-height:1.9;color:var(--muted);margin-bottom:14px;font-weight:300}
 .story-box .highlight{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--olive);margin-bottom:14px}
 
-/* WHAT LED US HERE */
-.lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
-.lead-card{background:var(--cream);border-radius:18px;padding:32px;border:1px solid rgba(201,168,76,0.2);box-shadow:0 4px 20px rgba(44,36,22,.05);text-align:center}
-.lead-icon{font-size:36px;margin-bottom:16px}
-.lead-card h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--olive);margin-bottom:10px}
-.lead-card p{font-size:13px;line-height:1.75;color:var(--muted);font-weight:300}
+/* FARMING METHODS — cream style */
+.farming-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;margin-bottom:52px}
+.fcard{background:var(--cream);border-radius:20px;padding:32px 28px;border:1px solid rgba(107,76,42,.12);box-shadow:0 4px 20px rgba(44,36,22,.06);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.fcard:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(44,36,22,.1)}
+.fcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.fcard.organic::before{background:linear-gradient(90deg,#7dbf4e,#a8d878)}
+.fcard.hydro::before{background:linear-gradient(90deg,#4eb8d4,#78d4e8)}
+.fcard.traditional::before{background:linear-gradient(90deg,var(--gold),var(--gold-light))}
+.fcard-icon{font-size:40px;margin-bottom:14px}
+.fcard h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--dark);margin-bottom:8px}
+.fcard-badge{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:8px;margin-bottom:12px}
+.fcard.organic .fcard-badge{background:rgba(125,191,78,.15);color:#3a7a1a;border:1px solid rgba(125,191,78,.3)}
+.fcard.hydro .fcard-badge{background:rgba(78,184,212,.15);color:#1a6a8a;border:1px solid rgba(78,184,212,.3)}
+.fcard.traditional .fcard-badge{background:rgba(201,168,76,.15);color:#8b6a00;border:1px solid rgba(201,168,76,.3)}
+.fcard p{font-size:13px;color:var(--muted);line-height:1.8}
+.fcard ul{list-style:none;margin-top:12px}
+.fcard ul li{font-size:12px;color:var(--muted);padding:4px 0;padding-left:18px;position:relative;line-height:1.6}
+.fcard ul li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-size:11px;font-weight:700}
 
-/* HYDROPONICS */
-.hydro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-.herb-card{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:24px;text-align:center;transition:background .2s}
-.herb-card:hover{background:rgba(255,255,255,0.16)}
+/* PROCESS STEPS — cream style */
+.process-title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:var(--dark);text-align:center;margin-bottom:36px}
+.process-title em{font-style:italic;color:var(--olive)}
+.process-steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative;margin-bottom:60px}
+.process-steps::before{content:'';position:absolute;top:36px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,rgba(201,168,76,.2),rgba(201,168,76,.6),rgba(201,168,76,.2));z-index:0}
+.pstep{text-align:center;position:relative;z-index:1}
+.pstep-circle{width:72px;height:72px;border-radius:50%;background:var(--cream2);border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px;position:relative;transition:background .3s}
+.pstep:hover .pstep-circle{background:rgba(201,168,76,.15)}
+.pstep-num{position:absolute;top:-4px;right:-4px;background:var(--gold);color:#fff;font-size:9px;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.pstep h4{font-size:11px;font-weight:600;color:var(--dark);margin-bottom:5px;letter-spacing:.04em}
+.pstep p{font-size:10px;color:var(--muted);line-height:1.5;padding:0 6px}
+
+/* HYDROPONICS — warm cream style */
+.hydro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px;margin-bottom:24px}
+.herb-card{background:var(--cream);border:1px solid rgba(107,76,42,.12);border-radius:16px;padding:24px;text-align:center;transition:transform .2s,box-shadow .2s;box-shadow:0 2px 12px rgba(44,36,22,.05)}
+.herb-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(44,36,22,.1)}
 .herb-icon{font-size:32px;margin-bottom:10px}
-.herb-card h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;margin-bottom:6px}
-.herb-card p{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6}
-.hydro-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.hydro-badge{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:6px 16px;font-size:12px;color:rgba(255,255,255,0.8)}
+.herb-card h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--olive);margin-bottom:6px}
+.herb-card p{font-size:12px;color:var(--muted);line-height:1.6}
+.hydro-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.hydro-badge{background:var(--cream2);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:6px 16px;font-size:12px;color:var(--olive);font-weight:500}
 
-/* VISION */
-.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
-.vision-item{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:14px;padding:20px}
-.vision-dot{width:8px;height:8px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0}
-.vision-item p{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.7}
-.vision-item p strong{color:#fff}
-.vision-quote{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);border-radius:16px;padding:28px 32px;margin-top:24px;text-align:center}
-.vision-quote blockquote{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#fff;line-height:1.6;margin-bottom:10px}
-.vision-quote cite{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light)}
-
-/* SOURCING */
-.sourcing-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+/* SOURCING GRID */
+.sourcing-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
 .stag2{background:var(--cream);border:1px solid rgba(107,76,42,.15);border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 2px 12px rgba(44,36,22,.05)}
 .stag2-icon{font-size:26px}
 .stag2-info strong{display:block;font-size:13px;font-weight:600;color:var(--dark)}
 .stag2-info span{font-size:11px;color:var(--muted)}
 
-/* VALUES GRID */
+/* VALUES */
 .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .vcard{background:var(--cream2);border-radius:18px;padding:34px;border:1px solid rgba(107,76,42,.1);box-shadow:0 4px 24px rgba(44,36,22,.05);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
 .vcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--brown));transform:scaleX(0);transform-origin:left;transition:transform .3s}
@@ -109,15 +111,30 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 52px;display:fl
 .vcard h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:10px}
 .vcard p{font-size:13px;line-height:1.75;color:var(--muted);font-weight:300}
 
+/* VISION GRID */
+.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+.vision-item{display:flex;gap:14px;align-items:flex-start;background:var(--cream);border:1px solid rgba(201,168,76,.2);border-radius:14px;padding:20px}
+.vision-dot{width:8px;height:8px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0}
+.vision-item p{font-size:14px;color:var(--muted);line-height:1.7}
+.vision-item p strong{color:var(--dark)}
+.vision-quote{background:linear-gradient(135deg,var(--cream2),var(--cream3));border:1px solid rgba(201,168,76,.3);border-radius:16px;padding:28px 32px;margin-top:24px;text-align:center}
+.vision-quote blockquote{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--dark);line-height:1.6;margin-bottom:10px}
+.vision-quote cite{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+
 /* VM CARDS */
 .vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
-.vm-card{background:var(--cream);border-radius:20px;padding:36px;border:1px solid rgba(201,168,76,0.2);box-shadow:0 4px 20px rgba(44,36,22,.06)}
+.vm-card{background:var(--cream);border-radius:20px;padding:36px;border:1px solid rgba(201,168,76,.2);box-shadow:0 4px 20px rgba(44,36,22,.06)}
 .vm-card-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:600}
 .vm-card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;margin-bottom:14px;line-height:1.2}
-.vm-card h3 em{font-style:italic}
+.vm-card h3 em{font-style:italic;color:var(--olive)}
 .vm-card p{font-size:14px;line-height:1.85;color:var(--muted);font-weight:300}
 
-/* COMPLIANCE */
+/* COMPLIANCE — brown bg from original */
+.compliance{background:var(--brown);padding:80px 52px}
+.compliance-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:32px}
+.compliance h3{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#fff;margin-bottom:12px;line-height:1.2}
+.compliance h3 em{font-style:italic}
+.compliance p{font-size:15px;color:rgba(255,255,255,.6);max-width:460px;line-height:1.7}
 .badges{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 .badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:16px 22px;text-align:center;min-width:88px}
 .badge-icon{font-size:24px;margin-bottom:6px}
@@ -126,13 +143,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 52px;display:fl
 .badge-udyam{background:rgba(201,168,76,.2);border-color:rgba(201,168,76,.4)}
 
 /* FOUNDER */
-.founder-card{background:var(--cream);border-radius:24px;padding:48px;border:1px solid rgba(201,168,76,0.2);box-shadow:0 8px 32px rgba(44,36,22,.08);display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.founder-card{background:var(--cream);border-radius:24px;padding:48px;border:1px solid rgba(201,168,76,.2);box-shadow:0 8px 32px rgba(44,36,22,.08);display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
 .founder-avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--olive),var(--gold));display:flex;align-items:center;justify-content:center;font-size:48px;flex-shrink:0}
 .founder-name{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;color:var(--dark);margin-bottom:4px}
 .founder-role{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:600}
 .founder-bio{font-size:15px;line-height:1.85;color:var(--muted);font-weight:300}
 
-/* CTA */
 .btn-brown{display:inline-block;padding:14px 32px;background:var(--brown);color:#fff;text-decoration:none;border-radius:30px;font-size:12px;font-weight:500;letter-spacing:.08em;transition:background .2s,transform .2s;margin-right:14px}
 .btn-brown:hover{background:var(--brown-mid);transform:translateY(-1px)}
 .btn-outline{display:inline-block;padding:14px 32px;border:1.5px solid var(--brown);color:var(--brown);text-decoration:none;border-radius:30px;font-size:12px;font-weight:500;transition:all .2s}
@@ -150,16 +166,16 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
 .foot-bottom p{font-size:11px;color:rgba(255,255,255,.25)}
 
 @media(max-width:768px){
-  nav{padding:16px 24px}
-  .hero{padding:110px 24px 70px}
+  nav{padding:16px 24px}.hero{padding:110px 24px 70px}
   .hero-inner,.two-col,.vm-grid,.vision-grid,.sourcing-grid{grid-template-columns:1fr;gap:36px}
   .hero h1{font-size:38px}
-  .fruit-visual{height:280px}
-  .section,.section-bg,.section-bg-dark,.section-bg-brown{padding:60px 24px}
-  .lead-grid,.hydro-grid,.vgrid{grid-template-columns:1fr}
+  .section,.section-bg,.section-bg-warm{padding:60px 24px}
+  .farming-grid,.hydro-grid,.vgrid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:repeat(3,1fr);gap:20px}
+  .process-steps::before{display:none}
   .founder-card{grid-template-columns:1fr;text-align:center}
-  footer{padding:40px 24px 24px}
-  .nav-cta{display:none}
+  .compliance-inner{flex-direction:column}
+  footer{padding:40px 24px 24px}.nav-cta{display:none}
 }
 </style>
 </head>
@@ -171,12 +187,14 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
-    <a href="recipes.html">Recipes</a><a href="contact.html">Contact</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
     <a href="contact.html" class="nav-cta">Enquire</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — original layout with real photos -->
 <section class="hero">
   <div class="hero-inner">
     <div>
@@ -184,12 +202,13 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
       <h1>Pure. Natural. <em>Honest.</em><br>Food Crafted With Care.</h1>
       <p>Organic, farm fresh, naturally grown fruits and vegetables — sourced directly from local farmers in Karnataka and Maharashtra, gently dehydrated to preserve every nutrient, every flavour.</p>
       <p>No middlemen. No preservatives added. Just pure, honest food — women-led and community-driven.</p>
+      <div class="fruit-badge">Organic · Farm Fresh · No Preservatives Added</div>
     </div>
-    <!-- Vibrant Real Fruit & Veg Visual -->
+    <!-- Original photo grid -->
     <div style="position:relative;padding-bottom:20px">
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:420px">
         <div style="border-radius:16px;overflow:hidden;grid-row:1/3;box-shadow:0 8px 24px rgba(44,36,22,.12)">
-          <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&q=80" alt="Fresh Mixed Fruits Bowl" style="width:100%;height:100%;object-fit:cover">
+          <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&q=80" alt="Fresh Mixed Fruits" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(44,36,22,.12)">
           <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&q=80" alt="Fresh Tomatoes" style="width:100%;height:100%;object-fit:cover">
@@ -198,10 +217,9 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
           <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&q=80" alt="Fresh Bananas" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(44,36,22,.12);grid-column:2/4">
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" alt="Fresh Vegetables and Herbs" style="width:100%;height:100%;object-fit:cover">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" alt="Fresh Vegetables" style="width:100%;height:100%;object-fit:cover">
         </div>
       </div>
-      <div class="fruit-badge">Organic · Farm Fresh · Naturally Grown · No Preservatives Added</div>
     </div>
   </div>
 </section>
@@ -215,21 +233,21 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
       <div>
         <p class="sp">Every year, millions of tonnes of fresh fruits and vegetables are wasted across India — not because they are bad, but because they don't reach the right hands in time.</p>
         <p class="sp">We started Alora with a simple but powerful solution — <strong>dehydration.</strong></p>
-        <p class="sp">By gently removing moisture from organic, farm fresh, naturally grown produce sourced directly from local farmers in Karnataka and Maharashtra, we extend the shelf life naturally — <strong>from days to up to 12 months through mechanical dehydration, and up to 25 years through freeze dehydration</strong> — without adding a single preservative.</p>
-        <p class="sp" style="font-style:italic;color:var(--brown)">The result? Less waste. More nutrition. Pure, honest food that travels further and lasts longer — while still carrying the goodness of the farm it came from.</p>
+        <p class="sp">By gently removing moisture from organic, farm fresh produce sourced directly from local farmers, we extend the shelf life naturally — <strong>from days to up to 12 months through mechanical dehydration, and up to 25 years through freeze dehydration</strong> — without adding a single preservative.</p>
+        <p class="sp" style="font-style:italic;color:var(--brown)">"Less waste. More nutrition. Pure, honest food that travels further and lasts longer."</p>
       </div>
-      <div class="lead-grid" style="grid-template-columns:1fr;gap:16px;margin-top:0">
-        <div class="lead-card" style="text-align:left;display:flex;gap:16px;align-items:flex-start">
+      <div>
+        <div class="lead-card">
           <div style="font-size:32px;flex-shrink:0">🌾</div>
-          <div><h3 style="margin-bottom:6px">Food Waste Problem</h3><p>Millions of tonnes of fresh produce wasted annually across India — we are part of the solution.</p></div>
+          <div><h3>Food Waste Problem</h3><p>Millions of tonnes of fresh produce wasted annually — we are part of the solution.</p></div>
         </div>
-        <div class="lead-card" style="text-align:left;display:flex;gap:16px;align-items:flex-start">
+        <div class="lead-card">
           <div style="font-size:32px;flex-shrink:0">💧</div>
-          <div><h3 style="margin-bottom:6px">Dehydration Solution</h3><p>Mechanical dehydration extends shelf life to <strong>12 months</strong>. Freeze dehydration extends it up to <strong>25 years</strong> — naturally, no preservatives added.</p></div>
+          <div><h3>Dehydration Solution</h3><p>Mechanical dehydration: shelf life up to <strong>12 months</strong>. Freeze dehydration: up to <strong>25 years</strong> — naturally, no preservatives added.</p></div>
         </div>
-        <div class="lead-card" style="text-align:left;display:flex;gap:16px;align-items:flex-start">
+        <div class="lead-card">
           <div style="font-size:32px;flex-shrink:0">🚜</div>
-          <div><h3 style="margin-bottom:6px">Direct from Farmers</h3><p>Farm fresh produce sourced directly — fair prices for farmers, pure goodness for buyers.</p></div>
+          <div><h3>Direct from Farmers</h3><p>Farm fresh produce sourced directly — fair prices for farmers, pure goodness for buyers.</p></div>
         </div>
       </div>
     </div>
@@ -246,56 +264,117 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
       <p class="sp">What started as one woman's dream in Belagavi is now becoming a reality — a food brand built on courage, learning, and a deep passion for natural ingredients.</p>
       <p class="sp">Founded with a clear mission to deliver high-quality dehydrated food products that meet global standards, Alora was born from a desire to preserve nature's goodness — reducing waste, supporting local farmers, and bringing wholesome ingredients to buyers worldwide.</p>
       <p class="sp" style="font-style:italic;color:var(--brown)">"Every blend, every powder, every product is crafted with care. We don't rush the process — we respect it."</p>
-      <p class="sp">From a vision rooted in Belagavi's rich agricultural heritage, Alora stands for purity, trust, and the determination to build something truly meaningful. <em>This journey is just beginning — and we invite you to grow with us.</em></p>
     </div>
     <div class="story-box">
       <p class="highlight">"What began as a small home-based initiative is growing into a modern, process-driven food brand focused on consistency, hygiene, and natural ingredients."</p>
       <p>We work in small batches to maintain freshness, follow clean processing practices, and ensure every product reflects our commitment to quality.</p>
       <br>
-      <p>Our produce is <strong>naturally grown</strong> — chemical-free, farm fresh, and handled with care from harvest to packaging. We use the word <strong>"naturally grown"</strong> with pride — because our farmers grow with care, not chemicals.</p>
+      <p>Our produce is <strong>naturally grown</strong> — chemical-free, farm fresh, and handled with care from harvest to packaging.</p>
       <br>
       <p style="font-size:13px;color:var(--gold);font-style:italic">Women-led · Community-driven · Small Batch · No Preservatives Added</p>
     </div>
   </div>
 </section>
 
-<!-- HYDROPONICS -->
-<div class="section-bg-dark">
+<!-- FARMING METHODS — NEW HIGHLIGHTED SECTION -->
+<div class="section-bg-warm">
   <div class="section-inner">
-    <div class="slabel-light">Innovation · Sustainability</div>
-    <div class="sh2-white">Growing Our Own — <em>Hydroponically</em></div>
-    <p class="sp-white" style="max-width:680px">We are also growing our own fresh herbs using hydroponics — a soil-free, pesticide-free growing method that uses 90% less water than traditional farming. Harvested at peak freshness and gently dehydrated to preserve their natural aroma, flavour and nutrients.</p>
+    <div class="slabel">Sourcing &amp; Farming</div>
+    <div class="sh2">How We Grow — <em>Three Methods</em></div>
+    <p class="sp" style="max-width:700px">We believe quality begins long before processing. It starts with how ingredients are grown — the farming method, the soil, the care. We work with three distinct farming approaches.</p>
+
+    <div class="farming-grid">
+      <div class="fcard organic">
+        <div class="fcard-icon">🌱</div>
+        <h3>Organic Farming</h3>
+        <span class="fcard-badge">Certified Natural</span>
+        <p>Grown without synthetic pesticides, herbicides, or chemical fertilisers. Natural composting, crop rotation, and traditional methods maintain healthy soil and biodiversity.</p>
+        <ul>
+          <li>No synthetic chemicals or pesticides</li>
+          <li>Natural composting and crop rotation</li>
+          <li>Soil health preserved for future generations</li>
+          <li>Higher antioxidant and nutrient density</li>
+          <li>Supports biodiversity and ecosystem balance</li>
+        </ul>
+      </div>
+      <div class="fcard hydro">
+        <div class="fcard-icon">💧</div>
+        <h3>Hydroponic Farming</h3>
+        <span class="fcard-badge">Soil-Free · Precision Grown</span>
+        <p>We grow our own fresh herbs in nutrient-rich water — no soil, no pesticides. Precision farming means consistent, clean, high-quality produce year-round regardless of season.</p>
+        <ul>
+          <li>Up to 90% less water than traditional farming</li>
+          <li>No soil-borne diseases or pests</li>
+          <li>Precise nutrient delivery to each plant</li>
+          <li>Year-round production, any climate</li>
+          <li>Faster growth cycles, consistent quality</li>
+        </ul>
+      </div>
+      <div class="fcard traditional">
+        <div class="fcard-icon">🌾</div>
+        <h3>Traditional Farming</h3>
+        <span class="fcard-badge">Farm-Fresh · Seasonal</span>
+        <p>Strong partnerships with traditional farming communities across Karnataka, Maharashtra, and Kerala — seasonal crops harvested at peak ripeness for maximum flavour and nutrition.</p>
+        <ul>
+          <li>Harvested at peak ripeness for best flavour</li>
+          <li>Direct farmer relationships and fair pricing</li>
+          <li>Seasonal produce — naturally at its best</li>
+          <li>Supports local farming livelihoods</li>
+          <li>Fully traceable from field to finished product</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PROCESSING STEPS -->
+    <div class="process-title">From Farm to <em>Finished Product</em></div>
+    <div class="process-steps">
+      <div class="pstep">
+        <div class="pstep-circle">🌿<span class="pstep-num">1</span></div>
+        <h4>Farm Harvest</h4>
+        <p>Picked at peak ripeness from trusted farms</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-circle">🧼<span class="pstep-num">2</span></div>
+        <h4>Cleaning</h4>
+        <p>Multi-stage washing and inspection</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-circle">✂️<span class="pstep-num">3</span></div>
+        <h4>Preparation</h4>
+        <p>Peeling, slicing and sorting by grade</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-circle">❄️<span class="pstep-num">4</span></div>
+        <h4>Dehydration</h4>
+        <p>Freeze or mechanical — nutrients locked in</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-circle">🔬<span class="pstep-num">5</span></div>
+        <h4>Quality Testing</h4>
+        <p>Moisture, microbial and taste testing</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-circle">📦<span class="pstep-num">6</span></div>
+        <h4>Packaging</h4>
+        <p>Hygienic, airtight sealed and labelled</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HYDROPONICS HERBS -->
+<div class="section-bg">
+  <div class="section-inner">
+    <div class="slabel">Innovation · Sustainability</div>
+    <div class="sh2">Growing Our Own — <em>Hydroponically</em></div>
+    <p class="sp" style="max-width:680px">We grow our own fresh herbs using hydroponics — a soil-free, pesticide-free method using 90% less water than traditional farming. Harvested at peak freshness and gently dehydrated to preserve natural aroma, flavour and nutrients.</p>
     <div class="hydro-grid">
-      <div class="herb-card">
-        <div class="herb-icon">🌿</div>
-        <h4>Methi</h4>
-        <p>Fenugreek leaves — aromatic and rich in iron</p>
-      </div>
-      <div class="herb-card">
-        <div class="herb-icon">🌱</div>
-        <h4>Pudina</h4>
-        <p>Fresh mint — cooling and naturally fragrant</p>
-      </div>
-      <div class="herb-card">
-        <div class="herb-icon">🌿</div>
-        <h4>Basil</h4>
-        <p>Fresh basil — immunity boosting and aromatic</p>
-      </div>
-      <div class="herb-card">
-        <div class="herb-icon">🌱</div>
-        <h4>Coriander</h4>
-        <p>Fresh coriander — vibrant flavour and colour</p>
-      </div>
-      <div class="herb-card">
-        <div class="herb-icon">🍃</div>
-        <h4>Curry Leaves</h4>
-        <p>South Indian staple — intensely flavourful</p>
-      </div>
-      <div class="herb-card">
-        <div class="herb-icon">🌿</div>
-        <h4>More Coming</h4>
-        <p>Rosemary, Thyme and seasonal herbs — growing range</p>
-      </div>
+      <div class="herb-card"><div class="herb-icon">🌿</div><h4>Methi</h4><p>Fenugreek leaves — aromatic and rich in iron</p></div>
+      <div class="herb-card"><div class="herb-icon">🌱</div><h4>Pudina</h4><p>Fresh mint — cooling and naturally fragrant</p></div>
+      <div class="herb-card"><div class="herb-icon">🌿</div><h4>Basil</h4><p>Fresh basil — immunity boosting and aromatic</p></div>
+      <div class="herb-card"><div class="herb-icon">🌱</div><h4>Coriander</h4><p>Fresh coriander — vibrant flavour and colour</p></div>
+      <div class="herb-card"><div class="herb-icon">🍃</div><h4>Curry Leaves</h4><p>South Indian staple — intensely flavourful</p></div>
+      <div class="herb-card"><div class="herb-icon">🌿</div><h4>More Coming</h4><p>Rosemary, Thyme and seasonal herbs — growing range</p></div>
     </div>
     <div class="hydro-badges">
       <span class="hydro-badge">💧 90% Less Water</span>
@@ -308,140 +387,126 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
   </div>
 </div>
 
-<!-- SOURCING -->
+<!-- SOURCING REGIONS — original photo collage -->
+<section class="section">
+  <div class="two-col">
+    <div>
+      <div class="slabel">Farm to Table</div>
+      <div class="sh2">Sourcing Directly from <em>Local Farmers</em></div>
+      <p class="sp">Our ingredients are carefully selected — organic, farm fresh, naturally grown produce sourced directly from trusted farming communities across Karnataka and Maharashtra.</p>
+      <p class="sp">By working directly with farmers, we ensure complete freshness, traceability, and fair prices — no middlemen, no compromises.</p>
+      <div class="sourcing-grid">
+        <div class="stag2"><div class="stag2-icon">🌿</div><div class="stag2-info"><strong>Karnataka</strong><span>Primary sourcing region</span></div></div>
+        <div class="stag2"><div class="stag2-icon">🌾</div><div class="stag2-info"><strong>Maharashtra</strong><span>Seasonal produce</span></div></div>
+        <div class="stag2"><div class="stag2-icon">🍃</div><div class="stag2-info"><strong>Kerala</strong><span>Tropical fruits &amp; spices</span></div></div>
+        <div class="stag2"><div class="stag2-icon">🏠</div><div class="stag2-info"><strong>Our Hydroponics</strong><span>Fresh herbs — grown in-house</span></div></div>
+      </div>
+    </div>
+    <!-- original photo collage -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr 1fr;gap:10px;height:480px">
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(44,36,22,.1);grid-row:1/3">
+        <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&q=80" alt="Fresh Bananas" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(44,36,22,.1)">
+        <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&q=80" alt="Fresh Fruits" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(44,36,22,.1)">
+        <img src="https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?w=400&q=80" alt="Fresh Garlic" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(44,36,22,.1);grid-column:1/3">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" alt="Fresh Vegetables" style="width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
 <div class="section-bg">
   <div class="section-inner">
-    <div class="two-col">
-      <div>
-        <div class="slabel">Farm to Table</div>
-        <div class="sh2">Sourcing Directly from <em>Local Farmers</em></div>
-        <p class="sp">Our ingredients are carefully selected — organic, farm fresh, naturally grown produce sourced directly from trusted farming communities across Karnataka and Maharashtra.</p>
-        <p class="sp">By working directly with farmers, we ensure complete freshness, traceability, and fair prices — no middlemen, no compromises.</p>
-        <p class="sp">Every fruit, vegetable, and herb carries the honest goodness of the soil it was grown in — and we protect that goodness through careful, hygienic dehydration.</p>
-        <div class="sourcing-grid" style="margin-top:24px">
-          <div class="stag2"><div class="stag2-icon">🌿</div><div class="stag2-info"><strong>Karnataka</strong><span>Primary sourcing region</span></div></div>
-          <div class="stag2"><div class="stag2-icon">🌾</div><div class="stag2-info"><strong>Maharashtra</strong><span>Seasonal produce</span></div></div>
-          <div class="stag2"><div class="stag2-icon">🌻</div><div class="stag2-info"><strong>Other States</strong><span>Seasonal availability</span></div></div>
-          <div class="stag2"><div class="stag2-icon">🏠</div><div class="stag2-info"><strong>Our Hydroponics</strong><span>Fresh herbs — grown in-house</span></div></div>
-        </div>
-      </div>
-      <!-- Vibrant real fruit & veg collage -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr 1fr;gap:10px;height:480px">
-        <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(44,36,22,.1);grid-row:1/3">
-          <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&q=80" alt="Fresh Bananas" style="width:100%;height:100%;object-fit:cover">
-        </div>
-        <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(44,36,22,.1)">
-          <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&q=80" alt="Fresh Fruits" style="width:100%;height:100%;object-fit:cover">
-        </div>
-        <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(44,36,22,.1)">
-          <img src="https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?w=400&q=80" alt="Fresh Garlic" style="width:100%;height:100%;object-fit:cover">
-        </div>
-        <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(44,36,22,.1);grid-column:1/3">
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" alt="Fresh Vegetables" style="width:100%;height:100%;object-fit:cover">
-        </div>
-      </div>
+    <div class="slabel">What We Stand For</div>
+    <div class="sh2">Our Core <em>Values</em></div>
+    <div class="vgrid">
+      <div class="vcard"><div class="vcard-icon">🌿</div><h3>Purity</h3><p>Clean, naturally grown ingredients — exactly as nature intended. No shortcuts, no compromises, no preservatives added.</p></div>
+      <div class="vcard"><div class="vcard-icon">✨</div><h3>Integrity</h3><p>Honest products and transparent processes. What you see is what you get — always. No artificial treatments, no hidden additives.</p></div>
+      <div class="vcard"><div class="vcard-icon">💚</div><h3>Care</h3><p>Every batch made with attention and love. Quality is not just a standard — it is a responsibility we take seriously.</p></div>
+      <div class="vcard"><div class="vcard-icon">🎯</div><h3>Consistency</h3><p>Quality that remains the same every time. Small batch production ensures every order meets our high standards.</p></div>
+      <div class="vcard"><div class="vcard-icon">🌸</div><h3>Empowerment</h3><p>Growth that includes women and communities. We create opportunities through micro-farming and processing skills.</p></div>
+      <div class="vcard"><div class="vcard-icon">🌍</div><h3>Sustainability</h3><p>Respect for nature and local growers. Dehydration reduces food waste — our products are part of a sustainable future.</p></div>
     </div>
   </div>
 </div>
 
 <!-- VISION & MISSION -->
-<div class="section-bg-dark">
-  <div class="section-inner">
-    <div class="slabel-light">Our Purpose</div>
-    <div class="sh2-white">Vision & <em>Mission</em></div>
-    <p class="sp-white" style="max-width:680px">To build a food brand that delivers pure, natural products while uplifting the people behind them. Our vision is to create a sustainable ecosystem where:</p>
-    <div class="vision-grid">
-      <div class="vision-item"><div class="vision-dot"></div><p><strong>Women gain financial independence</strong> through micro-farming, home-based processing, and skill development</p></div>
-      <div class="vision-item"><div class="vision-dot"></div><p><strong>Local farmers and growers thrive</strong> with fair opportunities and consistent support</p></div>
-      <div class="vision-item"><div class="vision-dot"></div><p><strong>Community farming becomes a movement</strong>, encouraging families to grow herbs, greens, and natural ingredients</p></div>
-      <div class="vision-item"><div class="vision-dot"></div><p><strong>Natural, honest food becomes a lifestyle</strong>, not a luxury</p></div>
-      <div class="vision-item"><div class="vision-dot"></div><p><strong>Growth is shared</strong>, empowering individuals, families, and communities</p></div>
-      <div class="vision-item"><div class="vision-dot"></div><p><strong>Alora aims to nourish people</strong> — not just through food, but through empowerment, dignity, and opportunity</p></div>
-    </div>
-    <div class="vision-quote">
-      <blockquote>"When a woman grows, a family grows. When a community grows, a nation grows."</blockquote>
-      <cite>— Jyothi Prabhu, Founder, Alora Customary Care</cite>
-    </div>
-  </div>
-</div>
-
-<!-- VALUES -->
 <section class="section">
-  <div class="slabel">What We Stand For</div>
-  <div class="sh2">Our Core <em>Values</em></div>
-  <div class="vgrid">
-    <div class="vcard"><div class="vcard-icon">🌿</div><h3>Purity</h3><p>Clean, naturally grown ingredients — exactly as nature intended. No shortcuts, no compromises, no preservatives added.</p></div>
-    <div class="vcard"><div class="vcard-icon">✨</div><h3>Integrity</h3><p>Honest products and transparent processes. What you see is what you get — always. No artificial treatments, no hidden additives.</p></div>
-    <div class="vcard"><div class="vcard-icon">💚</div><h3>Care</h3><p>Every batch made with attention and love. Quality is not just a standard for us — it is a responsibility we take seriously.</p></div>
-    <div class="vcard"><div class="vcard-icon">🎯</div><h3>Consistency</h3><p>Quality that remains the same every time. Small batch production ensures every order meets our high standards.</p></div>
-    <div class="vcard"><div class="vcard-icon">🌸</div><h3>Empowerment</h3><p>Growth that includes women and communities. We create opportunities for women through micro-farming and processing skills.</p></div>
-    <div class="vcard"><div class="vcard-icon">🌍</div><h3>Sustainability</h3><p>Respect for nature and local growers. Dehydration reduces food waste — our products are part of a sustainable future.</p></div>
+  <div class="slabel">Our Purpose</div>
+  <div class="sh2">Vision &amp; <em>Mission</em></div>
+  <p class="sp" style="max-width:680px">To build a food brand that delivers pure, natural products while uplifting the people behind them — creating a sustainable ecosystem where women thrive, farmers prosper, and natural food becomes a way of life.</p>
+  <div class="vision-grid">
+    <div class="vision-item"><div class="vision-dot"></div><p><strong>Women gain financial independence</strong> through micro-farming, home-based processing, and skill development</p></div>
+    <div class="vision-item"><div class="vision-dot"></div><p><strong>Local farmers and growers thrive</strong> with fair opportunities and consistent support</p></div>
+    <div class="vision-item"><div class="vision-dot"></div><p><strong>Community farming becomes a movement</strong> — encouraging families to grow herbs, greens and natural ingredients</p></div>
+    <div class="vision-item"><div class="vision-dot"></div><p><strong>Natural, honest food becomes a lifestyle</strong>, not a luxury — accessible to all</p></div>
+    <div class="vision-item"><div class="vision-dot"></div><p><strong>Growth is shared</strong> — empowering individuals, families, and communities together</p></div>
+    <div class="vision-item"><div class="vision-dot"></div><p><strong>Alora aims to nourish people</strong> — not just through food, but through empowerment and dignity</p></div>
+  </div>
+  <div class="vision-quote">
+    <blockquote>"When a woman grows, a family grows. When a community grows, a nation grows."</blockquote>
+    <cite>— Jyothi Prabhu, Founder, Alora Customary Care</cite>
+  </div>
+  <div class="vm-grid" style="margin-top:32px">
+    <div class="vm-card">
+      <div class="vm-card-label">Vision</div>
+      <h3>Building a <em>Sustainable</em> Ecosystem</h3>
+      <p>To build a food brand that delivers pure, natural products while uplifting the people behind them — women thrive, farmers prosper, and natural food becomes a way of life.</p>
+      <p style="font-size:13px;color:var(--gold);font-style:italic;margin-top:12px">This journey is just beginning — grow with us.</p>
+    </div>
+    <div class="vm-card">
+      <div class="vm-card-label">Mission</div>
+      <h3>Quality Without <em>Compromise</em></h3>
+      <p>To provide the highest quality naturally grown, dehydrated produce to food industry buyers — clean, honest, and sustainably sourced from trusted farming communities across India.</p>
+      <p style="font-size:14px;color:var(--muted);font-style:italic;border-left:3px solid var(--gold);padding-left:14px;margin-top:12px">"Alora aims to become a brand that nourishes people — not just through food, but through empowerment, dignity, and opportunity."</p>
+    </div>
   </div>
 </section>
-
-<!-- VM CARDS -->
-<div class="section-bg">
-  <div class="section-inner">
-    <div class="slabel">Purpose & Direction</div>
-    <div class="sh2">Vision & <em>Mission</em></div>
-    <div class="vm-grid">
-      <div class="vm-card">
-        <div class="vm-card-label">Vision</div>
-        <h3>Building a <em>Sustainable</em> Ecosystem</h3>
-        <p>To build a food brand that delivers pure, natural products while uplifting the people behind them — creating a sustainable ecosystem where women thrive, farmers prosper, and natural food becomes a way of life.</p>
-        <br>
-        <p style="font-size:13px;color:var(--gold);font-style:italic;margin-top:8px">This journey is just beginning — and we invite you to grow with us.</p>
-      </div>
-      <div class="vm-card">
-        <div class="vm-card-label">Mission</div>
-        <h3>Quality Without <em>Compromise</em></h3>
-        <p>To provide the highest quality naturally grown, dehydrated produce to food industry buyers — clean, honest, and sustainably sourced from trusted farming communities across India.</p>
-        <br>
-        <p style="font-size:14px;color:var(--muted);font-style:italic;border-left:3px solid var(--gold);padding-left:14px;margin-top:8px">"Alora aims to become a brand that nourishes people — not just through food, but through empowerment, dignity, and opportunity."</p>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- FOUNDER -->
-<section class="section">
-  <div class="slabel">The Person Behind Alora</div>
-  <div class="sh2">Meet the <em>Founder</em></div>
-  <div class="founder-card">
-    <div class="founder-avatar">🌿</div>
-    <div>
-      <div class="founder-name">Jyothi Prabhu</div>
-      <div class="founder-role">Founder · Alora Customary Care</div>
-      <p class="founder-bio">With a deep passion for natural nutrition, food sustainability, and women empowerment, Jyothi founded Alora Customary Care in Belagavi, Karnataka. Driven by a belief that pure, honest food can change lives, she is building a brand rooted in integrity, community, and care — one small batch at a time.</p>
-    </div>
-  </div>
-</section>
-
-<!-- COMPLIANCE -->
-<div class="section-bg-brown">
+<div class="section-bg">
   <div class="section-inner">
-    <div class="two-col">
+    <div class="slabel">The Person Behind Alora</div>
+    <div class="sh2">Meet the <em>Founder</em></div>
+    <div class="founder-card">
+      <div class="founder-avatar">🌿</div>
       <div>
-        <div class="slabel-light">Compliance & Trust</div>
-        <div class="sh2-white">Certifications & <em>Registrations</em></div>
-        <p class="sp-white">Building a fully compliant, export-ready business — step by step, with integrity and transparency.</p>
-        <div class="badges">
-          <div class="badge badge-udyam"><div class="badge-icon">🇮🇳</div><div class="badge-text">Udyam</div><div class="badge-sub">Registered ✅</div></div>
-          <div class="badge"><div class="badge-icon">✅</div><div class="badge-text">FSSAI</div><div class="badge-sub">In Process</div></div>
-          <div class="badge"><div class="badge-icon">🌍</div><div class="badge-text">IEC</div><div class="badge-sub">In Process</div></div>
-          <div class="badge"><div class="badge-icon">📋</div><div class="badge-text">GST</div><div class="badge-sub">In Process</div></div>
-          <div class="badge"><div class="badge-icon">🏅</div><div class="badge-text">RCMC</div><div class="badge-sub">In Process</div></div>
-          <div class="badge"><div class="badge-icon">🌾</div><div class="badge-text">APEDA</div><div class="badge-sub">In Process</div></div>
-        </div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:#fff;margin-bottom:20px;line-height:1.2">Honest, <em>Transparent,</em> Compliant</div>
-        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:28px">We are openly working towards full compliance and certification — because we believe in building this business the right way, step by step.</p>
-        <a href="contact.html" style="display:inline-block;padding:13px 28px;background:var(--gold);color:#fff;text-decoration:none;border-radius:30px;font-size:13px;font-weight:500">Get In Touch →</a>
+        <div class="founder-name">Jyothi Prabhu</div>
+        <div class="founder-role">Founder · Alora Customary Care</div>
+        <p class="founder-bio">With a deep passion for natural nutrition, food sustainability, and women empowerment, Jyothi founded Alora Customary Care in Belagavi, Karnataka. Driven by a belief that pure, honest food can change lives, she is building a brand rooted in integrity, community, and care — one small batch at a time.</p>
       </div>
     </div>
   </div>
 </div>
+
+<!-- COMPLIANCE -->
+<section class="compliance">
+  <div class="compliance-inner">
+    <div>
+      <h3>Certifications &amp; <em>Registrations</em></h3>
+      <p>Building a fully compliant, export-ready business — step by step, with integrity and transparency.</p>
+      <div class="badges">
+        <div class="badge badge-udyam"><div class="badge-icon">🇮🇳</div><div class="badge-text">Udyam</div><div class="badge-sub">Registered ✅</div></div>
+        <div class="badge"><div class="badge-icon">✅</div><div class="badge-text">FSSAI</div><div class="badge-sub">In Process</div></div>
+        <div class="badge"><div class="badge-icon">🌍</div><div class="badge-text">IEC</div><div class="badge-sub">In Process</div></div>
+        <div class="badge"><div class="badge-icon">📋</div><div class="badge-text">GST</div><div class="badge-sub">In Process</div></div>
+        <div class="badge"><div class="badge-icon">🏅</div><div class="badge-text">RCMC</div><div class="badge-sub">In Process</div></div>
+        <div class="badge"><div class="badge-icon">🌾</div><div class="badge-text">APEDA</div><div class="badge-sub">In Process</div></div>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#fff;margin-bottom:16px;line-height:1.2">Honest, <em>Transparent,</em> Compliant</div>
+      <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:24px">We are openly working towards full compliance and certification — because we believe in building this business the right way, step by step.</p>
+      <a href="contact.html" style="display:inline-block;padding:13px 28px;background:var(--gold);color:#fff;text-decoration:none;border-radius:30px;font-size:13px;font-weight:500">Get In Touch →</a>
+    </div>
+  </div>
+</section>
 
 <!-- MISSION CTA -->
 <section class="section" style="text-align:center;max-width:800px">
@@ -456,7 +521,7 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
   <div class="foot-inner">
     <div>
       <div class="foot-logo">Alora Customary Care</div>
-      <div class="foot-sub">Dehydrated Fruits & Foods</div>
+      <div class="foot-sub">Dehydrated Fruits &amp; Foods</div>
       <p class="foot-tag">Premium naturally grown ingredients from Belagavi, Karnataka, India.</p>
     </div>
     <div class="foot-col">
@@ -464,13 +529,11 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="products.html">Products</a>
-      <a href="recipes.html">Recipes</a><a href="contact.html">Contact</a>
-    </div>
-    <div class="foot-col">
-      <h4>Legal</h4>
-      <a href="terms.html">Terms & Conditions</a><a href="payment.html">Payment Methods</a><a href="faq.html">FAQ</a>
-      <a href="payment.html">Payment Methods</a>
+      <a href="recipes.html">Recipes</a>
       <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="payment.html">Payment Methods</a>
     </div>
     <div class="foot-col">
       <h4>Contact</h4>
