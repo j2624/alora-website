@@ -11,7 +11,9 @@
 
   <!-- Golden Turmeric Latte -->
   <div class="recipe-card">
-    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" class="recipe-img" alt="Turmeric Latte">
+    <div class="recipe-img-wrapper">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" class="recipe-img" alt="Turmeric Latte">
+    </div>
     <h2>Golden Turmeric Latte</h2>
     <p class="desc">A warm, soothing drink made with Aloras Turmeric Powder.</p>
 
@@ -34,7 +36,9 @@
 
   <!-- Instant Ginger Tea -->
   <div class="recipe-card">
-    <img src="https://images.unsplash.com/photo-1513639725746-c5d3e861f32a" class="recipe-img" alt="Ginger Tea">
+    <div class="recipe-img-wrapper">
+      <img src="https://images.unsplash.com/photo-1513639725746-c5d3e861f32a" class="recipe-img" alt="Ginger Tea">
+    </div>
     <h2>Instant Ginger Tea</h2>
     <p class="desc">A quick, refreshing tea using Aloras Ginger Powder.</p>
 
@@ -56,7 +60,9 @@
 
   <!-- Banana Smoothie -->
   <div class="recipe-card">
-    <img src="https://images.unsplash.com/photo-1572441710534-680f9c0b3a5d" class="recipe-img" alt="Banana Smoothie">
+    <div class="recipe-img-wrapper">
+      <img src="https://images.unsplash.com/photo-1572441710534-680f9c0b3a5d" class="recipe-img" alt="Banana Smoothie">
+    </div>
     <h2>Banana Powder Smoothie</h2>
     <p class="desc">A creamy, nutritious smoothie perfect for breakfast.</p>
 
@@ -78,12 +84,27 @@
 
 </section>
 
-<!-- ====== STYLING FOR RECIPES ONLY ====== -->
+<!-- ====== CLEAN, ALIGNED STYLING ====== -->
 
 <style>
-  .recipes-page { max-width: 900px; margin: auto; padding: 20px; }
-  .recipes-page h1 { text-align: center; color: #2a7a3b; }
-  .intro { text-align: center; margin-bottom: 30px; color: #444; }
+  .recipes-page { 
+    max-width: 900px; 
+    margin: auto; 
+    padding: 20px; 
+  }
+
+  .recipes-page h1 { 
+    text-align: center; 
+    color: #2a7a3b; 
+    font-size: 2.2rem;
+  }
+
+  .intro { 
+    text-align: center; 
+    margin-bottom: 30px; 
+    color: #444; 
+    font-size: 1.1rem;
+  }
 
   .recipe-card {
     background: #ffffff;
@@ -93,14 +114,35 @@
     box-shadow: 0 4px 14px rgba(0,0,0,0.1);
   }
 
-  .recipe-img {
+  /* Uniform image container */
+  .recipe-img-wrapper {
     width: 100%;
+    height: 260px; /* FIXED HEIGHT FOR ALL IMAGES */
+    overflow: hidden;
     border-radius: 14px;
     margin-bottom: 15px;
   }
 
-  h2 { color: #e67e22; }
-  .desc { font-style: italic; color: #555; }
+  /* Image fits perfectly */
+  .recipe-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures perfect alignment */
+    border-radius: 14px;
+  }
 
-  ul, ol { margin-left: 20px; }
+  h2 { 
+    color: #e67e22; 
+    margin-top: 0;
+  }
+
+  .desc { 
+    font-style: italic; 
+    color: #555; 
+    margin-bottom: 10px;
+  }
+
+  ul, ol { 
+    margin-left: 20px; 
+  }
 </style>
