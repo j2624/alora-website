@@ -3,663 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <title>Aloras Food Recipes</title>
-
 <style>
-  :root {
-    --green: #2a7a3b;
-    --gold: #e6a522;
-    --soft-bg: #faf7f2;
-    --card-bg: #ffffff;
-    --accent: #ff6b6b;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: var(--soft-bg);
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
-
-  .recipes-page {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px 16px 60px;
-  }
-
-  header.recipes-header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  header.recipes-header h1 {
-    font-size: 2.6rem;
-    color: var(--green);
-    margin: 0 0 10px;
-    letter-spacing: 0.04em;
-  }
-
-  header.recipes-header p {
-    font-size: 1.1rem;
-    color: #555;
-    margin: 0 0 6px;
-  }
-
-  .tagline {
-    font-size: 0.95rem;
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-  }
-
-  .category-title {
-    margin: 40px 0 16px;
-    font-size: 1.4rem;
-    color: var(--green);
-    border-left: 4px solid var(--gold);
-    padding-left: 10px;
-  }
-
-  .recipes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
-  }
-
-  .recipe-card {
-    background: var(--card-bg);
-    border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .recipe-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-  }
-
-  .recipe-img-wrapper {
-    width: 100%;
-    height: 190px;
-    overflow: hidden;
-  }
-
-  .recipe-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .recipe-body {
-    padding: 16px 18px 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .recipe-chip {
-    display: inline-block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: #f3f3f3;
-    color: #777;
-  }
-
-  .recipe-chip.drink { background: #e8f7ff; color: #1b6ea8; }
-  .recipe-chip.breakfast { background: #fff3da; color: #b87400; }
-  .recipe-chip.baby { background: #ffe9f2; color: #b23b7d; }
-  .recipe-chip.indian { background: #f3f0ff; color: #5b3fb3; }
-  .recipe-chip.beauty { background: #e9fff4; color: #1f8a5b; }
-
-  .recipe-body h2 {
-    font-size: 1.1rem;
-    margin: 4px 0;
-    color: var(--gold);
-  }
-
-  .powder-label {
-    font-size: 0.85rem;
-    color: #888;
-  }
-
-  .desc {
-    font-size: 0.9rem;
-    color: #555;
-    margin: 4px 0 6px;
-  }
-
-  .recipe-body h3 {
-    font-size: 0.9rem;
-    margin: 8px 0 4px;
-    color: #444;
-  }
-
-  ul, ol {
-    margin: 0 0 6px 18px;
-    padding: 0;
-    font-size: 0.88rem;
-  }
-
-  li { margin-bottom: 2px; }
-
+body { font-family: Arial; background:#faf7f2; margin:0; padding:20px; }
+h1 { text-align:center; color:#2a7a3b; }
+.category-title { margin:40px 0 15px; font-size:22px; color:#2a7a3b; border-left:4px solid #e6a522; padding-left:10px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.card { background:#fff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:hidden; }
+.card img { width:100%; height:180px; object-fit:cover; }
+.card-body { padding:15px; }
+.card-body h2 { font-size:18px; color:#e6a522; margin:5px 0; }
+.small { font-size:13px; color:#777; }
 </style>
 </head>
 
 <body>
 
-<section class="recipes-page">
+<h1>Aloras Food Recipes</h1>
 
-<header class="recipes-header">
-  <p class="tagline">Global-friendly • Everyday easy • Premium ingredients</p>
-  <h1>Aloras Food Recipes</h1>
-  <p>Versatile ideas for Asian and Western kitchens using Aloras natural dehydrated powders.</p>
-</header>
-<!-- DRINKS SECTION -->
+<!-- DRINKS -->
 <h2 class="category-title">Drinks & Lattes</h2>
+<div class="grid">
 
-<div class="recipes-grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2"><div class="card-body"><h2>Amla Shot</h2><p class="small">Amla Powder • Honey • Warm water</p></div></div>
 
-  <!-- Amla Immunity Shot -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip drink">Drink</span>
-      <h2>Amla Immunity Shot</h2>
-      <div class="powder-label">With Aloras Amla Powder</div>
-      <p class="desc">Daily vitamin‑C boost for immunity.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1 tsp Amla Powder</li>
-        <li>1 cup warm water</li>
-        <li>1 tsp honey</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Mix all ingredients.</li>
-        <li>Drink immediately.</li>
-      </ol>
-    </div>
-  </article>
+<div class="card"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092"><div class="card-body"><h2>Turmeric Latte</h2><p class="small">Turmeric Powder • Milk • Honey</p></div></div>
 
-  <!-- Golden Turmeric Latte -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip drink">Drink</span>
-      <h2>Golden Turmeric Latte</h2>
-      <div class="powder-label">With Aloras Turmeric Powder</div>
-      <p class="desc">Warm, soothing, anti‑inflammatory latte.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1 cup milk</li>
-        <li>1 tsp Turmeric Powder</li>
-        <li>Honey to taste</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Warm milk.</li>
-        <li>Add turmeric and whisk.</li>
-        <li>Sweeten and serve.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Beetroot Pink Latte -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1547514701-9cdcb1f594d7" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip drink">Drink</span>
-      <h2>Beetroot Pink Latte</h2>
-      <div class="powder-label">With Aloras Beetroot Powder</div>
-      <p class="desc">Café‑style naturally pink latte.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1 tsp Beetroot Powder</li>
-        <li>1 cup milk</li>
-        <li>1 tsp sugar or honey</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Warm milk.</li>
-        <li>Whisk in beetroot powder.</li>
-        <li>Sweeten and serve.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Orange Peel Tea -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip drink">Drink</span>
-      <h2>Orange Peel Tea</h2>
-      <div class="powder-label">With Aloras Orange Peel Powder</div>
-      <p class="desc">Refreshing citrus tea for digestion & glow.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1 tsp Orange Peel Powder</li>
-        <li>1 cup hot water</li>
-        <li>Honey optional</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Steep powder in hot water for 3 minutes.</li>
-        <li>Strain and serve.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Instant Ginger Tea -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1513639725746-c5d3e861f32a" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip drink">Drink</span>
-      <h2>Instant Ginger Tea</h2>
-      <div class="powder-label">With Aloras Ginger Powder</div>
-      <p class="desc">Quick soothing tea for cold & throat.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1 cup hot water</li>
-        <li>1/2 tsp Ginger Powder</li>
-        <li>Honey optional</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Mix ginger powder in hot water.</li>
-        <li>Sweeten if needed.</li>
-      </ol>
-    </div>
-  </article>
+<div class="card"><img src="https://images.unsplash.com/photo-1547514701-9cdcb1f594d7"><div class="card-body"><h2>Beetroot Latte</h2><p class="small">Beetroot Powder • Milk</p></div></div>
 
 </div>
-<!-- BABY & KIDS FRIENDLY -->
+
+<!-- BABY -->
 <h2 class="category-title">Baby & Kids Friendly</h2>
+<div class="grid">
 
-<div class="recipes-grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"><div class="card-body"><h2>Banana Baby Porridge</h2><p class="small">Banana Powder • Warm water</p></div></div>
 
-  <!-- Banana Baby Porridge -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip baby">Baby</span>
-      <h2>Banana Baby Porridge</h2>
-      <div class="powder-label">With Aloras Banana Powder</div>
-      <p class="desc">Soft, gentle, nutritious porridge for babies.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1 tbsp Banana Powder</li>
-        <li>3–4 tbsp warm water or milk</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Mix banana powder with warm liquid.</li>
-        <li>Make smooth paste and serve lukewarm.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Palak Baby Soup -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip baby">Baby</span>
-      <h2>Palak Baby Soup</h2>
-      <div class="powder-label">With Aloras Palak Powder</div>
-      <p class="desc">Mild spinach soup for toddlers.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1/2 tsp Palak Powder</li>
-        <li>1 cup warm water or veg stock</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Whisk palak powder into warm water.</li>
-        <li>Serve slightly cooled.</li>
-      </ol>
-    </div>
-  </article>
+<div class="card"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd"><div class="card-body"><h2>Palak Baby Soup</h2><p class="small">Palak Powder • Warm water</p></div></div>
 
 </div>
 
+<!-- BREAKFAST -->
+<h2 class="category-title">Breakfast & Western</h2>
+<div class="grid">
 
+<div class="card"><img src="https://images.unsplash.com/photo-1572441710534-680f9c0b3a5d"><div class="card-body"><h2>Banana Smoothie</h2><p class="small">Banana Powder • Milk</p></div></div>
 
-<!-- BREAKFAST & WESTERN STYLE -->
-<h2 class="category-title">Breakfast & Western Style</h2>
+<div class="card"><img src="https://images.unsplash.com/photo-1587731556938-38755b4803a6"><div class="card-body"><h2>Banana Pancakes</h2><p class="small">Banana Powder • Batter</p></div></div>
 
-<div class="recipes-grid">
-
-  <!-- Banana Smoothie -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1572441710534-680f9c0b3a5d" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip breakfast">Breakfast</span>
-      <h2>Banana Smoothie</h2>
-      <div class="powder-label">With Aloras Banana Powder</div>
-      <p class="desc">Creamy breakfast smoothie without fresh bananas.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>2 tbsp Banana Powder</li>
-        <li>1 cup milk</li>
-        <li>Honey optional</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Blend all ingredients.</li>
-        <li>Serve chilled.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Banana Pancakes -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1587731556938-38755b4803a6" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip breakfast">Breakfast</span>
-      <h2>Banana Pancakes</h2>
-      <div class="powder-label">With Aloras Banana Powder</div>
-      <p class="desc">Fluffy pancakes with natural banana flavour.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1 cup pancake batter</li>
-        <li>2 tbsp Banana Powder</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Mix banana powder into batter.</li>
-        <li>Cook on a greased pan.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Beetroot Red Velvet Pancakes -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip breakfast">Breakfast</span>
-      <h2>Red Velvet Pancakes</h2>
-      <div class="powder-label">With Aloras Beetroot Powder</div>
-      <p class="desc">Natural red velvet colour using beetroot.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1 cup pancake batter</li>
-        <li>1–2 tsp Beetroot Powder</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Mix beetroot powder into batter.</li>
-        <li>Cook as usual.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Orange Peel Cake Glaze -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip breakfast">Dessert</span>
-      <h2>Orange Peel Cake Glaze</h2>
-      <div class="powder-label">With Aloras Orange Peel Powder</div>
-      <p class="desc">Citrus glaze for cakes & muffins.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1/2 tsp Orange Peel Powder</li>
-        <li>4 tbsp icing sugar</li>
-        <li>1–2 tsp milk</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Mix all ingredients.</li>
-        <li>Drizzle over cake.</li>
-      </ol>
-    </div>
-  </article>
+<div class="card"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591"><div class="card-body"><h2>Red Velvet Pancakes</h2><p class="small">Beetroot Powder • Batter</p></div></div>
 
 </div>
-<!-- INDIAN & ASIAN INSPIRED -->
+
+<!-- INDIAN -->
 <h2 class="category-title">Indian & Asian Inspired</h2>
+<div class="grid">
 
-<div class="recipes-grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1601050690597-df7d3a5f7f3e"><div class="card-body"><h2>Amla Pickle</h2><p class="small">Amla Powder • Oil • Spices</p></div></div>
 
-  <!-- Amla Pickle -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1601050690597-df7d3a5f7f3e" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip indian">Indian</span>
-      <h2>Amla Pickle</h2>
-      <div class="powder-label">With Aloras Amla Powder</div>
-      <p class="desc">Tangy, spicy, perfect with rice or roti.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>2 tsp Amla Powder</li>
-        <li>1 tsp mustard seeds</li>
-        <li>1 tsp chilli powder</li>
-        <li>3 tbsp sesame oil</li>
-        <li>Salt to taste</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Heat oil and crackle mustard seeds.</li>
-        <li>Turn off flame, add powders.</li>
-        <li>Mix and store.</li>
-      </ol>
-    </div>
-  </article>
+<div class="card"><img src="https://images.unsplash.com/photo-1615485290396-5f3f2b1e8d64"><div class="card-body"><h2>Turmeric Pickle</h2><p class="small">Turmeric Powder • Oil</p></div></div>
 
-  <!-- Turmeric Pickle -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1615485290396-5f3f2b1e8d64" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip indian">Indian</span>
-      <h2>Turmeric Pickle</h2>
-      <div class="powder-label">With Aloras Turmeric Powder</div>
-      <p class="desc">Earthy, bold, traditional flavour.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>2 tsp Turmeric Powder</li>
-        <li>1 tsp chilli flakes</li>
-        <li>3 tbsp sesame oil</li>
-        <li>Salt to taste</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Warm oil.</li>
-        <li>Add turmeric + chilli.</li>
-        <li>Mix and rest 24 hours.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Methi Digestive Drink -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1584270354949-1f5a3f9f1f5b" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip indian">Indian</span>
-      <h2>Methi Digestive Drink</h2>
-      <div class="powder-label">With Aloras Methi Powder</div>
-      <p class="desc">Traditional drink for digestion.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1 tsp Methi Powder</li>
-        <li>1 cup warm water</li>
-        <li>1 tsp lemon juice</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Mix methi powder in warm water.</li>
-        <li>Add lemon and drink.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Palak Omelette -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip indian">Everyday</span>
-      <h2>Palak Omelette</h2>
-      <div class="powder-label">With Aloras Palak Powder</div>
-      <p class="desc">Quick protein-rich breakfast.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>2 eggs</li>
-        <li>1 tsp Palak Powder</li>
-        <li>Salt & pepper</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Beat eggs with palak powder.</li>
-        <li>Cook on a pan.</li>
-      </ol>
-    </div>
-  </article>
+<div class="card"><img src="https://images.unsplash.com/photo-1584270354949-1f5a3f9f1f5b"><div class="card-body"><h2>Methi Drink</h2><p class="small">Methi Powder • Warm water</p></div></div>
 
 </div>
 
+<!-- BEAUTY -->
+<h2 class="category-title">Beauty & Self Care</h2>
+<div class="grid">
 
+<div class="card"><img src="https://images.unsplash.com/photo-1599058917212-d750089bc07c"><div class="card-body"><h2>Orange Peel Mask</h2><p class="small">Orange Peel Powder • Yogurt</p></div></div>
 
-<!-- BEAUTY & SELF CARE -->
-<h2 class="category-title">Beauty & Self Care (External Use)</h2>
+<div class="card"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"><div class="card-body"><h2>Turmeric Face Pack</h2><p class="small">Turmeric Powder • Gram flour</p></div></div>
 
-<div class="recipes-grid">
-
-  <!-- Orange Peel Glow Mask -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07c" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip beauty">Beauty</span>
-      <h2>Orange Peel Glow Mask</h2>
-      <div class="powder-label">With Aloras Orange Peel Powder</div>
-      <p class="desc">Brightening mask for glowing skin.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1 tsp Orange Peel Powder</li>
-        <li>1 tbsp yogurt or rose water</li>
-        <li>Few drops honey</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Mix to smooth paste.</li>
-        <li>Apply 10–15 mins.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Turmeric Face Pack -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip beauty">Beauty</span>
-      <h2>Turmeric Glow Pack</h2>
-      <div class="powder-label">With Aloras Turmeric Powder</div>
-      <p class="desc">Classic haldi face pack.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1/2 tsp Turmeric Powder</li>
-        <li>2 tsp gram flour</li>
-        <li>Rose water</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Mix to paste.</li>
-        <li>Apply 10 mins.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Beetroot Lip Tint -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip beauty">Beauty</span>
-      <h2>Beetroot Lip Tint</h2>
-      <div class="powder-label">With Aloras Beetroot Powder</div>
-      <p class="desc">Natural pink lip tint.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1/4 tsp Beetroot Powder</li>
-        <li>1 tsp aloe gel</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Mix well.</li>
-        <li>Apply lightly.</li>
-      </ol>
-    </div>
-  </article>
-
-  <!-- Amla Hair Mask -->
-  <article class="recipe-card">
-    <div class="recipe-img-wrapper">
-      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" class="recipe-img">
-    </div>
-    <div class="recipe-body">
-      <span class="recipe-chip beauty">Beauty</span>
-      <h2>Amla Hair Strength Mask</h2>
-      <div class="powder-label">With Aloras Amla Powder</div>
-      <p class="desc">Traditional hair strengthening mask.</p>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>2 tbsp Amla Powder</li>
-        <li>Water or yogurt</li>
-      </ul>
-      <h3>Method</h3>
-      <ol>
-        <li>Make paste.</li>
-        <li>Apply 20–30 mins.</li>
-      </ol>
-    </div>
-  </article>
+<div class="card"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"><div class="card-body"><h2>Beetroot Lip Tint</h2><p class="small">Beetroot Powder • Aloe gel</p></div></div>
 
 </div>
 
-
-
-<!-- PAGE END -->
-</section>
 </body>
 </html>
+
