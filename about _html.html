@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About – Alora Customary Care</title>
+<meta name="description" content="About Alora Customary Care - Founded in Belagavi, Karnataka. Learn about our freeze dehydration technology, farmer sourcing, and food safety standards.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --dark:#2c2416;--brown:#6b4c2a;--brown-mid:#8b6340;
+  --gold:#c9a84c;--gold-light:#e2c47a;
+  --cream:#f7f3ec;--cream2:#ede8df;--cream3:#e4ddd3;
+  --olive:#4a5c2a;--olive2:#5a7234;--muted:#6a6050;
+  --rose:#9b4a5a;--rose-light:#c4758a;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(247,243,236,0.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,168,76,0.18)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:.15em;text-decoration:none;color:var(--dark)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--dark)}
+.nav-cta{background:var(--brown)!important;color:#fff!important;padding:8px 20px;border-radius:18px}
+
+/* HERO */
+.hero{min-height:52vh;display:flex;align-items:center;padding:130px 52px 70px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 90% 50%,rgba(201,168,76,0.07),transparent 70%)}
+.hero-inner{max-width:1100px;margin:auto;width:100%}
+.tag{display:inline-block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.4);padding:5px 14px;border-radius:20px;margin-bottom:24px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:62px;font-weight:300;line-height:1.05;max-width:700px;margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--olive)}
+.hero p{font-size:16px;line-height:1.8;color:var(--muted);max-width:520px;font-weight:300}
+.divider{height:1px;background:linear-gradient(90deg,var(--gold),transparent);max-width:1100px;margin:0 auto;opacity:.3}
+
+/* STORY */
+.story{padding:80px 52px;max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.story-img{height:380px;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(44,36,22,.12)}
+.story-img img{width:100%;height:100%;object-fit:cover}
+.stag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:600}
+.story h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;line-height:1.15;margin-bottom:20px}
+.story h2 em{font-style:italic}
+.story p{font-size:14.5px;line-height:1.9;color:var(--muted);margin-bottom:14px;font-weight:300}
+
+/* QUOTE */
+.quote-section{background:var(--olive);padding:60px 52px}
+.quote-inner{max-width:800px;margin:auto;text-align:center}
+.quote-mark{font-family:'Cormorant Garamond',serif;font-size:80px;color:var(--gold-light);line-height:.6;margin-bottom:16px;opacity:.7}
+.quote-text{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:#fff;line-height:1.5;font-style:italic;margin-bottom:20px}
+.quote-author{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);font-weight:500}
+
+/* MISSION & VISION */
+.mv-section{padding:90px 52px;background:var(--cream3)}
+.mv-inner{max-width:1100px;margin:auto}
+.mv-header{text-align:center;margin-bottom:50px}
+.mv-header .stag{display:block;margin-bottom:10px}
+.mv-header h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;line-height:1.1}
+.mv-header h2 em{font-style:italic;color:var(--olive)}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.mv-card{border-radius:20px;padding:42px;position:relative;overflow:hidden}
+.mv-card.mission{background:linear-gradient(135deg,#3d5a1e,#5a7a28);color:#fff}
+.mv-card.vision{background:linear-gradient(135deg,#4a3010,#7a5228);color:#fff;box-shadow:0 8px 32px rgba(74,48,16,0.35)}
+.mv-card-icon{font-size:44px;margin-bottom:18px}
+.mv-card h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;margin-bottom:16px;color:#fff}
+.mv-card p{font-size:15px;line-height:1.85;color:rgba(255,255,255,0.82);font-weight:300}
+.mv-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px}
+.mv-card.mission::after{background:linear-gradient(90deg,var(--gold-light),transparent)}
+.mv-card.vision::after{background:linear-gradient(90deg,var(--gold-light),transparent)}
+.mv-highlight{display:inline-block;margin-top:18px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;border-radius:20px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)}
+
+/* WOMEN EMPOWERMENT */
+.women-section{padding:80px 52px;background:linear-gradient(135deg,#4a1a2e 0%,#7a2a48 45%,#9b4a62 100%)}
+.women-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.women-text .stag{color:#f0a0b8}
+.women-text h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:#fff;line-height:1.15;margin-bottom:18px}
+.women-text h2 em{font-style:italic;color:#f0a0b8}
+.women-text p{font-size:14.5px;line-height:1.9;color:rgba(255,255,255,.75);margin-bottom:14px}
+.women-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.wstat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:22px;text-align:center}
+.wstat-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:#f0a0b8;margin-bottom:6px}
+.wstat-label{font-size:11px;color:rgba(255,255,255,.7);letter-spacing:.08em}
+
+/* TECH */
+.tech{background:var(--brown);padding:90px 52px}
+.tech-inner{max-width:1100px;margin:auto}
+.tech .stag{color:var(--gold-light)}
+.tech h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:#fff;line-height:1.15;margin-bottom:14px}
+.tech h2 em{font-style:italic}
+.tech-sub{font-size:15px;color:rgba(255,255,255,.55);font-weight:300;max-width:580px;margin-bottom:44px;line-height:1.7}
+.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tcard{border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:34px;position:relative;overflow:hidden;transition:background .3s}
+.tcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.tcard:hover{background:rgba(255,255,255,.06)}
+.tcard-icon{font-size:36px;margin-bottom:18px}
+.tcard h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#fff;margin-bottom:10px}
+.tcard p{font-size:13.5px;line-height:1.8;color:rgba(255,255,255,.62);font-weight:300}
+.tbadge{display:inline-block;margin-top:14px;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:10px;background:rgba(201,168,76,.15);color:var(--gold-light);border:1px solid rgba(201,168,76,.3)}
+
+/* SOURCING */
+.sourcing{background:var(--cream3);padding:80px 52px}
+.sourcing-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.sourcing h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;line-height:1.15;margin-bottom:18px}
+.sourcing h2 em{font-style:italic}
+.sourcing p{font-size:14.5px;line-height:1.9;color:var(--muted);margin-bottom:14px}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stag2{background:var(--cream);border:1px solid rgba(107,76,42,.15);border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 2px 10px rgba(44,36,22,.05)}
+.stag2-icon{font-size:24px}
+.stag2-info strong{display:block;font-size:13px;font-weight:600;color:var(--dark)}
+.stag2-info span{font-size:11px;color:var(--muted)}
+
+/* VALUES */
+.values{padding:90px 52px;max-width:1100px;margin:auto}
+.values h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;line-height:1.15;margin-bottom:48px}
+.values h2 em{font-style:italic}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vcard{background:var(--cream2);border-radius:18px;padding:30px;border:1px solid rgba(107,76,42,.1);box-shadow:0 3px 20px rgba(44,36,22,.05);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.vcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--brown));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.vcard:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(44,36,22,.1)}
+.vcard:hover::after{transform:scaleX(1)}
+.vcard-icon{font-size:30px;margin-bottom:14px}
+.vcard h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-bottom:8px;color:var(--olive)}
+.vcard p{font-size:13px;line-height:1.75;color:var(--muted);font-weight:300}
+
+/* COMPLIANCE */
+.compliance{background:var(--brown);padding:70px 52px}
+.compliance-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:28px}
+.compliance h3{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:#fff;margin-bottom:10px;line-height:1.2}
+.compliance h3 em{font-style:italic}
+.compliance p{font-size:14px;color:rgba(255,255,255,.62);max-width:440px;line-height:1.7}
+.badges{display:flex;gap:12px;flex-wrap:wrap}
+.badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:14px 20px;text-align:center;min-width:82px}
+.badge-icon{font-size:22px;margin-bottom:5px}
+.badge-text{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75);font-weight:500}
+
+/* TEAM */
+.team{padding:90px 52px;max-width:1100px;margin:auto}
+.team h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;line-height:1.15;margin-bottom:48px}
+.team h2 em{font-style:italic}
+.team-card{background:var(--cream2);border-radius:20px;padding:38px 30px;text-align:center;border:1px solid rgba(107,76,42,.1);box-shadow:0 4px 22px rgba(44,36,22,.06);max-width:360px;transition:transform .25s,box-shadow .25s}
+.team-card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(44,36,22,.12)}
+.team-avatar{width:90px;height:90px;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:36px;background:linear-gradient(135deg,var(--olive),var(--gold))}
+.team-card h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--dark);margin-bottom:5px}
+.team-role{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:600}
+.team-card p{font-size:13px;line-height:1.75;color:var(--muted);font-weight:300}
+
+/* FOOTER */
+footer{background:var(--dark);color:#fff;padding:48px 52px 26px}
+.foot-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:36px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:22px}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:.14em;margin-bottom:4px}
+.foot-sub{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.foot-tag{font-size:12px;color:rgba(255,255,255,.32);max-width:180px;line-height:1.6}
+.foot-col h4{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.foot-col a{display:block;font-size:12px;color:rgba(255,255,255,.48);text-decoration:none;margin-bottom:8px;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{max-width:1100px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.foot-bottom p{font-size:10px;color:rgba(255,255,255,.24)}
+
+@media(max-width:768px){
+  nav{padding:14px 20px}.hero{padding:108px 22px 60px}.hero h1{font-size:38px}
+  .story,.sourcing-inner,.women-inner{grid-template-columns:1fr;gap:36px}
+  .story,.tech,.values,.team,.compliance,.sourcing,.mv-section,.women-section,.quote-section{padding:60px 22px}
+  .tech-grid,.vgrid,.mv-grid{grid-template-columns:1fr}
+  footer{padding:36px 22px 20px}.nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Alora Customary Care</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="products.html">Products</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="nav-cta">Enquire</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="tag">Our Story · Belagavi, India</div>
+    <h1>Rooted in <em>Nature,</em><br>Driven by Science</h1>
+    <p>Alora was founded with a passion for food longevity — preserving nature's peak nutrition through advanced dehydration technology, supporting local farmers, and delivering wholesome ingredients to the world.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-img">
+    <img src="Alora Natural Dehydeated Fruits.png" alt="Alora Natural Dehydrated Fruits" onerror="this.parentElement.style.background='linear-gradient(135deg,#ddeedd,#c8dfc0)';this.style.display='none'">
+  </div>
+  <div>
+    <div class="stag">How It Started</div>
+    <h2>From <em>Belagavi</em> to the World</h2>
+    <p>Alora Dehydrated Fruits was born in the heart of Karnataka, India — a region blessed with rich agricultural heritage and access to some of the finest natural produce in the country.</p>
+    <p>We started with a vision rooted in food longevity — to preserve nature's nutrition at its peak, reducing waste while delivering wholesome ingredients to global buyers.</p>
+    <p>Using advanced freeze dehydration and mechanical dehydration technology, we lock in the natural vitamins, minerals, and goodness of every fruit and vegetable — exactly as nature intended.</p>
+  </div>
+</section>
+
+<!-- QUOTE — bold and readable -->
+<section class="quote-section">
+  <div class="quote-inner">
+    <div class="quote-mark">&ldquo;</div>
+    <p class="quote-text">Quality is not just a standard for us — it is a responsibility we take seriously with every single batch we produce.</p>
+    <div class="quote-author">— Jyothi Prabhu, Founder &amp; Director, Alora Customary Care</div>
+  </div>
+</section>
+
+<!-- MISSION & VISION — highlighted, strong -->
+<section class="mv-section">
+  <div class="mv-inner">
+    <div class="mv-header">
+      <span class="stag">What Drives Us</span>
+      <h2>Our <em>Mission &amp; Vision</em></h2>
+    </div>
+    <div class="mv-grid">
+      <div class="mv-card mission">
+        <div class="mv-card-icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To be India's most trusted dehydrated food sourcing partner — delivering premium natural ingredients with integrity, transparency, and a commitment to quality that never wavers. We serve home cooks, food businesses, and global buyers with the same care and consistency.</p>
+        <span class="mv-highlight">Quality · Integrity · Consistency</span>
+      </div>
+      <div class="mv-card vision">
+        <div class="mv-card-icon">🌿</div>
+        <h3>Our Vision</h3>
+        <p>A future powered by <strong style="color:var(--gold-light)">organic, clean ingredients</strong> — where every product we make is traceable back to a certified organic farm or precision hydroponic system. Today's consumers want organic, chemical-free, and sustainably grown food. Alora is already there — sourcing naturally, processing cleanly, and delivering ingredients people can truly trust.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:18px">
+          <span class="mv-highlight" style="background:rgba(168,216,120,.2);border-color:rgba(168,216,120,.4);color:#a8d878">🌱 Organic First</span>
+          <span class="mv-highlight" style="background:rgba(120,212,232,.2);border-color:rgba(120,212,232,.4);color:#78d4e8">💧 Hydroponic</span>
+          <span class="mv-highlight">🌍 Global Reach</span>
+          <span class="mv-highlight">♻️ Zero Waste</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WOMEN EMPOWERMENT -->
+<section class="women-section">
+  <div class="women-inner">
+    <div class="women-text">
+      <div class="stag">Women at the Heart of Alora</div>
+      <h2>Empowering <em>Women</em> Through Food</h2>
+      <p>Alora is a solo woman-founded and led business — built from passion, purpose and a deep belief in the power of natural food. Every product, every relationship, every decision is driven personally by Jyothi Prabhu from Belagavi, India.</p>
+      <p>As a solo woman entrepreneur, Jyothi believes that when women lead, communities thrive. Alora is built on the values of integrity, care, and a deep respect for nature — qualities that define everything we grow, process and deliver.</p>
+    </div>
+    <div class="women-stats">
+      <div class="wstat">
+        <div class="wstat-num">100%</div>
+        <div class="wstat-label">Woman Founded &amp; Led</div>
+      </div>
+      <div class="wstat">
+        <div class="wstat-num">🌸</div>
+        <div class="wstat-label">Women Empowerment</div>
+      </div>
+      <div class="wstat">
+        <div class="wstat-num">🌱</div>
+        <div class="wstat-label">Organic First Vision</div>
+      </div>
+      <div class="wstat">
+        <div class="wstat-num">🌍</div>
+        <div class="wstat-label">India to the World</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="tech">
+  <div class="tech-inner">
+    <div class="stag">Our Technology</div>
+    <h2>Advanced <em>Dehydration</em> Technology</h2>
+    <p class="tech-sub">We use two state-of-the-art preservation methods — no sun drying, no contamination, no compromise on quality or nutrition.</p>
+    <div class="tech-grid">
+      <div class="tcard">
+        <div class="tcard-icon">❄️</div>
+        <h3>Freeze Dehydration</h3>
+        <p>Freeze drying removes moisture at ultra-low temperatures, preserving up to 98% of the original nutrients, colour, and flavour. The gold standard in food preservation — trusted by pharmaceutical and premium nutraceutical industries worldwide.</p>
+        <span class="tbadge">Up to 98% Nutrient Retention</span>
+      </div>
+      <div class="tcard">
+        <div class="tcard-icon">⚙️</div>
+        <h3>Mechanical Dehydration</h3>
+        <p>Precision-controlled mechanical dehydration removes moisture in a fully hygienic, temperature-regulated environment. No sun exposure, no contamination risk — consistent quality in every single batch.</p>
+        <span class="tbadge">Hygienic · Controlled · Consistent</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCING -->
+<section class="sourcing">
+  <div class="sourcing-inner">
+    <div>
+      <div class="stag">Farmer Friendly Sourcing</div>
+      <h2>Supporting <em>Local Farmers</em> Across India</h2>
+      <p>We source directly from trusted farming communities across Karnataka and other Indian states — building long-term relationships that benefit farmers, buyers, and the environment.</p>
+      <p>By working close to the source, we ensure freshness, traceability, and fair prices for the farmers who grow our ingredients.</p>
+    </div>
+    <div class="sgrid">
+      <div class="stag2"><div class="stag2-icon">🌿</div><div class="stag2-info"><strong>Karnataka</strong><span>Primary sourcing region</span></div></div>
+      <div class="stag2"><div class="stag2-icon">🌾</div><div class="stag2-info"><strong>Maharashtra</strong><span>Seasonal produce</span></div></div>
+      <div class="stag2"><div class="stag2-icon">🌻</div><div class="stag2-info"><strong>Other States</strong><span>Seasonal availability</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="stag">What We Stand For</div>
+  <h2>Our Core <em>Values</em></h2>
+  <div class="vgrid">
+    <div class="vcard"><div class="vcard-icon">🌱</div><h3>Quality Ingredients</h3><p>Only the finest produce, carefully selected from trusted farm networks across Karnataka and other Indian states — every batch fully traceable.</p></div>
+    <div class="vcard"><div class="vcard-icon">🔬</div><h3>Nutritional Integrity</h3><p>Our freeze and mechanical dehydration processes preserve natural vitamins, minerals and nutrients — the full benefit of nature, intact.</p></div>
+    <div class="vcard"><div class="vcard-icon">🧼</div><h3>Hygiene First</h3><p>Every product processed in clean, hygienic, controlled environments — no sun drying, no contamination. Quality and hygiene are our foremost priority.</p></div>
+    <div class="vcard"><div class="vcard-icon">🤝</div><h3>Farmer Friendly</h3><p>We work directly with local farming communities — supporting livelihoods and promoting ethical, transparent sourcing.</p></div>
+    <div class="vcard"><div class="vcard-icon">🌍</div><h3>Eco-Conscious</h3><p>Dehydration naturally reduces food waste and carbon footprint. We are committed to sustainable practices that protect our planet.</p></div>
+    <div class="vcard"><div class="vcard-icon">😊</div><h3>Customer Satisfaction</h3><p>Your trust is our highest standard. Consistent quality, reliable supply, and responsive communication — every order, every time.</p></div>
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section class="compliance">
+  <div class="compliance-inner">
+    <div>
+      <h3>Compliant with All <em>Food Safety Standards</em></h3>
+      <p>Every Alora product meets all regulatory food safety and quality requirements — giving our buyers complete confidence in every order.</p>
+    </div>
+    <div class="badges">
+      <div class="badge"><div class="badge-icon">✅</div><div class="badge-text">FSSAI</div></div>
+      <div class="badge"><div class="badge-icon">🏅</div><div class="badge-text">GMP</div></div>
+      <div class="badge"><div class="badge-icon">🔒</div><div class="badge-text">HACCP</div></div>
+      <div class="badge"><div class="badge-icon">🌍</div><div class="badge-text">Export</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="stag">The Person Behind Alora</div>
+  <h2>Meet the <em>Founder</em></h2>
+  <div class="team-card">
+    <div class="team-avatar">🌿</div>
+    <h3>Jyothi Prabhu</h3>
+    <div class="team-role">Founder &amp; Director</div>
+    <p>With a deep passion for natural nutrition and food sustainability, Jyothi founded Alora with a mission to preserve nature's goodness using the best available technology — making premium dehydrated ingredients accessible to buyers worldwide.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-logo">Alora Customary Care</div>
+      <div class="foot-sub">Dehydrated Fruits &amp; Foods</div>
+      <p class="foot-tag">Premium natural ingredients from Belagavi, Karnataka, India.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="foot-col">
+      <h4>Technology</h4>
+      <a href="about.html">Freeze Dehydration</a>
+      <a href="about.html">Mechanical Dehydration</a>
+      <a href="about.html">Quality Testing</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="tel:+919137450793">+91 91374 50793 🇮🇳</a>
+      <a href="tel:+447990832467">+44 7990 832467 🇬🇧</a>
+      <a href="mailto:info@aloracare.in">info@aloracare.in</a>
+      <a href="https://wa.me/919137450793" target="_blank">💬 WhatsApp</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p>© 2026 Alora Customary Care. All Rights Reserved.</p>
+    <p>Natural · Nutritious · Sustainable · Made in India</p>
+  </div>
+</footer>
+
+</body>
+</html>
