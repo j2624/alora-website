@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,6 +100,22 @@ nav a:hover{color:var(--green-deep);}
 
 /* CUSTOM BANNER */
 .custom-banner{background:var(--green-mid);padding:60px 56px;}
+/* CASHEW SECTION */
+.cashew-section{background:linear-gradient(135deg,#fdf6e3,#f5e6c8);padding:70px 56px}
+.cashew-inner{max-width:1100px;margin:auto}
+.cashew-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500}
+.cashew-title{font-family:"Cormorant Garamond",serif;font-size:38px;font-weight:300;color:var(--green-deep);margin-bottom:8px}
+.cashew-title em{font-style:italic}
+.cashew-desc{font-size:14px;color:var(--text-muted);line-height:1.7;max-width:500px;font-weight:300;margin-bottom:36px}
+.cashew-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cashew-card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(139,94,26,.1);border:1px solid rgba(184,151,90,.2);transition:transform .25s;display:flex;flex-direction:column}
+.cashew-card:hover{transform:translateY(-4px)}
+.cashew-thumb{height:200px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fdf6e3;position:relative}
+.cashew-thumb img{width:100%;height:100%;object-fit:contain}
+.cashew-badge{position:absolute;top:10px;right:10px;font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:8px;background:#fdf3e0;color:#8b5e1a}
+.cashew-info{padding:16px 18px 20px;flex:1;display:flex;flex-direction:column}
+.cashew-info h3{font-family:"Cormorant Garamond",serif;font-size:18px;font-weight:600;color:var(--green-deep);margin-bottom:6px}
+.cashew-info p{font-size:12px;line-height:1.6;color:var(--text-muted);margin-bottom:14px;font-weight:300;flex:1}
 .custom-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;}
 .custom-inner h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:white;margin-bottom:12px;line-height:1.2;}
 .custom-inner h2 em{font-style:italic;}
@@ -384,6 +401,16 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       </div>
 
       <div class="card">
+        <div class="thumb"><img src="Aloras Dehydrated Jackfruit.png" alt="Dehydrated Jackfruit"><span class="pill p-fruit">Fruit</span></div>
+        <div class="info"><h3>Dehydrated Jackfruit</h3><p>Naturally sweet jackfruit pieces — rich in fibre and Vitamin C. No added sugar, no preservatives added.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+        <div class="tabs">
+          <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Jackfruit (Artocarpus heterophyllus)</strong> — naturally dehydrated pieces. No added sugar, no preservatives added.</p></div></div>
+          <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">340</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">3.6g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">0.9g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">13.8g</div><div class="nl">Fibre</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
+          <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 12 months</strong> from manufacture. Store in cool, dry place.</div></div></div>
+        </div>
+      </div>
+
+      <div class="card">
         <div class="thumb"><img src="dehydraded_mixedfruits.png.png" alt="Mixed Fruits"><span class="pill p-fruit">Mixed</span></div>
         <div class="info"><h3>Mixed Dehydrated Fruits</h3><p>A vibrant blend including apple, pineapple and banana. Perfect for trail mixes and cereals.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
         <div class="tabs">
@@ -582,6 +609,23 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
 </section>
 
 <!-- CUSTOM BANNER -->
+<!-- CASHEWS SECTION -->
+<section class="cashew-section">
+  <div class="cashew-inner">
+    <div class="cashew-label">Category 05 · Premium Nuts</div>
+    <div class="cashew-title">Premium <em>Cashews</em></div>
+    <div class="cashew-desc">Finest quality cashews — hygienically processed and export ready. Available in multiple grades for retail, wholesale and food manufacturing.</div>
+    <div class="cashew-grid">
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Alora premeum cashwes 180.png" alt="Premium Cashews W180" onerror="this.style.display='none';this.parentElement.style.fontSize='52px';this.parentElement.innerHTML+='🥜'"><span class="cashew-badge">W180</span></div><div class="cashew-info"><h3>Premium Cashews W180</h3><p>Largest whole cashew grade. Premium quality — ideal for gifting and gourmet retail.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras Premium 240.png" alt="Premium Cashews W240" onerror="this.style.display='none';this.parentElement.style.fontSize='52px';this.parentElement.innerHTML+='🥜'"><span class="cashew-badge">W240</span></div><div class="cashew-info"><h3>Premium Cashews W240</h3><p>Superior whole cashews — consistent size, popular for bulk and export orders.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras Cashews 450.png" alt="Cashews W450" onerror="this.style.display='none';this.parentElement.style.fontSize='52px';this.parentElement.innerHTML+='🥜'"><span class="cashew-badge">W450</span></div><div class="cashew-info"><h3>Cashews W450</h3><p>Small whole cashews — excellent value for food processing and bulk buyers.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras Cashew SSP.png" alt="Cashew SSP" onerror="this.style.display='none';this.parentElement.style.fontSize='52px';this.parentElement.innerHTML+='🥜'"><span class="cashew-badge">SSP</span></div><div class="cashew-info"><h3>Cashew SSP</h3><p>Small splits — ideal for baking, confectionery and food manufacturing.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras Cashew DP.png" alt="Cashew DP" onerror="this.style.display='none';this.parentElement.style.fontSize='52px';this.parentElement.innerHTML+='🥜'"><span class="cashew-badge">DP</span></div><div class="cashew-info"><h3>Cashew DP</h3><p>Desert pieces — ideal for ice cream, chocolates and dessert applications.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras cashew SWP.png" alt="Cashew SWP" onerror="this.style.display='none';this.parentElement.style.fontSize='52px';this.parentElement.innerHTML+='🥜'"><span class="cashew-badge">SWP</span></div><div class="cashew-info"><h3>Cashew SWP</h3><p>Small whole pieces — versatile grade for snacking, cooking and retail.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras Cashew TK.png" alt="Cashew TK" onerror="this.style.display='none';this.parentElement.style.fontSize='52px';this.parentElement.innerHTML+='🥜'"><span class="cashew-badge">TK</span></div><div class="cashew-info"><h3>Cashew TK</h3><p>Tukda pieces — broken cashew pieces ideal for cooking, mithai and food industry.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+    </div>
+  </div>
+</section>
 <div class="custom-banner">
   <div class="custom-inner">
     <div>
