@@ -76,7 +76,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 52px;display:fl
 .dark-card p{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7;font-weight:300}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:auto;padding:90px 52px}
 .two-col h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;line-height:1.15;margin-bottom:20px}
-.two-col h2 em{font-style:italic}
+.two-col h2 em{font-style:italic;color:var(--olive)}
+.highlight{position:relative;color:var(--dark);white-space:nowrap}
+.highlight::after{content:'';position:absolute;left:-2px;right:-2px;bottom:2px;height:12px;background:rgba(201,168,76,0.35);z-index:-1;border-radius:2px}
 .two-col p{font-size:15px;line-height:1.85;color:var(--muted);font-weight:300;margin-bottom:16px}
 .info-box{background:var(--cream);border-radius:20px;padding:36px;border:1px solid rgba(201,168,76,0.2);box-shadow:0 4px 24px rgba(44,36,22,.06)}
 .info-box h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--olive);margin-bottom:16px}
@@ -161,6 +163,7 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
     <a href="recipes.html">Recipes</a>
+    <a href="process.html">Our Process</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="nav-cta">Enquire</a>
@@ -259,7 +262,7 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
 <div class="two-col" style="background:var(--cream2)">
   <div>
     <div class="slabel">Our Promise</div>
-    <h2>Quality <em>Promise</em></h2>
+    <h2><span class="highlight">Quality</span> <em>Promise</em></h2>
     <p>We are committed to delivering products that are safe, natural, and carefully crafted. Every blend and powder is prepared with hygiene, tested for taste, and handled with care.</p>
     <p>Quality is not just a standard for us — it is a responsibility we take seriously with every single batch we produce.</p>
   </div>
@@ -351,6 +354,7 @@ footer{background:var(--dark);color:#fff;padding:52px 52px 30px}
       <a href="about.html">About Us</a>
       <a href="products.html">Products</a>
       <a href="recipes.html">Recipes</a>
+      <a href="process.html">Our Process</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
       <a href="terms.html">Terms & Conditions</a>
