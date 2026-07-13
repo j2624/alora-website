@@ -13,7 +13,7 @@
   --olive:#4a5c2a;--olive2:#5a7234;--gold:#c9a84c;--gold-light:#e2c47a;
   --cream:#f7f3ec;--cream2:#ede8df;
   --orange:#d4691e;--teal:#1f7a6e;--berry:#6b3490;--rust:#b83a22;
-  --ginger:#b07018;--muted:#6a6050;--text:#3a3020;
+  --ginger:#b07018;--muted:#6a6050;--text:#3a3020;--charcoal:#2e2a22;--beet:#8b1a2e;--fgreen:#1a5c1a;
 }
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
 
@@ -25,7 +25,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:fl
 .nav-links a:hover,.nav-links a.active{color:var(--olive)}
 .nav-cta{background:var(--olive)!important;color:#fff!important;padding:7px 18px;border-radius:16px;font-size:10px!important}
 
-/* HERO — compact */
+/* HERO */
 .hero{padding:110px 48px 60px;background:linear-gradient(135deg,#2c4014 0%,#3d5c20 55%,#4a6f28 100%);text-align:center}
 .hero-label{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:#fff;line-height:1.1;margin-bottom:12px}
@@ -44,33 +44,46 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:fl
 .cat-label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-weight:600}
 .cat-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:28px;padding-bottom:12px;border-bottom:2px solid rgba(201,168,76,0.18);line-height:1.1}
 .cat-title em{font-style:italic}
+#featured .cat-title{color:var(--charcoal)}
 #fruit-powder .cat-title{color:var(--orange)}
 #veg-powder   .cat-title{color:var(--olive2)}
 #fruits       .cat-title{color:var(--berry)}
 #vegs         .cat-title{color:var(--teal)}
 #khawa        .cat-title{color:var(--rust)}
 
-/* CARD — horizontal, compact */
+/* ══ FEATURED RECIPE CARDS — full clean image, no duplicate text ══ */
+.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.detail-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid rgba(201,168,76,0.16);box-shadow:0 4px 20px rgba(44,36,22,.07);transition:box-shadow .2s,transform .2s}
+.detail-card:hover{box-shadow:0 10px 30px rgba(44,36,22,.13);transform:translateY(-3px)}
+.detail-card img{width:100%;height:auto;display:block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:700px){.featured-grid{grid-template-columns:1fr}}
+
+/* ══ CATEGORY INTRO BANNER ══ */
+.cat-banner{border-radius:16px;padding:20px 26px;margin-bottom:24px;display:flex;align-items:center;gap:16px;color:#fff}
+.cat-banner .icon{font-size:32px;flex-shrink:0}
+.cat-banner h4{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-bottom:3px}
+.cat-banner p{font-size:12px;color:rgba(255,255,255,.78);line-height:1.5}
+
+/* accent left border + highlight chip */
+.recipe-card{border-left:4px solid transparent}
+.full-recipe-chip{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;padding:4px 10px;border-radius:12px;margin-bottom:10px;width:fit-content;text-decoration:none}
+.mini-box{transition:transform .18s,box-shadow .18s}
+.mini-box:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(44,36,22,.08)}
+
+/* CARD — horizontal, compact (existing mini-tip cards) */
 .recipe-card{background:#fff;border-radius:14px;overflow:hidden;border:1px solid rgba(201,168,76,0.14);box-shadow:0 2px 14px rgba(44,36,22,.05);margin-bottom:18px;transition:transform .2s,box-shadow .2s;display:grid;grid-template-columns:160px 1fr}
 .recipe-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(44,36,22,.1)}
-
-/* IMAGE — fixed small size */
 .recipe-img-col{overflow:hidden;position:relative;height:160px}
 .recipe-img-col img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .recipe-card:hover .recipe-img-col img{transform:scale(1.06)}
 .img-badge{position:absolute;bottom:7px;left:7px;background:rgba(0,0,0,0.48);color:#fff;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border-radius:8px}
-
-/* EMOJI BLOCK for items without photos */
 .emoji-col{height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
 .emoji-col span{font-size:40px}
 .emoji-col p{font-size:11px;font-weight:600;color:#fff;letter-spacing:.06em}
-
-/* BODY */
 .recipe-body{padding:16px 20px;display:flex;flex-direction:column;justify-content:center}
 .recipe-product-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;margin-bottom:3px;line-height:1.2}
 .recipe-tagline{font-size:11.5px;color:var(--muted);margin-bottom:10px;font-style:italic}
-
-/* TAGS */
 .uses-row{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
 .use-tag{border-radius:14px;padding:3px 9px;font-size:10px;font-weight:500;border:1.2px solid}
 .t-orange{color:var(--orange);border-color:rgba(212,105,30,.28);background:rgba(212,105,30,.05)}
@@ -81,8 +94,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:fl
 .t-rust{color:var(--rust);border-color:rgba(184,58,34,.26);background:rgba(184,58,34,.05)}
 .t-beet{color:#8b1a2e;border-color:rgba(139,26,46,.26);background:rgba(139,26,46,.05)}
 .t-green{color:#1a5c1a;border-color:rgba(26,92,26,.26);background:rgba(26,92,26,.05)}
-
-/* RECIPE MINI LIST — 2 columns, inline */
 .recipe-mini{display:grid;grid-template-columns:1fr 1fr;gap:7px}
 .mini-box{background:var(--cream2);border-radius:8px;padding:9px 11px;border-left:3px solid}
 .mini-box-title{font-size:11px;font-weight:600;margin-bottom:3px}
@@ -146,6 +157,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
 
 <div class="filter-bar">
   <button class="filter-btn active" onclick="filterSection('all',this)">🌿 All</button>
+  <button class="filter-btn" onclick="filterSection('featured',this)">⭐ Featured</button>
   <button class="filter-btn" onclick="filterSection('fruit-powder',this)">🍊 Fruit Powders</button>
   <button class="filter-btn" onclick="filterSection('veg-powder',this)">🥦 Veg Powders</button>
   <button class="filter-btn" onclick="filterSection('fruits',this)">🍌 Dehydrated Fruits</button>
@@ -155,13 +167,130 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
 
 <div class="content">
 
+  <!-- ═══ FEATURED FULL RECIPES ═══ -->
+  <div class="cat-section" id="featured">
+    <div class="cat-label">Featured</div>
+    <div class="cat-title">Full <em>Step-by-Step</em> Recipes</div>
+
+    <div class="featured-grid">
+
+      <!-- ORANGE PEEL -->
+      <div class="detail-card">
+        <img src="https://raw.githubusercontent.com/j2624/alora-website/master/orange%20peel%20Recepie.png" alt="Vitamin C Orange Peel Tea recipe card">
+        <div class="sr-only">
+          <h2>Vitamin C Orange Peel Tea</h2>
+          <p>A warming citrus tea using Alora Orange Peel Powder — an easy daily immunity boost. 5 mins, 1 Cup.</p>
+          <p>Ingredients: Hot water 1 cup, Alora Orange Peel Powder ½ tsp, Honey 1 tsp, Lemon juice few drops.</p>
+          <p>Method: Add Alora Orange Peel Powder to hot water. Stir in honey and lemon juice. Mix well and enjoy warm.</p>
+        </div>
+      </div>
+
+      <!-- POMEGRANATE -->
+      <div class="detail-card">
+        <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Pomerganate%20power%20Bowl%20recepiee.png" alt="Pomegranate Power Bowl recipe card">
+        <div class="sr-only">
+          <h2>Pomegranate Power Bowl</h2>
+          <p>A vibrant, antioxidant-rich breakfast bowl with Alora Pomegranate Powder stirred through creamy yogurt. 10 mins, 1 Bowl.</p>
+          <p>Ingredients: Thick yogurt 1 cup, Alora Pomegranate Powder 1 tsp, Granola 3 tbsp, Honey 1 tsp, Fresh pomegranate arils for topping.</p>
+          <p>Method: Stir Pomegranate Powder into yogurt until swirled pink. Spoon into a bowl. Top with granola, honey and arils. Serve chilled.</p>
+        </div>
+      </div>
+
+      <!-- BEETROOT -->
+      <div class="detail-card">
+        <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Beetroot%20Gumus%20Recepie.png" alt="Beetroot Hummus recipe card">
+        <div class="sr-only">
+          <h2>Beetroot Hummus</h2>
+          <p>A vivid pink, creamy hummus with the earthy sweetness of Alora Beetroot Powder — great with warm pita. 10 mins, Serves 4.</p>
+          <p>Ingredients: Chickpeas (boiled) 1 cup, Alora Beetroot Powder 1 tsp, Tahini 2 tbsp, Lemon juice 1 tbsp, Olive oil 1 tbsp, Garlic 1 clove, Salt to taste.</p>
+          <p>Method: Blend all ingredients until smooth. Adjust water for desired consistency. Drizzle olive oil and serve.</p>
+        </div>
+      </div>
+
+      <!-- AMLA -->
+      <div class="detail-card">
+        <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Amla%20immunity%20tea%20Recipe.png" alt="Amla Immunity Tea recipe card">
+        <div class="sr-only">
+          <h2>Amla Immunity Tea</h2>
+          <p>A daily Ayurvedic ritual — warm water infused with Alora Amla Powder, honey and turmeric for immunity. 5 mins, 1 Cup.</p>
+          <p>Ingredients: Warm water 1 cup, Alora Amla Powder ½ tsp, Honey 1 tsp, Turmeric a pinch.</p>
+          <p>Method: Stir Amla Powder and turmeric into warm water. Add honey and mix well. Drink first thing every morning.</p>
+        </div>
+      </div>
+
+      <!-- KASHMIRI KAHWA -->
+      <div class="detail-card">
+        <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Iced%20Khawa%20Recepie.png" alt="Iced Kashmiri Kahwa recipe card">
+        <div class="sr-only">
+          <h2>Iced Kashmiri Kahwa</h2>
+          <p>A refreshing cold twist on the traditional Himalayan brew — saffron and cardamom over ice. 8 mins, 1 Glass.</p>
+          <p>Ingredients: Water 1 cup, Alora Kashmiri Kahwa mix 2 tsp (double strength), Honey 1 tsp, Lemon juice few drops, Ice cubes.</p>
+          <p>Method: Brew Kahwa double-strength, then let it cool. Fill a glass with ice. Pour over Kahwa, add honey and lemon. Stir and serve.</p>
+        </div>
+      </div>
+
+      <!-- GARLIC & LEMON ROASTED VEGGIES -->
+      <div class="detail-card">
+        <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Garlic%20%26lemon%20roased%20Veges%20Recepie.png" alt="Garlic and Lemon Roasted Veggies recipe card">
+        <div class="sr-only">
+          <h2>Garlic &amp; Lemon Roasted Veggies</h2>
+          <p>Wholesome roasted vegetables tossed with Alora Garlic Powder and a bright citrus lift — an easy weeknight side. 35 mins, Serves 2.</p>
+          <p>Ingredients: Mixed vegetables 2 cups, Olive oil 2 tbsp, Alora Garlic Powder 1 tbsp, Lemon juice/zest 1 lemon, Salt &amp; pepper to taste.</p>
+          <p>Method: Toss vegetables with oil, garlic powder and seasoning. Spread on a baking tray. Roast at 200°C for 25–30 min until golden. Finish with fresh lemon juice and zest.</p>
+        </div>
+      </div>
+
+      <!-- BLACK GARLIC PASTA -->
+      <div class="detail-card">
+        <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Black%20Garlic%20Pasta%20Recepie.png" alt="Black Garlic Pasta recipe card">
+        <div class="sr-only">
+          <h2>Black Garlic Pasta</h2>
+          <p>Creamy, garlicky pasta with a rich umami kick from Alora Black Garlic Powder — restaurant-style, ready in 25 minutes. 25 mins, Serves 2.</p>
+          <p>Ingredients: Pasta 200 g, Olive oil 2 tbsp, Garlic (chopped) 1 tbsp, Alora Black Garlic Powder 1 tbsp, Cream ¼ cup, Parmesan 2 tbsp, Salt &amp; pepper to taste.</p>
+          <p>Method: Cook pasta, reserve some starchy water. Sauté garlic, stir in Black Garlic Powder. Add cream, season, mix well. Toss in pasta with parmesan and serve.</p>
+        </div>
+      </div>
+
+      <!-- BANANA SMOOTHIE -->
+      <div class="detail-card">
+        <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Banana%20smoothie%20recepie.png" alt="Banana Smoothie recipe card">
+        <div class="sr-only">
+          <h2>Banana Smoothie</h2>
+          <p>A creamy, naturally sweet smoothie made with Alora Banana Powder — no fresh banana needed. 5 mins, 1 Glass.</p>
+          <p>Ingredients: Milk 1 cup, Alora Banana Powder 2 tbsp, Honey 1 tsp, Chia seeds ½ tsp (optional).</p>
+          <p>Method: Add milk, Banana Powder and honey to a blender. Blend until smooth and creamy. Stir in chia seeds and serve chilled.</p>
+        </div>
+      </div>
+
+      <!-- SPINACH POWDER RECIPE -->
+      <div class="detail-card">
+        <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Spinach%20powder%20recepie.png" alt="Spinach Powder recipe card">
+        <div class="sr-only">
+          <h2>Spinach Powder Soup</h2>
+          <p>A vibrant, iron-rich soup made in minutes with Alora Spinach Powder — no washing or chopping needed. 10 mins, Serves 2.</p>
+          <p>Ingredients: Alora Spinach Powder 2 tbsp, Water 400 ml, Garlic ½ tsp, Salt to taste, Cream 2 tbsp.</p>
+          <p>Method: Whisk Spinach Powder into warm water until smooth. Add garlic and salt, heat 5 minutes. Stir in cream and serve hot.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
   <!-- ═══ FRUIT POWDERS ═══ -->
   <div class="cat-section" id="fruit-powder">
     <div class="cat-label">Category 01</div>
     <div class="cat-title">Fruit <em>Powder</em> Uses &amp; Recipes</div>
 
-    <!-- ORANGE PEEL -->
-    <div class="recipe-card">
+    <div class="cat-banner" style="background:linear-gradient(135deg,#a8451c,#d4691e)">
+      <div class="icon">🍊</div>
+      <div>
+        <h4>Sun-Ripened Fruit, Powdered Fresh</h4>
+        <p>Vitamin-rich, no added sugar — perfect for teas, smoothies, baking and skincare. Tap ⭐ Full Recipe on any card below for the complete step-by-step.</p>
+      </div>
+    </div>
+
+    <div class="recipe-card" style="border-left-color:var(--orange)">
       <div class="recipe-img-col">
         <img src="https://images.unsplash.com/photo-1547514701-42782101795e?w=400&q=80" alt="Fresh Oranges">
         <span class="img-badge">Orange Peel</span>
@@ -169,13 +298,13 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       <div class="recipe-body">
         <div class="recipe-product-title" style="color:var(--orange)">Orange Peel Powder</div>
         <div class="recipe-tagline">Rich in Vitamin C · Natural Citrus Flavour · Multi-purpose</div>
+        <a href="#featured" class="full-recipe-chip" style="background:rgba(212,105,30,.1);color:var(--orange)">⭐ Full Recipe: Vitamin C Orange Peel Tea</a>
         <div class="uses-row">
           <span class="use-tag t-orange">☕ Tea</span><span class="use-tag t-orange">🧁 Baking</span>
           <span class="use-tag t-orange">🥤 Smoothies</span><span class="use-tag t-orange">💆 Skincare</span>
           <span class="use-tag t-orange">🍫 Chocolate</span><span class="use-tag t-orange">🏠 Room Freshener</span>
         </div>
         <div class="recipe-mini">
-          <div class="mini-box" style="border-color:var(--orange)"><div class="mini-box-title" style="color:var(--orange)">☕ Orange Peel Tea</div><p>Half tsp in hot water with honey and ginger. Steep 3 mins.</p></div>
           <div class="mini-box" style="border-color:var(--orange)"><div class="mini-box-title" style="color:var(--orange)">💆 Face Mask</div><p>Mix 1 tsp with honey and yogurt. Apply 15 mins — natural brightening.</p></div>
           <div class="mini-box" style="border-color:var(--orange)"><div class="mini-box-title" style="color:var(--orange)">🧁 Orange Cake</div><p>1 tbsp in cake batter for natural citrus flavour — no artificial essence.</p></div>
           <div class="mini-box" style="border-color:var(--orange)"><div class="mini-box-title" style="color:var(--orange)">🥤 Citrus Smoothie</div><p>Blend half tsp with banana, milk and honey. Fresh, tangy and nutritious.</p></div>
@@ -183,8 +312,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <!-- BANANA -->
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:var(--ginger)">
       <div class="recipe-img-col">
         <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&q=80" alt="Fresh Bananas">
         <span class="img-badge">Banana</span>
@@ -192,13 +320,13 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       <div class="recipe-body">
         <div class="recipe-product-title" style="color:var(--ginger)">Banana Powder</div>
         <div class="recipe-tagline">High in Potassium · Natural Sweetener · Baby Food Friendly</div>
+        <a href="#featured" class="full-recipe-chip" style="background:rgba(176,112,24,.1);color:var(--ginger)">⭐ Full Recipe: Banana Smoothie</a>
         <div class="uses-row">
           <span class="use-tag t-gold">🍼 Baby Food</span><span class="use-tag t-gold">🥤 Smoothies</span>
           <span class="use-tag t-gold">🥞 Pancakes</span><span class="use-tag t-gold">🍪 Baking</span>
           <span class="use-tag t-gold">💪 Protein Shakes</span><span class="use-tag t-gold">🍨 Ice Cream</span>
         </div>
         <div class="recipe-mini">
-          <div class="mini-box" style="border-color:var(--ginger)"><div class="mini-box-title" style="color:var(--ginger)">🥤 Banana Smoothie</div><p>2 tbsp with milk, honey and cinnamon. Blend — real banana flavour.</p></div>
           <div class="mini-box" style="border-color:var(--ginger)"><div class="mini-box-title" style="color:var(--ginger)">🥞 Banana Pancakes</div><p>Replace fresh banana with 3 tbsp powder — consistent, natural sweetness.</p></div>
           <div class="mini-box" style="border-color:var(--ginger)"><div class="mini-box-title" style="color:var(--ginger)">🍼 Baby Porridge</div><p>1 tsp in warm rice or oat porridge — nutritious and easy to digest.</p></div>
           <div class="mini-box" style="border-color:var(--ginger)"><div class="mini-box-title" style="color:var(--ginger)">💪 Protein Shake</div><p>2 tbsp in your shake — natural carbs and potassium. Perfect post-workout.</p></div>
@@ -206,8 +334,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <!-- AMLA -->
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:var(--olive2)">
       <div class="recipe-img-col">
         <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Amla.png.png" alt="Fresh Amla Gooseberry">
         <span class="img-badge">Amla</span>
@@ -215,13 +342,13 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       <div class="recipe-body">
         <div class="recipe-product-title" style="color:var(--olive2)">Amla Powder</div>
         <div class="recipe-tagline">Highest Natural Vitamin C · Immunity Booster · Ayurvedic Superfood</div>
+        <a href="#featured" class="full-recipe-chip" style="background:rgba(74,92,42,.1);color:var(--olive2)">⭐ Full Recipe: Amla Immunity Tea</a>
         <div class="uses-row">
           <span class="use-tag t-olive">🏥 Health Supplement</span><span class="use-tag t-olive">☕ Tea</span>
           <span class="use-tag t-olive">🥤 Juice</span><span class="use-tag t-olive">💆 Hair Care</span>
           <span class="use-tag t-olive">🍯 Chutney</span><span class="use-tag t-olive">💊 Nutraceuticals</span>
         </div>
         <div class="recipe-mini">
-          <div class="mini-box" style="border-color:var(--olive2)"><div class="mini-box-title" style="color:var(--olive2)">☕ Amla Immunity Tea</div><p>Half tsp with warm water, honey and turmeric. Every morning for immunity.</p></div>
           <div class="mini-box" style="border-color:var(--olive2)"><div class="mini-box-title" style="color:var(--olive2)">💆 Hair Oil Mask</div><p>2 tbsp with coconut oil. Apply to scalp, leave 1 hour. Strengthens roots.</p></div>
           <div class="mini-box" style="border-color:var(--olive2)"><div class="mini-box-title" style="color:var(--olive2)">🥤 Amla Detox Juice</div><p>1 tsp in water with honey and black salt — refreshing Vitamin C drink.</p></div>
           <div class="mini-box" style="border-color:var(--olive2)"><div class="mini-box-title" style="color:var(--olive2)">🥒 Amla Pickle</div><p>Heat oil, add mustard seeds and spices. Mix amla powder, store in jar — 1 month!</p></div>
@@ -229,8 +356,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <!-- POMEGRANATE -->
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:var(--berry)">
       <div class="recipe-img-col">
         <img src="https://raw.githubusercontent.com/j2624/alora-website/master/pomegranate.png.png" alt="Pomegranate">
         <span class="img-badge">Pomegranate</span>
@@ -238,6 +364,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       <div class="recipe-body">
         <div class="recipe-product-title" style="color:var(--berry)">Pomegranate Powder</div>
         <div class="recipe-tagline">Rich in Antioxidants · Natural Deep Red · Heart Health</div>
+        <a href="#featured" class="full-recipe-chip" style="background:rgba(107,52,144,.1);color:var(--berry)">⭐ Full Recipe: Pomegranate Power Bowl</a>
         <div class="uses-row">
           <span class="use-tag t-berry">🥤 Smoothies</span><span class="use-tag t-berry">🧁 Baking</span>
           <span class="use-tag t-berry">💊 Supplements</span><span class="use-tag t-berry">🍹 Drinks</span>
@@ -256,6 +383,14 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
     <div class="cat-label">Category 02</div>
     <div class="cat-title">Vegetable <em>Powder</em> Uses &amp; Recipes</div>
 
+    <div class="cat-banner" style="background:linear-gradient(135deg,#2c4014,#5a7234)">
+      <div class="icon">🥦</div>
+      <div>
+        <h4>Zero Prep, Full Flavour</h4>
+        <p>From umami-rich Black Garlic to earthy Beetroot — no chopping, no peeling, just powerful natural flavour in every pinch.</p>
+      </div>
+    </div>
+
     <div class="soup-card green">
       <h3>🍅 Tomato Powder <em>Soup</em></h3>
       <p class="sub">Rich, natural lycopene — ready in under 10 minutes!</p>
@@ -267,8 +402,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <!-- SPINACH -->
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:var(--olive2)">
       <div class="recipe-img-col">
         <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400&q=90" alt="Fresh Spinach">
         <span class="img-badge">Spinach</span>
@@ -276,13 +410,13 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       <div class="recipe-body">
         <div class="recipe-product-title" style="color:var(--olive2)">Spinach Powder</div>
         <div class="recipe-tagline">Iron Rich · Natural Vivid Green · Versatile Superfood</div>
+        <a href="#featured" class="full-recipe-chip" style="background:rgba(74,92,42,.1);color:var(--olive2)">⭐ Full Recipe: Spinach Powder Soup</a>
         <div class="uses-row">
           <span class="use-tag t-olive">🍵 Soup</span><span class="use-tag t-olive">🥤 Smoothies</span>
           <span class="use-tag t-olive">🍞 Bread &amp; Pasta</span><span class="use-tag t-olive">🥞 Pancakes</span>
           <span class="use-tag t-olive">💊 Supplements</span>
         </div>
         <div class="recipe-mini">
-          <div class="mini-box" style="border-color:var(--olive2)"><div class="mini-box-title" style="color:var(--olive2)">🍵 Spinach Soup</div><p>2 tbsp in 400ml water with garlic, salt and cream. Heat 5 mins. Vibrant green!</p></div>
           <div class="mini-box" style="border-color:var(--olive2)"><div class="mini-box-title" style="color:var(--olive2)">🥤 Green Smoothie</div><p>1 tsp in banana, apple and coconut water. No raw spinach needed!</p></div>
           <div class="mini-box" style="border-color:var(--olive2)"><div class="mini-box-title" style="color:var(--olive2)">🍞 Green Pasta</div><p>2 tbsp in pasta dough — natural green colour and added iron.</p></div>
           <div class="mini-box" style="border-color:var(--olive2)"><div class="mini-box-title" style="color:var(--olive2)">🥞 Spinach Pancakes</div><p>1 tbsp in batter. Bright green, nutritious pancakes kids will love!</p></div>
@@ -290,8 +424,27 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <!-- GARLIC -->
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:var(--charcoal)">
+      <div class="recipe-img-col">
+        <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Black%20Garlic.png" alt="Black Garlic">
+        <span class="img-badge">Black Garlic</span>
+      </div>
+      <div class="recipe-body">
+        <div class="recipe-product-title" style="color:var(--charcoal)">Black Garlic Powder</div>
+        <div class="recipe-tagline">Deep Umami Flavour · Fermented Superfood · Antioxidant Rich</div>
+        <a href="#featured" class="full-recipe-chip" style="background:rgba(46,42,34,.1);color:var(--charcoal)">⭐ Full Recipe: Black Garlic Pasta</a>
+        <div class="uses-row">
+          <span class="use-tag t-teal">🍝 Pasta</span><span class="use-tag t-teal">🍞 Sourdough</span>
+          <span class="use-tag t-teal">🧈 Butter Spread</span><span class="use-tag t-teal">🍲 Soups</span>
+          <span class="use-tag t-teal">🥩 Marinades</span>
+        </div>
+        <div class="recipe-mini">
+          <div class="mini-box" style="border-color:var(--charcoal)"><div class="mini-box-title" style="color:var(--charcoal)">🧈 Black Garlic Butter</div><p>1 tbsp whipped into softened butter — spread on warm bread or steak.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" style="border-left-color:var(--teal)">
       <div class="recipe-img-col">
         <img src="https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?w=400&q=80" alt="Fresh Garlic">
         <span class="img-badge">Garlic</span>
@@ -311,8 +464,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <!-- GINGER -->
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:var(--ginger)">
       <div class="recipe-img-col">
         <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&q=80" alt="Fresh Ginger">
         <span class="img-badge">Ginger</span>
@@ -332,8 +484,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <!-- BEETROOT -->
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:#8b1a2e">
       <div class="recipe-img-col">
         <img src="https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?w=400&q=90" alt="Fresh Beetroot">
         <span class="img-badge">Beetroot</span>
@@ -341,6 +492,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       <div class="recipe-body">
         <div class="recipe-product-title" style="color:#8b1a2e">Beetroot Powder</div>
         <div class="recipe-tagline">Natural Deep Red · Iron Rich · Performance Booster</div>
+        <a href="#featured" class="full-recipe-chip" style="background:rgba(139,26,46,.1);color:#8b1a2e">⭐ Full Recipe: Beetroot Hummus</a>
         <div class="uses-row">
           <span class="use-tag t-beet">🥤 Smoothies</span><span class="use-tag t-beet">🧁 Food Colouring</span>
           <span class="use-tag t-beet">💊 Supplements</span><span class="use-tag t-beet">🍵 Soup</span>
@@ -353,8 +505,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <!-- METHI -->
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:#1a5c1a">
       <div class="recipe-img-col">
         <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Methi.png.png" alt="Fresh Methi">
         <span class="img-badge">Methi</span>
@@ -374,8 +525,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <!-- TURMERIC -->
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:var(--ginger)">
       <div class="recipe-img-col">
         <img src="https://raw.githubusercontent.com/j2624/alora-website/master/Tummeric.png.png" alt="Fresh Turmeric Root">
         <span class="img-badge">Turmeric</span>
@@ -401,7 +551,15 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
     <div class="cat-label">Category 03</div>
     <div class="cat-title">Dehydrated <em>Fruits</em> Uses &amp; Ideas</div>
 
-    <div class="recipe-card">
+    <div class="cat-banner" style="background:linear-gradient(135deg,#4a1f5c,#6b3490)">
+      <div class="icon">🍌</div>
+      <div>
+        <h4>Sweet, Chewy, No Added Sugar</h4>
+        <p>Mango, banana, pineapple, apple and guava — dried at their peak. Perfect for snacking straight from the pack or baking in.</p>
+      </div>
+    </div>
+
+    <div class="recipe-card" style="border-left-color:var(--berry)">
       <div class="recipe-img-col">
         <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&q=80" alt="Fresh Tropical Fruits">
         <span class="img-badge">Tropical Fruits</span>
@@ -430,6 +588,14 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
     <div class="cat-label">Category 04</div>
     <div class="cat-title">Dehydrated <em>Vegetables</em> Uses &amp; Recipes</div>
 
+    <div class="cat-banner" style="background:linear-gradient(135deg,#0d3830,#1f7a6e)">
+      <div class="icon">🥕</div>
+      <div>
+        <h4>Chop-Free Cooking</h4>
+        <p>Onion, tomato, potato and garlic, ready to rehydrate straight into soups, curries and sauces — zero prep, full flavour.</p>
+      </div>
+    </div>
+
     <div class="soup-card teal">
       <h3>🥕 Mixed Vegetable <em>Soup</em></h3>
       <p class="sub">A hearty, nutritious soup — ready in 15 minutes using Alora dehydrated vegetables!</p>
@@ -441,7 +607,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:var(--teal)">
       <div class="recipe-img-col">
         <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" alt="Fresh Vegetables">
         <span class="img-badge">Dehydrated Veg</span>
@@ -467,6 +633,14 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
     <div class="cat-label">Category 05</div>
     <div class="cat-title">Kashmiri <em>Kahwa</em> Brewing &amp; Uses</div>
 
+    <div class="cat-banner" style="background:linear-gradient(135deg,#5a2e0e,#8b5a2a)">
+      <div class="icon">🍵</div>
+      <div>
+        <h4>A Himalayan Tradition, Brewed at Home</h4>
+        <p>Saffron, cardamom and warm spice — the same wellness ritual enjoyed in Kashmir for centuries, ready in 5 minutes.</p>
+      </div>
+    </div>
+
     <div class="soup-card brown">
       <h3>🍵 Classic Kashmiri <em>Kahwa</em></h3>
       <p class="sub">A Himalayan tradition — warming, aromatic and rich in wellness</p>
@@ -478,7 +652,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       </div>
     </div>
 
-    <div class="recipe-card">
+    <div class="recipe-card" style="border-left-color:var(--rust)">
       <div class="recipe-img-col">
         <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80" alt="Kashmiri Kahwa">
         <span class="img-badge">Kashmiri Kahwa</span>
@@ -486,6 +660,7 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
       <div class="recipe-body">
         <div class="recipe-product-title" style="color:var(--rust)">Kashmiri Kahwa</div>
         <div class="recipe-tagline">Traditional Himalayan Brew · Saffron &amp; Cardamom · Wellness Tea</div>
+        <a href="#featured" class="full-recipe-chip" style="background:rgba(184,58,34,.1);color:var(--rust)">⭐ Full Recipe: Iced Kashmiri Kahwa</a>
         <div class="uses-row">
           <span class="use-tag t-rust">☕ Morning Wellness</span><span class="use-tag t-rust">🌙 Evening Relaxation</span>
           <span class="use-tag t-rust">🤒 Cold &amp; Flu</span><span class="use-tag t-rust">🧘 Meditation</span>
@@ -493,7 +668,6 @@ footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
         </div>
         <div class="recipe-mini">
           <div class="mini-box" style="border-color:var(--rust)"><div class="mini-box-title" style="color:var(--rust)">🥛 Kahwa Latte</div><p>Brew strong (2 tsp), strain, add steamed milk and honey. Aromatic latte twist!</p></div>
-          <div class="mini-box" style="border-color:var(--rust)"><div class="mini-box-title" style="color:var(--rust)">🧊 Iced Kahwa</div><p>Brew double strength, cool, pour over ice with honey and lemon. Refreshing!</p></div>
           <div class="mini-box" style="border-color:var(--rust)"><div class="mini-box-title" style="color:var(--rust)">🤒 Cold Relief Brew</div><p>Brew with extra ginger and honey. Saffron, cardamom and cinnamon soothe symptoms.</p></div>
           <div class="mini-box" style="border-color:var(--rust)"><div class="mini-box-title" style="color:var(--rust)">🍮 Kahwa Dessert Base</div><p>Use brewed Kahwa in rice kheer or panna cotta — beautiful colour and aroma!</p></div>
         </div>
