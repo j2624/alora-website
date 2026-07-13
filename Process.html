@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Process – Alora Customary Care</title>
+<meta name="description" content="How Alora sources, develops and delivers natural dehydrated products from Belagavi, Karnataka to your table.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --olive:#4a5c2a;--olive2:#5a7234;--gold:#c9a84c;--gold-light:#e2c47a;
+  --cream:#f7f3ec;--cream2:#ede8df;
+  --orange:#d4691e;--teal:#1f7a6e;--berry:#6b3490;--rust:#b83a22;
+  --ginger:#b07018;--muted:#6a6050;--text:#3a3020;--charcoal:#2e2a22;--beet:#8b1a2e;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(247,243,236,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,168,76,0.2)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;letter-spacing:.14em;text-decoration:none;color:var(--olive)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--olive)}
+.nav-cta{background:var(--olive)!important;color:#fff!important;padding:7px 18px;border-radius:16px;font-size:10px!important}
+
+/* HERO */
+.hero{padding:110px 48px 60px;background:linear-gradient(135deg,#2c4014 0%,#3d5c20 55%,#4a6f28 100%);text-align:center}
+.hero-label{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:#fff;line-height:1.1;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero p{font-size:13.5px;color:rgba(255,255,255,0.62);max-width:560px;margin:auto;line-height:1.75}
+
+/* SECTION */
+.content{max-width:1100px;margin:0 auto;padding:64px 40px}
+.sec-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:600;text-align:center}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;text-align:center;margin-bottom:14px}
+.sec-title em{font-style:italic;color:var(--olive)}
+.sec-desc{font-size:13px;color:var(--muted);text-align:center;max-width:560px;margin:0 auto 50px;line-height:1.75}
+
+/* WHEEL */
+.wheel-wrap{display:flex;justify-content:center;margin-bottom:100px}
+.wheel{position:relative;width:520px;height:520px;max-width:90vw}
+.wheel svg{position:absolute;top:0;left:0;width:100%;height:100%}
+.wheel-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:150px;text-align:center}
+.wheel-center .icon{font-size:34px;margin-bottom:6px}
+.wheel-center p{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;line-height:1.25;color:var(--olive)}
+.wheel-step{position:absolute;width:128px;transform:translate(-50%,-50%);text-align:center;color:#fff;border-radius:16px;padding:12px 10px;font-size:11.5px;font-weight:500;line-height:1.35;box-shadow:0 6px 18px rgba(44,36,22,.16)}
+.wheel-step .num{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;display:block;margin-bottom:2px;color:var(--gold-light)}
+
+@media(max-width:700px){
+  nav{padding:14px 18px}.hero{padding:96px 20px 48px}.hero h1{font-size:32px}
+  .content{padding:44px 16px}
+  .wheel{width:340px;height:340px}
+  .wheel-step{width:92px;font-size:9.5px;padding:8px 6px;border-radius:12px}
+  .wheel-center{width:110px}
+  .wheel-center .icon{font-size:24px}
+  .wheel-center p{font-size:12px}
+  .wheel-wrap{margin-bottom:70px}
+  .nav-cta{display:none}
+}
+
+/* INNOVATION STRIP */
+.innovation-block{max-width:820px;margin:0 auto 0;text-align:center}
+.innovation-block h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;margin-bottom:20px;color:var(--olive)}
+.innovation-block p{font-size:13.5px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.innovation-strip{height:70px;background:linear-gradient(135deg,var(--olive),var(--olive2));border-radius:14px;margin-top:36px}
+
+/* KITCHEN FEATURE */
+.kitchen-feature{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:18px;overflow:hidden;margin:90px auto;max-width:1020px;box-shadow:0 10px 34px rgba(44,36,22,.1)}
+.kitchen-img{min-height:340px;background-size:cover;background-position:center}
+.kitchen-text{background:#fff;padding:44px 40px;display:flex;flex-direction:column;justify-content:center}
+.kitchen-text h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--olive);margin-bottom:14px}
+.kitchen-text p{font-size:12.5px;color:var(--muted);line-height:1.8;margin-bottom:12px}
+@media(max-width:750px){.kitchen-feature{grid-template-columns:1fr}.kitchen-img{height:220px}}
+
+/* ACCORDION */
+.accordion{max-width:820px;margin:0 auto 90px}
+.accordion-item{border-bottom:1px solid rgba(201,168,76,.25)}
+.accordion-head{display:flex;justify-content:space-between;align-items:center;padding:22px 4px;cursor:pointer}
+.accordion-head h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--olive)}
+.accordion-arrow{width:34px;height:34px;border-radius:8px;background:var(--olive);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;transition:transform .25s}
+.accordion-item.open .accordion-arrow{transform:rotate(135deg)}
+.accordion-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.accordion-item.open .accordion-body{max-height:200px}
+.accordion-body p{font-size:12.5px;color:var(--muted);line-height:1.8;padding:0 4px 22px}
+
+/* SAFETY BANNER */
+.safety-banner{display:grid;grid-template-columns:1fr 1fr;border-radius:18px;overflow:hidden;margin:0 auto 90px;max-width:1020px;background:linear-gradient(135deg,var(--olive),#3a4a20);color:#fff}
+.safety-text{padding:48px 44px;display:flex;flex-direction:column;justify-content:center}
+.safety-text h3{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600;margin-bottom:14px;line-height:1.25}
+.safety-text p{font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.8;margin-bottom:22px}
+.safety-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--olive);padding:11px 22px;border-radius:22px;font-size:11px;font-weight:700;letter-spacing:.04em;text-decoration:none;width:fit-content}
+.safety-img{min-height:280px;background-size:cover;background-position:center}
+@media(max-width:750px){.safety-banner{grid-template-columns:1fr}.safety-img{height:200px;order:-1}}
+
+/* FOOTER */
+footer{background:var(--olive);color:#fff;padding:36px 48px 20px}
+.foot-inner{max-width:960px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:16px}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:.13em;margin-bottom:3px}
+.foot-sub{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);margin-bottom:8px}
+.foot-col h4{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);margin-bottom:12px}
+.foot-col a{display:block;font-size:12px;color:rgba(255,255,255,.48);text-decoration:none;margin-bottom:6px;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{max-width:960px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.foot-bottom p{font-size:10px;color:rgba(255,255,255,.26)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Alora Customary Care</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="process.html" class="active">Our Process</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="nav-cta">Enquire</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-label">Farm to Table · Belagavi to the World</div>
+  <h1>How We <em>Create &amp; Deliver</em></h1>
+  <p>From a single idea to a pack in your hands — every Alora product follows a rigorous journey of sourcing, testing and care, from our home in Belagavi, Karnataka to your table in the UK and beyond.</p>
+</section>
+
+<div class="content">
+
+  <!-- WHEEL 1 — PRODUCT DEVELOPMENT -->
+  <div class="sec-label">Our Process — Part 01</div>
+  <div class="sec-title">How We <em>Create</em> New Products</div>
+  <p class="sec-desc">Every Alora product is developed with care — from first idea to shelf, guided by nutrition, natural sourcing and real kitchen testing.</p>
+
+  <div class="wheel-wrap">
+    <div class="wheel" id="wheel1">
+      <svg viewBox="0 0 520 520"><circle cx="260" cy="260" r="205" fill="none" stroke="rgba(74,92,42,0.18)" stroke-width="2" stroke-dasharray="4 8"/></svg>
+      <div class="wheel-center">
+        <div class="icon">🌿</div>
+        <p>Alora Product<br>Journey</p>
+      </div>
+      <!-- 8 steps placed clockwise from top -->
+      <div class="wheel-step" style="top:0%;left:50%;background:var(--olive)"><span class="num">01</span>Idea Generation</div>
+      <div class="wheel-step" style="top:14.6%;left:85.4%;background:var(--olive2)"><span class="num">02</span>Ingredient Sourcing</div>
+      <div class="wheel-step" style="top:50%;left:100%;background:var(--gold);color:var(--text)"><span class="num">03</span>Recipe &amp; Formula Development</div>
+      <div class="wheel-step" style="top:85.4%;left:85.4%;background:var(--orange)"><span class="num">04</span>Dehydration &amp; Processing</div>
+      <div class="wheel-step" style="top:100%;left:50%;background:var(--rust)"><span class="num">05</span>Lab &amp; Quality Testing</div>
+      <div class="wheel-step" style="top:85.4%;left:14.6%;background:var(--berry)"><span class="num">06</span>Packaging &amp; Labelling</div>
+      <div class="wheel-step" style="top:50%;left:0%;background:var(--teal)"><span class="num">07</span>Product Launch</div>
+      <div class="wheel-step" style="top:14.6%;left:14.6%;background:var(--olive)"><span class="num">08</span>Customer Feedback &amp; Improvement</div>
+    </div>
+  </div>
+
+  <!-- WHEEL 2 — SOURCING JOURNEY -->
+  <div class="sec-label">Our Process — Part 02</div>
+  <div class="sec-title">From <em>Belagavi</em> to Your Table</div>
+  <p class="sec-desc">Grown, dried and packed at source in Karnataka — then exported and delivered fresh to homes across the UK.</p>
+
+  <div class="wheel-wrap">
+    <div class="wheel" id="wheel2">
+      <svg viewBox="0 0 520 520"><circle cx="260" cy="260" r="205" fill="none" stroke="rgba(176,112,24,0.18)" stroke-width="2" stroke-dasharray="4 8"/></svg>
+      <div class="wheel-center">
+        <div class="icon">🌍</div>
+        <p>Belagavi<br>to the UK</p>
+      </div>
+      <div class="wheel-step" style="top:0%;left:50%;background:var(--olive)"><span class="num">01</span>Farm Sourcing, Belagavi</div>
+      <div class="wheel-step" style="top:14.6%;left:85.4%;background:var(--olive2)"><span class="num">02</span>Harvest &amp; Selection</div>
+      <div class="wheel-step" style="top:50%;left:100%;background:var(--ginger);color:#fff"><span class="num">03</span>Natural Dehydration</div>
+      <div class="wheel-step" style="top:85.4%;left:85.4%;background:var(--rust)"><span class="num">04</span>Lab Testing (FSSAI)</div>
+      <div class="wheel-step" style="top:100%;left:50%;background:var(--berry)"><span class="num">05</span>Packaging, MSME/Udyam</div>
+      <div class="wheel-step" style="top:85.4%;left:14.6%;background:var(--teal)"><span class="num">06</span>Export Documentation</div>
+      <div class="wheel-step" style="top:50%;left:0%;background:var(--orange)"><span class="num">07</span>UK Distribution</div>
+      <div class="wheel-step" style="top:14.6%;left:14.6%;background:var(--olive)"><span class="num">08</span>Delivered to Your Door</div>
+    </div>
+  </div>
+
+</div>
+
+  <!-- INNOVATION -->
+  <div class="innovation-block">
+    <h2>An Open Approach to Innovation</h2>
+    <p>To us, innovation isn't confined to a lab. Every new Alora product starts as a simple question — a family recipe, a request from a UK buyer, a gap we spot in the market. Ideas can come from anywhere: our kitchen in Belagavi, feedback from tutoring students, or a customer's WhatsApp message.</p>
+    <p>Innovation isn't just about the product itself — it's about the packaging, the processing, and how a product actually reaches your table. We stay close to every part of that journey, so every new addition to the Alora range is thought through end to end.</p>
+    <div class="innovation-strip"></div>
+  </div>
+
+  <!-- KITCHEN FEATURE -->
+  <div class="kitchen-feature">
+    <div class="kitchen-img" style="background-image:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80')"></div>
+    <div class="kitchen-text">
+      <h3>Our Home Kitchen, Where It Begins</h3>
+      <p>Every Alora recipe is first tested in a real kitchen, not a factory line. Before any product reaches production, it's tasted, adjusted and tasted again — the same way you'd perfect a family recipe.</p>
+      <p>We work directly with our dehydration and packaging partners in Belagavi to make sure what works in the kitchen translates faithfully into every pack we send out — no shortcuts, no compromise on taste.</p>
+    </div>
+  </div>
+
+  <!-- ACCORDION -->
+  <div class="sec-label">Planning &amp; Approval</div>
+  <div class="sec-title">Before Any Product Goes to <em>Market</em></div>
+  <p class="sec-desc">Every product moves through the same careful checkpoints before it earns a place in the Alora range.</p>
+
+  <div class="accordion" id="accordion">
+    <div class="accordion-item open">
+      <div class="accordion-head" onclick="toggleAcc(this)">
+        <h4>Product Development</h4>
+        <div class="accordion-arrow">↗</div>
+      </div>
+      <div class="accordion-body">
+        <p>Once an idea is agreed, we move to developing it for real — sourcing raw materials responsibly, testing dehydration methods, and benchmarking against similar products already on the market before anything is approved for the next stage.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-head" onclick="toggleAcc(this)">
+        <h4>Scale Up</h4>
+        <div class="accordion-arrow">↗</div>
+      </div>
+      <div class="accordion-body">
+        <p>With the recipe confirmed, we move from small kitchen batches to full production quantities — checking consistency, shelf life and packaging integrity at every step before committing to a full run.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-head" onclick="toggleAcc(this)">
+        <h4>Launch</h4>
+        <div class="accordion-arrow">↗</div>
+      </div>
+      <div class="accordion-body">
+        <p>The finished product is listed on the Alora website and shared with our UK and India customers — with full documentation, FSSAI compliance and Udyam registration in place before it ever reaches a shelf.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAFETY BANNER -->
+  <div class="safety-banner">
+    <div class="safety-text">
+      <h3>Exceptional Standards of Food Safety &amp; Quality</h3>
+      <p>As a growing food business, we take food safety seriously at every stage. From MSME/Udyam registration to FSSAI compliance in progress, every Alora product is made with hygiene, traceability and honesty at its core.</p>
+      <a href="about.html" class="safety-btn">Learn More ↗</a>
+    </div>
+    <div class="safety-img" style="background-image:url('https://images.unsplash.com/photo-1547514701-42782101795e?w=800&q=80')"></div>
+  </div>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-logo">Alora Customary Care</div>
+      <div class="foot-sub">Pure · Natural · Nourishing</div>
+    </div>
+    <div class="foot-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="process.html">Our Process</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="tel:+919137450793">+91 91374 50793 🇮🇳</a>
+      <a href="tel:+447990832467">+44 7990 832467 🇬🇧</a>
+      <a href="mailto:info@aloracare.in">info@aloracare.in</a>
+      <a href="https://wa.me/919137450793" target="_blank">💬 WhatsApp</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p>© 2026 Alora Customary Care. All Rights Reserved.</p>
+    <p>Natural · Nutritious · Sustainable · Made in India</p>
+  </div>
+</footer>
+
+<script>
+function toggleAcc(headEl){
+  const item = headEl.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>
