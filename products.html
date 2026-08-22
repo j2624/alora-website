@@ -1,5 +1,6 @@
 
 
+
 ```html
 
 
@@ -38,11 +39,11 @@ nav a:hover{color:var(--green-deep);}
 .prod-section.alt-bg{background:var(--cream-dark);max-width:100%;padding:60px 0;}
 .prod-section.alt-bg .inner{max-width:1100px;margin:auto;padding:0 56px;}
 .inner{max-width:1100px;margin:auto;}
-.sec-head{margin-bottom:32px;}
-.sec-num{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:6px;}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--green-deep);line-height:1.1;}
-.sec-title em{font-style:italic;}
-.sec-desc{font-size:14px;color:var(--text-muted);line-height:1.7;max-width:500px;font-weight:300;margin-top:8px;}
+.sec-head{margin-bottom:32px;padding-left:20px;border-left:3px solid var(--gold);}
+.sec-num{display:inline-block;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#fff;background:var(--gold);font-weight:600;margin-bottom:10px;padding:4px 12px;border-radius:20px;}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:400;color:var(--green-deep);line-height:1.1;}
+.sec-title em{font-style:italic;color:var(--gold);}
+.sec-desc{font-size:14px;color:var(--text-muted);line-height:1.7;max-width:500px;font-weight:300;margin-top:10px;}
 .subcat{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-mid);font-weight:600;margin:28px 0 14px;padding-bottom:8px;border-bottom:1px solid rgba(184,151,90,0.2);}
 
 /* GRID */
@@ -108,9 +109,9 @@ nav a:hover{color:var(--green-deep);}
 /* CASHEW SECTION */
 .cashew-section{background:linear-gradient(135deg,#fdf6e3,#f5e6c8);padding:70px 56px}
 .cashew-inner{max-width:1100px;margin:auto}
-.cashew-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500}
-.cashew-title{font-family:"Cormorant Garamond",serif;font-size:38px;font-weight:300;color:var(--green-deep);margin-bottom:8px}
-.cashew-title em{font-style:italic}
+.cashew-label{display:inline-block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--gold);margin-bottom:12px;font-weight:600;padding:4px 12px;border-radius:20px}
+.cashew-title{font-family:"Cormorant Garamond",serif;font-size:38px;font-weight:400;color:var(--green-deep);margin-bottom:8px}
+.cashew-title em{font-style:italic;color:var(--gold)}
 .cashew-desc{font-size:14px;color:var(--text-muted);line-height:1.7;max-width:500px;font-weight:300;margin-bottom:36px}
 .cashew-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .cashew-card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(139,94,26,.1);border:1px solid rgba(184,151,90,.2);transition:transform .25s;display:flex;flex-direction:column}
@@ -177,6 +178,95 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
 </section>
 <div class="divider"></div>
 
+<!-- ═══ 0. SUPERFOOD ═══ -->
+<section class="prod-section" id="superfood">
+  <div class="sec-head">
+    <div class="sec-num">Category 00 &middot; Featured</div>
+    <div class="sec-title">Super<em>food</em></div>
+    <div class="sec-desc">Our most nutrient-dense picks — high in Vitamin C, antioxidants, iron and natural nitrates. Handpicked from across the Alora range.</div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="thumb"><img src="dehydrated-lemon-superfood.png" alt="Dehydrated Lemon"><span class="pill p-fruit">Superfood</span></div>
+      <div class="info"><h3>Dehydrated Lemon</h3><p>Tangy, refreshing lemon slices, rich in Vitamin C. Made from carefully selected fresh lemons.</p><div class="shelf">&#x23F3; 30 Days after opening</div><a href="contact.html" class="btn">Enquire</a></div>
+      <div class="tabs">
+        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Lemon</strong> — dehydrated slowly to preserve flavour, aroma and nutritional goodness.</p></div></div>
+        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">227</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">5.5g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">0.6g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">6.1g</div><div class="nl">Fibre</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
+        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> Processed in a facility that may handle tree nuts and sesame.<br><strong>Storage:</strong> Cool, dry place, away from direct sunlight. Refrigerate after opening, use within 30 days.</div></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Amla-Powder.png.png" alt="Amla Powder"><span class="pill p-powder">Superfood</span></div>
+      <div class="info"><h3>Amla Powder</h3><p>High in Vitamin C and antioxidants. Sourced from premium Indian gooseberries.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Pomegranate-Powder.png.png" alt="Pomegranate Powder"><span class="pill p-powder">Superfood</span></div>
+      <div class="info"><h3>Pomegranate Powder</h3><p>Rich in polyphenols and antioxidants. Premium quality for supplement use.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Beetroot-Powder.png.png" alt="Beetroot Powder"><span class="pill p-powder">Superfood</span></div>
+      <div class="info"><h3>Beetroot Powder</h3><p>Vibrant, nutrient-dense beetroot powder packed with natural nitrates and iron.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Spinach-Powder.png.PNG" alt="Spinach Powder"><span class="pill p-powder">Superfood</span></div>
+      <div class="info"><h3>Spinach Powder</h3><p>Iron-rich spinach powder. Retains natural colour and full nutritional value.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Tumeric-Powder.png.png" alt="Turmeric Powder"><span class="pill p-powder">Superfood</span></div>
+      <div class="info"><h3>Turmeric Powder</h3><p>Pure dehydrated turmeric with high curcumin content. Anti-inflammatory and export grade.</p><div class="shelf">&#x23F3; 18 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Ginger-Powder.png.png" alt="Ginger Powder"><span class="pill p-powder">Superfood</span></div>
+      <div class="info"><h3>Ginger Powder</h3><p>Warm, aromatic ginger powder with high gingerol content. Export grade quality.</p><div class="shelf">&#x23F3; 18 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Orange_peel_powder.png.png" alt="Orange Peel Powder"><span class="pill p-powder">Superfood</span></div>
+      <div class="info"><h3>Orange Peel Powder</h3><p>Rich in Vitamin C and flavonoids. Used in health blends and skincare formulations.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Black-Garlic.png" alt="Black Garlic"><span class="pill p-veg">Superfood</span></div>
+      <div class="info"><h3>Black Garlic</h3><p>Naturally aged and fermented garlic with a rich, sweet umami flavour and higher antioxidant content.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Black-lemon.png" alt="Fermented Black Lemon"><span class="pill p-fruit">Superfood</span></div>
+      <div class="info"><h3>Fermented Black Lemon</h3><p>Sun-fermented whole lemons with rock salt — a tangy, smoky, umami-rich ingredient prized for its concentrated minerals.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Wheat-Grass-Powder.png" alt="Wheat Grass Powder"><span class="pill p-powder">Superfood</span></div>
+      <div class="info"><h3>Wheat Grass Powder</h3><p>Nutrient-dense young wheat grass, dehydrated and milled to retain natural chlorophyll and vitamins.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="Barley-Grass-Powder.png" alt="Barley Grass Powder"><span class="pill p-powder">Superfood</span></div>
+      <div class="info"><h3>Barley Grass Powder</h3><p>Young barley grass leaves, dehydrated and finely milled — a natural source of vitamins and minerals.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+    </div>
+
+    <div class="card">
+      <div class="thumb"><img src="isabgol-superfood.png" alt="Alora Isabgol"><span class="pill p-powder">Superfood</span></div>
+      <div class="info"><h3>Isabgol</h3><p>Natural psyllium husk, rich in fibre and known for digestive support and everyday wellness.</p><div class="shelf">&#x23F3; 45 Days after opening</div><a href="contact.html" class="btn">Enquire</a></div>
+      <div class="tabs">
+        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Isabgol (Psyllium Husk)</strong> — carefully selected natural psyllium husk, gently processed to preserve purity and fibre content.</p></div></div>
+        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">190</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">2.5g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">0.6g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">78g</div><div class="nl">Fibre</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
+        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> Processed in a facility that may handle tree nuts and sesame.<br><strong>Storage:</strong> Store in a cool, dry place, away from direct sunlight. Once opened, reseal tightly and use within 45 days.</div></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="divider"></div>
+
 <!-- ═══ 1. POWDERS ═══ -->
 <section class="prod-section">
   <div class="sec-head">
@@ -198,60 +288,10 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       </div>
     </div>
 
-    <div class="card">
-      <div class="thumb"><img src="Amla-Powder.png.png" alt="Amla Powder"><span class="pill p-powder">Powder</span></div>
-      <div class="info"><h3>Amla Powder</h3><p>High in Vitamin C and antioxidants. Sourced from premium Indian gooseberries.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Amla (Emblica officinalis)</strong> — dehydrated and ground to fine powder. No additives, no preservatives.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">350</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">4.2g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">2.0g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">700mg+</div><div class="nl">Vitamin C</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 12 months</strong> from manufacture.</div></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb"><img src="Pomegranate-Powder.png.png" alt="Pomegranate Powder"><span class="pill p-powder">Powder</span></div>
-      <div class="info"><h3>Pomegranate Powder</h3><p>Rich in polyphenols and antioxidants. Premium quality for supplement use.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Pomegranate (Punica granatum)</strong> — dehydrated pomegranate arils, ground to fine powder. No additives.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">350</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">3.5g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">1.0g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">High</div><div class="nl">Polyphenols</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 12 months</strong> from manufacture.</div></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb"><img src="Orange_peel_powder.png.png" alt="Orange Peel Powder"><span class="pill p-powder">Powder</span></div>
-      <div class="info"><h3>Orange Peel Powder</h3><p>Rich in Vitamin C and flavonoids. Used in health blends and skincare formulations.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Orange Peel (Citrus sinensis)</strong> — dehydrated and finely ground. No additives, no artificial flavours.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">97</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">1.5g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">0.2g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">136mg</div><div class="nl">Vitamin C</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 12 months</strong> from manufacture.</div></div></div>
-      </div>
-    </div>
-
   </div>
 
   <div class="subcat">Vegetable Powders</div>
   <div class="grid">
-
-    <div class="card">
-      <div class="thumb"><img src="Beetroot-Powder.png.png" alt="Beetroot Powder"><span class="pill p-powder">Powder</span></div>
-      <div class="info"><h3>Beetroot Powder</h3><p>Vibrant, nutrient-dense beetroot powder packed with natural nitrates and iron.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Beetroot (Beta vulgaris)</strong> — dehydrated and ground. No additives, no artificial colours.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">43</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">1.6g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">0.2g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">High</div><div class="nl">Nitrates</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 12 months</strong> from manufacture.</div></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb"><img src="Spinach-Powder.png.PNG" alt="Spinach Powder"><span class="pill p-powder">Powder</span></div>
-      <div class="info"><h3>Spinach Powder</h3><p>Iron-rich spinach powder. Retains natural colour and full nutritional value.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Spinach (Spinacia oleracea)</strong> — dehydrated and ground. No additives.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">290</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">28.1g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">5.4g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">29mg</div><div class="nl">Iron</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 12 months</strong> from manufacture.</div></div></div>
-      </div>
-    </div>
 
     <div class="card">
       <div class="thumb"><img src="Tomato-Powder.png.png" alt="Tomato Powder"><span class="pill p-powder">Powder</span></div>
@@ -269,16 +309,6 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       <div class="tabs">
         <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Garlic (Allium sativum)</strong> — dehydrated and ground. No additives.</p></div></div>
         <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">331</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">16.8g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">0.7g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">High</div><div class="nl">Allicin</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 18 months</strong> from manufacture.</div></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb"><img src="Ginger-Powder.png.png" alt="Ginger Powder"><span class="pill p-powder">Powder</span></div>
-      <div class="info"><h3>Ginger Powder</h3><p>Warm, aromatic ginger powder with high gingerol content. Export grade quality.</p><div class="shelf">&#x23F3; 18 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Ginger (Zingiber officinale)</strong> — dehydrated and ground. No additives.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">335</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">8.9g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">4.2g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">High</div><div class="nl">Gingerol</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
         <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 18 months</strong> from manufacture.</div></div></div>
       </div>
     </div>
@@ -304,16 +334,6 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
     </div>
 
     <div class="card">
-      <div class="thumb"><img src="Tumeric-Powder.png.png" alt="Turmeric Powder"><span class="pill p-powder">Powder</span></div>
-      <div class="info"><h3>Turmeric Powder</h3><p>Pure dehydrated turmeric with high curcumin content. Anti-inflammatory and export grade.</p><div class="shelf">&#x23F3; 18 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Turmeric Root (Curcuma longa)</strong> — dehydrated and finely ground. No additives.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">354</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">7.8g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">9.9g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">3.14%</div><div class="nl">Curcumin</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 18 months</strong> from manufacture.</div></div></div>
-      </div>
-    </div>
-
-    <div class="card">
       <div class="thumb"><img src="Red_onion_powder.png.png" alt="Red Onion Powder"><span class="pill p-powder">Powder</span></div>
       <div class="info"><h3>Red Onion Powder</h3><p>Finely milled red onion powder. Bold flavour, ideal for seasonings and food processing.</p><div class="shelf">&#x23F3; 18 Months</div><a href="contact.html" class="btn">Enquire</a></div>
       <div class="tabs">
@@ -324,49 +344,6 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
     </div>
 
   </div>
-
-  <div class="subcat">Superfood Powders</div>
-  <div class="grid">
-
-    <div class="card">
-      <div class="thumb"><img src="Black Garlic.png" alt="Black Garlic"><span class="pill p-powder">Powder</span></div>
-      <div class="info"><h3>Black Garlic</h3><p>Naturally aged and fermented garlic with a rich, sweet umami flavour and higher antioxidant content.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Black Garlic (Allium sativum, fermented)</strong> — naturally aged and dehydrated. No additives, no preservatives.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">149</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">6.4g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">0.5g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">High</div><div class="nl">Antioxidants</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 12 months</strong> from manufacture.</div></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb"><img src="Black lemon.png" alt="Fermented Black Lemon"><span class="pill p-fruit">Fermented</span></div>
-      <div class="info"><h3>Fermented Black Lemon</h3><p>Sun-fermented whole lemons with rock salt — a tangy, smoky, umami-rich ingredient prized for its concentrated minerals and flavour.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>Lemon, Rock Salt</strong> — carefully selected fresh lemons, naturally fermented with rock salt and sun-dried to perfection. No artificial colours, no preservatives.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">141</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">2.1g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">6.2g</div><div class="nl">Fibre</div></div><div class="nb"><div class="nv">4100mg</div><div class="nl">Sodium</div></div></div><p class="dc">Carbohydrate 28.6g (of which sugars 6.8g), Fat 0.6g (of which saturates 0.1g). Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> Processed in a facility that may handle tree nuts and sesame. Gluten free, suitable for vegetarians.<br><strong>Storage:</strong> Store in a cool, dry place away from direct sunlight. Once opened, refrigerate and use within 30 days.<br><strong>Shelf Life: 12 months</strong> from manufacture (unopened).</div></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb"><img src="Wheat Grass Powder.png" alt="Wheat Grass Powder"><span class="pill p-powder">Powder</span></div>
-      <div class="info"><h3>Wheat Grass Powder</h3><p>Nutrient-dense young wheat grass, dehydrated and milled to retain natural chlorophyll and vitamins.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Wheat Grass (Triticum aestivum)</strong> — dehydrated and ground to fine powder. No additives, no preservatives.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">300</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">21g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">2g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">High</div><div class="nl">Chlorophyll</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> Grass form of wheat — individuals with wheat/gluten sensitivity should check with a physician before use.<br><strong>Shelf Life: 12 months</strong> from manufacture.</div></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb"><img src="Barley Grass Powder.png" alt="Barley Grass Powder"><span class="pill p-powder">Powder</span></div>
-      <div class="info"><h3>Barley Grass Powder</h3><p>Young barley grass leaves, dehydrated and finely milled — a natural source of vitamins and minerals.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-      <div class="tabs">
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Barley Grass (Hordeum vulgare)</strong> — dehydrated and ground to fine powder. No additives, no preservatives.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Nutritional Info (per 100g)</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ng"><div class="nb"><div class="nv">320</div><div class="nl">kcal</div></div><div class="nb"><div class="nv">20g</div><div class="nl">Protein</div></div><div class="nb"><div class="nv">2.5g</div><div class="nl">Fat</div></div><div class="nb"><div class="nv">High</div><div class="nl">Vitamin K</div></div></div><p class="dc">Values approximate. Full analysis on request.</p></div></div>
-        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> Grass form of barley — individuals with gluten sensitivity should check with a physician before use.<br><strong>Shelf Life: 12 months</strong> from manufacture.</div></div></div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -382,7 +359,7 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
     <div class="grid">
 
       <div class="card">
-        <div class="thumb"><img src="Dehydrated _apple_slicecs.png.png" alt="Dehydrated Apple" onerror="this.src='dehydrated-apple-1.png'"><span class="pill p-fruit">Fruit</span></div>
+        <div class="thumb"><img src="Dehydrated-_apple_slicecs.png.png" alt="Dehydrated Apple" onerror="this.src='dehydrated-apple-1.png'"><span class="pill p-fruit">Fruit</span></div>
         <div class="info"><h3>Dehydrated Apple</h3><p>Crisp, naturally sweet apple slices. No added sugar, no preservatives.</p><div class="shelf">&#x23F3; 12–18 Months</div><a href="contact.html" class="btn">Enquire</a></div>
         <div class="tabs">
           <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Apple (Malus domestica)</strong> — naturally dehydrated. No added sugar, no sulphites, no preservatives.</p></div></div>
@@ -392,7 +369,7 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       </div>
 
       <div class="card">
-        <div class="thumb"><img src="Dehydrated _banana_slices.png.png" alt="Dehydrated Banana" onerror="this.src='dehydrated-banana-2.png'"><span class="pill p-fruit">Fruit</span></div>
+        <div class="thumb"><img src="Dehydrated-_banana_slices.png.png" alt="Dehydrated Banana" onerror="this.src='dehydrated-banana-2.png'"><span class="pill p-fruit">Fruit</span></div>
         <div class="info"><h3>Dehydrated Banana Slices</h3><p>Soft, naturally sweet banana slices. High in energy and potassium.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
         <div class="tabs">
           <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Banana (Musa acuminata)</strong> — naturally dehydrated slices. No added sugar, no preservatives.</p></div></div>
@@ -452,7 +429,7 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       </div>
 
       <div class="card">
-        <div class="thumb"><img src="Dehydrated Jackfruit slices.png" alt="Dehydrated Jackfruit"><span class="pill p-fruit">Fruit</span></div>
+        <div class="thumb"><img src="Dehydrated-Jackfruit-slices.png" alt="Dehydrated Jackfruit"><span class="pill p-fruit">Fruit</span></div>
         <div class="info"><h3>Dehydrated Jackfruit</h3><p>Naturally sweet jackfruit pieces — rich in fibre and Vitamin C. No added sugar, no preservatives added.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
         <div class="tabs">
           <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>100% Jackfruit (Artocarpus heterophyllus)</strong> — naturally dehydrated pieces. No added sugar, no preservatives added.</p></div></div>
@@ -667,14 +644,14 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
     <div class="cashew-title">Premium <em>Cashews</em></div>
     <div class="cashew-desc">Finest quality cashews — hygienically processed and export ready. Available in multiple grades for retail, wholesale and food manufacturing.</div>
     <div class="cashew-grid">
-      <div class="cashew-card"><div class="cashew-thumb"><img src="Alora premeum cashwes 180.png" alt="Premium Cashews W180"><span class="cashew-badge">W180</span></div><div class="cashew-info"><h3>Premium Cashews W180</h3><p>Largest whole cashew grade. Premium quality — ideal for gifting and gourmet retail.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
-      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras Premium 240.png" alt="Premium Cashews W240"><span class="cashew-badge">W240</span></div><div class="cashew-info"><h3>Premium Cashews W240</h3><p>Superior whole cashews — consistent size, popular for bulk and export orders.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
-      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras cashew SWP.png" alt="Cashew SWP"><span class="cashew-badge">SWP</span></div><div class="cashew-info"><h3>Cashew SWP</h3><p>Small whole pieces — versatile grade for snacking, cooking and retail packaging.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
-      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras Cashew TK.png" alt="Cashew TK"><span class="cashew-badge">TK</span></div><div class="cashew-info"><h3>Cashew TK</h3><p>Tukda pieces — broken cashew pieces ideal for cooking, mithai and food industry.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
-      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras Cashews LWP.png" alt="Cashew LWP"><span class="cashew-badge">LWP</span></div><div class="cashew-info"><h3>Cashew LWP</h3><p>Large whole pieces — premium grade for retail snacking and gourmet applications.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
-      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras Roasted Honey Cashews.png" alt="Roasted Honey Cashews"><span class="cashew-badge">Honey</span></div><div class="cashew-info"><h3>Roasted Honey Cashews</h3><p>Golden roasted cashews glazed with natural honey — perfect for snacking and gifting.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Natural Sugars · Healthy Fats · Magnesium</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">6 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
-      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras roasted Pepper Cashews.png" alt="Roasted Pepper Cashews"><span class="cashew-badge">Pepper</span></div><div class="cashew-info"><h3>Roasted Pepper Cashews</h3><p>Bold, spicy pepper-roasted cashews — ideal for snacking and premium retail packs.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">6 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
-      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras roasted Red Chilli Cashews.png" alt="Roasted Red Chilli Cashews"><span class="cashew-badge">Chilli</span></div><div class="cashew-info"><h3>Roasted Red Chilli Cashews</h3><p>Fiery red chilli roasted cashews — bold flavour for snacking and gourmet gifting.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">6 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Alora-premeum-cashwes-180.png" alt="Premium Cashews W180"><span class="cashew-badge">W180</span></div><div class="cashew-info"><h3>Premium Cashews W180</h3><p>Largest whole cashew grade. Premium quality — ideal for gifting and gourmet retail.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras-Premium-240.png" alt="Premium Cashews W240"><span class="cashew-badge">W240</span></div><div class="cashew-info"><h3>Premium Cashews W240</h3><p>Superior whole cashews — consistent size, popular for bulk and export orders.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras-cashew-SWP.png" alt="Cashew SWP"><span class="cashew-badge">SWP</span></div><div class="cashew-info"><h3>Cashew SWP</h3><p>Small whole pieces — versatile grade for snacking, cooking and retail packaging.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras-Cashew-TK.png" alt="Cashew TK"><span class="cashew-badge">TK</span></div><div class="cashew-info"><h3>Cashew TK</h3><p>Tukda pieces — broken cashew pieces ideal for cooking, mithai and food industry.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras-Cashews-LWP.png" alt="Cashew LWP"><span class="cashew-badge">LWP</span></div><div class="cashew-info"><h3>Cashew LWP</h3><p>Large whole pieces — premium grade for retail snacking and gourmet applications.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">12 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras-Roasted-Honey-Cashews.png" alt="Roasted Honey Cashews"><span class="cashew-badge">Honey</span></div><div class="cashew-info"><h3>Roasted Honey Cashews</h3><p>Golden roasted cashews glazed with natural honey — perfect for snacking and gifting.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Natural Sugars · Healthy Fats · Magnesium</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">6 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras-roasted-Pepper-Cashews.png" alt="Roasted Pepper Cashews"><span class="cashew-badge">Pepper</span></div><div class="cashew-info"><h3>Roasted Pepper Cashews</h3><p>Bold, spicy pepper-roasted cashews — ideal for snacking and premium retail packs.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">6 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
+      <div class="cashew-card"><div class="cashew-thumb"><img src="Aloras-roasted-Red-Chilli-Cashews.png" alt="Roasted Red Chilli Cashews"><span class="cashew-badge">Chilli</span></div><div class="cashew-info"><h3>Roasted Red Chilli Cashews</h3><p>Fiery red chilli roasted cashews — bold flavour for snacking and gourmet gifting.</p><div style="background:#fdf3e0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8b5e1a;margin-bottom:4px">🌿 Nutritional Value</div><div style="font-size:11px;color:#6b6456">Protein · Healthy Fats · Magnesium · Iron · Zinc</div></div><div style="background:#f0f7f0;border-radius:10px;padding:8px 12px;margin-bottom:10px"><div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c3a22;margin-bottom:4px">⏳ Shelf Life</div><div style="font-size:11px;color:#6b6456">6 months · Store in cool dry place</div></div><a href="contact.html" class="enquire-btn">Enquire →</a></div></div>
     </div>
   </div>
 </section>
@@ -699,7 +676,7 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       </div>
 
       <div class="card">
-        <div class="thumb"><img src="upma mix.png" alt="Upma Mix"><span class="pill p-mix">Premix</span></div>
+        <div class="thumb"><img src="upma-mix.png" alt="Upma Mix"><span class="pill p-mix">Premix</span></div>
         <div class="info"><h3>Upma Mix</h3><p>Classic South Indian savoury semolina breakfast mix with tempered spices and vegetables.</p><div class="shelf">&#x23F3; 6 Months</div><a href="contact.html" class="btn">Enquire</a></div>
         <div class="tabs">
           <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>Semolina (Sooji), Dehydrated Vegetables, Curry Leaves, Mustard Seeds, Spices</strong>. No preservatives, no artificial colours.</p></div></div>
@@ -708,7 +685,7 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       </div>
 
       <div class="card">
-        <div class="thumb"><img src="Phoa mix.png" alt="Poha Mix"><span class="pill p-mix">Premix</span></div>
+        <div class="thumb"><img src="Phoa-mix.png" alt="Poha Mix"><span class="pill p-mix">Premix</span></div>
         <div class="info"><h3>Poha Mix</h3><p>Light and fluffy flattened rice breakfast mix with peanuts, curry leaves and mild spices.</p><div class="shelf">&#x23F3; 6 Months</div><a href="contact.html" class="btn">Enquire</a></div>
         <div class="tabs">
           <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>Flattened Rice (Poha), Peanuts, Curry Leaves, Mustard Seeds, Turmeric, Spices</strong>. No preservatives, no artificial colours.</p></div></div>
@@ -726,7 +703,7 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       </div>
 
       <div class="card">
-        <div class="thumb"><img src="Paneer mattar gravey mix.png" alt="Paneer Matar Mix"><span class="pill p-mix">Premix</span></div>
+        <div class="thumb"><img src="Paneer-mattar-gravey-mix.png" alt="Paneer Matar Mix"><span class="pill p-mix">Premix</span></div>
         <div class="info"><h3>Paneer Matar Mix</h3><p>Rich paneer and green pea curry mix with warm North Indian spices — just add water and cook.</p><div class="shelf">&#x23F3; 6 Months</div><a href="contact.html" class="btn">Enquire</a></div>
         <div class="tabs">
           <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>Dehydrated Paneer, Dehydrated Peas, Onion, Tomato, Spices</strong>. No preservatives, no artificial colours.</p></div></div>
@@ -735,7 +712,7 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       </div>
 
       <div class="card">
-        <div class="thumb"><img src="Palak Paratha.png" alt="Palak Paratha Mix"><span class="pill p-mix">Premix</span></div>
+        <div class="thumb"><img src="Palak-Paratha.png" alt="Palak Paratha Mix"><span class="pill p-mix">Premix</span></div>
         <div class="info"><h3>Palak Paratha Mix</h3><p>Wholesome spinach-infused flatbread mix — soft, nutritious and full of flavour.</p><div class="shelf">&#x23F3; 6 Months</div><a href="contact.html" class="btn">Enquire</a></div>
         <div class="tabs">
           <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>Wheat Flour, Dehydrated Spinach (Palak), Spices</strong>. No preservatives, no artificial colours.</p></div></div>
@@ -744,20 +721,11 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       </div>
 
       <div class="card">
-        <div class="thumb"><img src="Methi Paratha.png" alt="Methi Paratha Mix"><span class="pill p-mix">Premix</span></div>
+        <div class="thumb"><img src="Methi-Paratha.png" alt="Methi Paratha Mix"><span class="pill p-mix">Premix</span></div>
         <div class="info"><h3>Methi Paratha Mix</h3><p>Aromatic fenugreek-infused flatbread mix with a distinctive, savoury flavour.</p><div class="shelf">&#x23F3; 6 Months</div><a href="contact.html" class="btn">Enquire</a></div>
         <div class="tabs">
           <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>Wheat Flour, Dehydrated Fenugreek (Methi), Spices</strong>. No preservatives, no artificial colours.</p></div></div>
           <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> Contains wheat/gluten and legumes (fenugreek).<br><strong>Shelf Life: 6 months</strong> from manufacture. Store in cool, dry place.</div></div></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="thumb"><img src="Khawa-Herbal-Tea.png.PNG" alt="Khawa"><span class="pill p-mix">Premix</span></div>
-        <div class="info"><h3>Khawa</h3><p>A warming traditional herbal blend, rich in aroma and comforting spice.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
-        <div class="tabs">
-          <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>Blend of Traditional Herbs and Spices</strong>. No artificial flavours, no preservatives.</p></div></div>
-          <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 12 months</strong> from manufacture. Store in cool, dry place.</div></div></div>
         </div>
       </div>
 
@@ -775,7 +743,7 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
   <div class="grid">
 
     <div class="card">
-      <div class="thumb"><img src="Choclate Strawberry.png" alt="Strawberry Chocolate"><span class="pill p-choc">Chocolate</span></div>
+      <div class="thumb"><img src="Choclate-Strawberry.png" alt="Strawberry Chocolate"><span class="pill p-choc">Chocolate</span></div>
       <div class="info"><h3>Strawberry Chocolate</h3><p>Naturally dehydrated strawberries generously coated in smooth chocolate. A perfect gifting treat.</p><div class="shelf">&#x23F3; 6 Months</div><a href="contact.html" class="btn">Enquire</a></div>
       <div class="tabs">
         <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>Dehydrated Strawberry, Chocolate Coating (Cocoa Solids, Cocoa Butter, Sugar)</strong>. No artificial preservatives.</p></div></div>
@@ -783,6 +751,29 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ═══ 8. DRINKS ═══ -->
+<section class="prod-section alt-bg">
+  <div class="inner">
+  <div class="sec-head">
+    <div class="sec-num">Category 08</div>
+    <div class="sec-title">Herbal <em>Drinks</em></div>
+    <div class="sec-desc">Warming, aromatic blends for everyday wellness — just add hot water.</div>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="thumb"><img src="Khawa-Herbal-Tea.png.PNG" alt="Khawa"><span class="pill p-mix">Drink</span></div>
+      <div class="info"><h3>Khawa</h3><p>A warming traditional herbal blend, rich in aroma and comforting spice.</p><div class="shelf">&#x23F3; 12 Months</div><a href="contact.html" class="btn">Enquire</a></div>
+      <div class="tabs">
+        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Ingredients</h4><span class="arr">&#9662;</span></div><div class="tab-b"><p class="it"><strong>Blend of Traditional Herbs and Spices</strong>. No artificial flavours, no preservatives.</p></div></div>
+        <div class="tab"><div class="tab-h" onclick="t(this)"><h4>Allergen &amp; Storage</h4><span class="arr">&#9662;</span></div><div class="tab-b"><div class="ab"><strong>Allergens:</strong> No known allergens.<br><strong>Shelf Life: 12 months</strong> from manufacture. Store in cool, dry place.</div></div></div>
+      </div>
+    </div>
+
+  </div>
   </div>
 </section>
 
@@ -821,11 +812,13 @@ footer{background:var(--green-deep);color:white;padding:48px 56px 28px;}
     </div>
     <div class="footer-links">
       <h4>Categories</h4>
+      <a href="products.html#superfood">Superfood</a>
       <a href="products.html">Powders</a>
       <a href="products.html">Dehydrated Fruits</a>
       <a href="products.html">Dehydrated Vegetables</a>
       <a href="products.html">Hydroponic Herbs</a>
       <a href="products.html">Herb Infused Oils</a>
+      <a href="products.html">Herbal Drinks</a>
     </div>
     <div class="footer-links">
       <h4>Contact</h4>
